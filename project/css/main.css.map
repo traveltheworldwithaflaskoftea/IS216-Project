@@ -1,0 +1,31 @@
+{
+    "version": 3,
+    "mappings": "AOAA,AAAA,eAAe,CAAC,GAAG,CAAC;EAChB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;CACf;;AAED,AAAA,SAAS,CAAC,mBAAmB,CAAC;EAC1B,OAAO,EAAE,CAAC;CACb",
+    "sources": [
+        "main.scss",
+        "1-helpers/_functions.scss",
+        "1-helpers/_mixins.scss",
+        "1-helpers/_variables.scss",
+        "2-basics/_base.scss",
+        "2-basics/_typography.scss",
+        "3-components/_buttons.scss",
+        "3-components/_carousel.scss",
+        "3-components/_slider.scss",
+        "4-layout/_footer.scss",
+        "4-layout/_forms.scss",
+        "4-layout/_grid.scss",
+        "4-layout/_navigation.scss",
+        "4-layout/_sidebar.scss",
+        "5-pages/_1login.scss",
+        "5-pages/_2signup.scss",
+        "5-pages/_3mainpage.scss",
+        "5-pages/_4individualpage.scss",
+        "5-pages/_5adoptionmessagepage.scss",
+        "5-pages/_6appointmentpage.scss",
+        "5-pages/_7profilepage.scss",
+        "5-pages/_8wishlist.scss",
+        "5-pages/_9passwordreset.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
