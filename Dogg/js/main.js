@@ -22,6 +22,11 @@ function onclick_breed(breed){
 	document.getElementById('filters_applied').innerHTML = text + breed;
 }
 
+function onclick_breed(breed){
+	console.log(breed);
+	document.getElementById('filters_applied').innerHTML = breed;
+}
+
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
