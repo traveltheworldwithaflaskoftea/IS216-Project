@@ -15,6 +15,57 @@ function myFunction() {
     }
 }
 
+function myFunction2() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput2");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL2");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+function myFunction3() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput3");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL3");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+function myFunction4() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput4");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL4");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
 AOS.init({
  	duration: 800,
  	easing: 'slide',
