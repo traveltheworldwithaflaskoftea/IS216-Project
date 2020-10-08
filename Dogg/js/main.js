@@ -1,3 +1,7 @@
+// search button and API 
+
+
+// end search and API 
 
 // Showing the filters on the search page 
 var search_age = '';
@@ -30,8 +34,7 @@ function onclick_breed(breed){
 	var text = text.replace('beagle', '');
 	document.getElementById('filters_applied').innerHTML = text + " " + breed;
 }
-// Showing the filters on the search page 
-
+// end Showing the filters on the search page 
 
 // Fuctions for the filter search 
 function myFunction() {
