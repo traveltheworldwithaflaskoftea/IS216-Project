@@ -1,5 +1,33 @@
 // search button and API 
+function search(){
+	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
+	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
 
+	var client  = new petfinder.Client({apiKey: id, secret: secret});
+	var search_parameters;
+
+	if(search_age != ''){
+		search_parameters += "age:'" + search_age + "'";		
+	}
+	if(search_gender != ''){
+		search_parameters += "gender:'" + search_gender + "'";		
+	}
+	if(search_breed != ''){
+		search_parameters += "breed:'" + search_breed + "'";		
+	}
+	
+
+	client.animal.search({
+			type: 'dog',
+			breed: 'pug',
+			state: 'NJ',
+			location: 'NJ'
+			})
+		.then(resp => {
+			// Do something with resp.data.breeds
+			console.log(resp.data.animals);
+		});
+}
 
 // end search and API 
 
@@ -10,29 +38,36 @@ var search_breed = '';
 
 function onclick_age(age){
 	var search_age = age;
-	var text = document.getElementById('filters_applied').innerHTML;
-	var text = text.replace('young', '');
-	var text = text.replace('old', '');
-	document.getElementById('filters_applied').innerHTML = text + "  " + `<button class="badge badge-dark">` + age + `</button>`;
+
+	document.getElementById('age').innerHTML = ' ' + `<badge class="badge badge-dark">` + ' ' + age + ' ' + `</badge>`;
+
+	// var text = document.getElementById('filters_applied').innerHTML;
+	// var text = text.replace('young', '');
+	// var text = text.replace('old', '');
+	// document.getElementById('filters_applied').innerHTML = text + "  " + `<button class="badge badge-dark">` + age + `</button>`;
 }
 
 function onclick_gender(gender){
 	var search_gender = gender;
-	var text = document.getElementById('filters_applied').innerHTML;
-	var text = text.replace('female', '');
-	var text = text.replace('male', '');
-	document.getElementById('filters_applied').innerHTML = text + "  " +  `<button class="badge badge-dark">` + gender + `</button>`;
+	document.getElementById('gender').innerHTML = ' ' + `<badge class="badge badge-dark">` + ' ' + gender + ' ' + `</badge>`;
+
+	// var text = document.getElementById('filters_applied').innerHTML;
+	// var text = text.replace('female', '');
+	// var text = text.replace('male', '');
+	// document.getElementById('filters_applied').innerHTML = text + "  " +  `<button class="badge badge-dark">` + gender + `</button>`;
 }
 
 function onclick_breed(breed){
 	var search_breed = breed;
-	var text = document.getElementById('filters_applied').innerHTML;
-	var text = text.replace('golden retriever', '');
-	var text = text.replace('corgi', '');
-	var text = text.replace('pug', '');
-	var text = text.replace('shiba', '');
-	var text = text.replace('beagle', '');
-	document.getElementById('filters_applied').innerHTML = text + "  " + `<button class="badge badge-dark">` + breed + `</button>`;
+	document.getElementById('breed').innerHTML = ' ' + `<badge class="badge badge-dark">` + ' ' + breed + ' ' + `</badge>`;
+
+	// var text = document.getElementById('filters_applied').innerHTML;
+	// var text = text.replace('golden retriever', '');
+	// var text = text.replace('corgi', '');
+	// var text = text.replace('pug', '');
+	// var text = text.replace('shiba', '');
+	// var text = text.replace('beagle', '');
+	// document.getElementById('filters_applied').innerHTML = text + "  " + `<button class="badge badge-dark">` + breed + `</button>`;
 }
 // end Showing the filters on the search page 
 
