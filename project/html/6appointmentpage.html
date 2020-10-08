@@ -1,11 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<html>
+    <head>
+        <title> Appointment Page </title>
+
+    <!---Internal CSS Styling -->
+    <style> 
+      
+
+        .sidebar{ 
+            background-color: yellow; 
+            padding: 5px; 
+            margin: 0px;
+            position: fixed; 
+            left: 0; 
+            top: 10; 
+            height: 100%;
+            line-height: 40px;
+            max-width: 20%;
+        }
+
+        .appointmentpage{ 
+            position: absolute;
+            top: 10; 
+            left: 100px; 
+            max-width: 80%; 
+            
+        }
+     
+    </style>
+    </head>
+   
+    <body >
+
+        <!-- This is the top navigation bar -->
+        <a href='#home'>Home</a>
+        <a href='#profile'>Profile</a>
+        <a href='#appointments'>Appointments</a>
+        <a href='#wishlist'>Wishlist</a>
+
+        <!--- This is the side menu bar -->
+        <div class='sidebar'>
+            
+           <input name='day[]' type='checkbox' value=1>
+           <a href="#day1"> Day 1</a> 
+           <br/>
+            
+           <input name='day[]' type='checkbox' value=2>
+           <a href="#day2"> Day 2</a> 
+           <br/>
+            
+           <input name='day[]' type='checkbox' value=3>
+           <a href="#day3"> Day 3</a> 
+           <br/>
+            
+        </div>
+
+        <!--- End of container div -->
+
+        <div class='appointmentpage'>
+
+            <h1> Appointment Page </h1>
+
+            <h2> IM THE MAP!</h2>
+            <p>
+                insert map api
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+                v Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+            </p>
     
-</body>
+            <h2 id='day1'> Day 1 Schedule </h2>
+            
+            <p> 
+                <table border='1'> 
+                    <tr>
+                        <th colspan='2'>Love cats </th>
+                    </tr> 
+                    <tr>
+                        <th>Meeting method</th>
+                        <td>
+                            <a href='zoom.us'> Zoom </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Date & Time</th>
+                        <td>23 November 3.30pm</td>
+                    </tr>
+                </table>
+            </p>
+
+            <h2 id='day2'> Day 2 Schedule </h2>
+            
+            <p> 
+                <table border='1'> 
+                    <tr>
+                        <th colspan='2'>Sunshine Pets </th>
+                    </tr> 
+                    <tr>
+                        <th>Meeting method</th>
+                        <td>
+                            1201 Macklind Ave, St. Louis, MO 63110, United States
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Date & Time</th>
+                        <td>27 November 3.30pm</td>
+                    </tr>
+                </table>
+            </p>
+
+            <h2 id='day2'> Day 3 Schedule </h2>
+            
+            <p> 
+                <table border='1'> 
+                    <tr>
+                        <th colspan='2'>Kitty Doggy Party </th>
+                    </tr> 
+                    <tr>
+                        <th>Meeting method</th>
+                        <td>
+                            <a href='zoom.us'> Zoom </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Date & Time</th>
+                        <td>30 November 9.30am</td>
+                    </tr>
+                </table>
+            </p>
+
+            <p> 
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, earum molestias temporibus, accusantium, velit provident modi repellat nisi commodi omnis rem aut nihil deserunt sunt quibusdam odio. Dolorum, numquam consequatur?
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                
+            </p>
+
+
+       
+            </div>
+    </body>
 </html>
