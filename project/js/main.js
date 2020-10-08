@@ -15,7 +15,9 @@ function search(){
 	if(search_breed != ''){
 		search_parameters += "breed:'" + search_breed + "'";		
 	}
-	
+	if(search_breed != ''){
+		search_parameters += "breed:'" + search_breed + "'";		
+	}
 
 	client.animal.search({
 			type: 'dog',
