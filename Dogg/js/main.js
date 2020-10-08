@@ -13,7 +13,7 @@ function onclick_age(age){
 	var text = document.getElementById('filters_applied').innerHTML;
 	var text = text.replace('young', '');
 	var text = text.replace('old', '');
-	document.getElementById('filters_applied').innerHTML = text + "  " + `<button class="badge badge-dark">` + age + `</button>`;
+	document.getElementById('filters_applied').innerHTML = text + "  " + `<span class="badge badge-dark">` + age + `</span>`;
 }
 
 function onclick_gender(gender){
@@ -21,7 +21,7 @@ function onclick_gender(gender){
 	var text = document.getElementById('filters_applied').innerHTML;
 	var text = text.replace('female', '');
 	var text = text.replace('male', '');
-	document.getElementById('filters_applied').innerHTML = text + "  " +  `<button class="badge badge-dark">` + gender + `</button>`;
+	document.getElementById('filters_applied').innerHTML = text + "  " +  `<span class="badge badge-dark">` + gender + `</span>`;
 }
 
 function onclick_breed(breed){
@@ -32,7 +32,7 @@ function onclick_breed(breed){
 	var text = text.replace('pug', '');
 	var text = text.replace('shiba', '');
 	var text = text.replace('beagle', '');
-	document.getElementById('filters_applied').innerHTML = text + "  " + `<button class="badge badge-dark">` + breed + `</button>`;
+	document.getElementById('filters_applied').innerHTML = text + "  " + `<span class="badge badge-dark">` + breed + `</span>`;
 }
 // end Showing the filters on the search page 
 
