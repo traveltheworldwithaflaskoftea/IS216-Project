@@ -136,8 +136,8 @@
                         <ul class="dropdown-menu" id="myUL">
                           <input class='form-control' type="text" id="myInput" onkeyup="myFunction()"  title="Type in a name">
 
-                          <li><a onclick="onclick_age('young')" href='#'>Young</a></li>
-                          <li onclick="onclick_age('Old')">Old</li>
+                          <li><a onclick="onclick_age('young')" href='#myInput'>Young</a></li>
+                          <li><a onclick="onclick_age('old')" href="#myInput">Old</a></li>
 
                         </ul>
                       </div>
@@ -152,8 +152,8 @@
                       <ul class="dropdown-menu" id="myUL2">
                         <input class='form-control' type="text" id="myInput2" onkeyup="myFunction2()"  title="Type in a name">
 
-                        <li><a href="#">Male</a></li>
-                        <li><a href="#">Female</a></li>
+                        <li><a href="#myInput" onclick="onclick_gender('male')">Male</a></li>
+                        <li><a href="#myInput" onclick="onclick_gender('female')">Female</a></li>
                         
                       </ul>
                     </div>
@@ -167,11 +167,11 @@
                       <ul class="dropdown-menu" id="myUL3">
                         <input class='form-control' type="text" id="myInput3" onkeyup="myFunction3()"  title="Type in a name">
 
-                        <li value='Gold Retriever'><a href="#">Golden Retriever</a></li>
-                        <li><a href="#">Pug</a></li>
-                        <li><a href="#">Corgi</a></li>
-                        <li><a href="#">Shiba</a></li>
-                        <li><a href="#">Beagle</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('golden retriever')">Golden Retriever</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('pug')">Pug</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('corgi')">Corgi</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('shiba')">Shiba</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('beagle')">Beagle</a></li>
 
                       </ul>
                     </div>
