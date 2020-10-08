@@ -1,3 +1,8 @@
+function onclick_age(age){
+	console.log(age);
+	document.getElementById('filters_applied').innerHTML = age;
+}
+
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
@@ -12,7 +17,7 @@ function myFunction() {
         } else {
             li[i].style.display = "none";
         }
-    }
+	}
 }
 
 function myFunction2() {

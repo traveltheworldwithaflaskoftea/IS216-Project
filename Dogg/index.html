@@ -131,13 +131,15 @@
                     <div class="dropdown my-4">
                       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Age 
                       <span class="caret"></span></button>
-                      <ul class="dropdown-menu" id="myUL">
-                        <input class='form-control' type="text" id="myInput" onkeyup="myFunction()"  title="Type in a name">
+                      <div class='form-group'>
+                        <ul class="dropdown-menu" id="myUL">
+                          <input class='form-control' type="text" id="myInput" onkeyup="myFunction()"  title="Type in a name">
 
-                        <li><a href="#">Young</a></li>
-                        <li><a href="#">Old</a></li>
+                          <li><a onclick="onclick_age('young')" href='#'>Young</a></li>
+                          <li onclick="onclick_age('Old')">Old</li>
 
-                      </ul>
+                        </ul>
+                      </div>
                     </div>
                   </div>
 
@@ -164,19 +166,26 @@
                       <ul class="dropdown-menu" id="myUL3">
                         <input class='form-control' type="text" id="myInput3" onkeyup="myFunction3()"  title="Type in a name">
 
-                        <li><a href="#">Golden Retriever</a></li>
+                        <li value='Gold Retriever'><a href="#">Golden Retriever</a></li>
                         <li><a href="#">Pug</a></li>
                         <li><a href="#">Corgi</a></li>
                         <li><a href="#">Shiba</a></li>
                         <li><a href="#">Beagle</a></li>
+
                       </ul>
                     </div>
                   </div>
 
                   <!-- col  -->
+                  
                 
                 <!-- end row -->
                 </div>
+
+              <!-- Letting users know what fields have been selected -->
+              <p id='filters_applied'>Filters Applied:</p>
+
+
               </div>    
             </div>
           </div>
