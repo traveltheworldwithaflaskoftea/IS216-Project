@@ -1,0 +1,33 @@
+
+
+// 1 - Helpers 
+@import '1-helpers/functions';
+@import '1-helpers/mixins';
+@import '1-helpers/variables' ;
+
+// 2 - Basics
+@import '2-basics/base';
+@import '2-basics/typography';
+
+// 3 - Components 
+@import '3-components/buttons';
+@import '3-components/carousel';
+@import '3-components/slider';
+
+// 4 - Layout 
+@import '4-layout/footer';
+@import '4-layout/forms';
+@import '4-layout/grid' ;
+@import '4-layout/navigation' ;
+@import '4-layout/sidebar';
+
+// 5- Pages 
+@import '5-pages/1login';
+@import '5-pages/2signup' ;
+@import '5-pages/3mainpage';
+@import '5-pages/4individualpage';
+@import '5-pages/5adoptionmessagepage' ;
+@import '5-pages/6appointmentpage';
+@import '5-pages/7profilepage';
+@import '5-pages/8wishlist' ;
+@import '5-pages/9passwordreset' ;
