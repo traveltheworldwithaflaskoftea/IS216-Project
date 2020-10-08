@@ -3,7 +3,9 @@
   <head>
     <title>ForeverHome</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
+    <script src="js/main.js"></script>
+ 
     
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i" rel="stylesheet">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
@@ -104,15 +106,66 @@
               <h1>We Care For <span class="d-md-block">My Dog</span></h1>
               <p class="mb-4">We always try to provide your dog the best<span class="d-block"> services.</p>
                
-                <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Age 
-                  <span class="caret"></span></button>
-                  <ul class="dropdown-menu">
-                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-                    <li><a href="#">Young</a></li>
-                    <li><a href="#">Adult</a></li>
-                  </ul>
+                <div class='row'>
+
+                  <!-- // Col -->
+                  <div class='col-3'>
+                    <div class="dropdown my-4">
+                      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Age 
+                      <span class="caret"></span></button>
+                      <ul class="dropdown-menu" id="myUL">
+                        <input class='form-control' type="text" id="myInput" onkeyup="myFunction()"  title="Type in a name">
+
+                        <li><a href="#">Young</a></li>
+                        <li><a href="#">Old</a></li>
+
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- col  -->
+                  <div class='col-3'>
+                    <div class="dropdown my-4">
+                      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Gender 
+                      <span class="caret"></span></button>
+                      <ul class="dropdown-menu" id="myUL2">
+                        <input class='form-control' type="text" id="myInput2" onkeyup="myFunction2()"  title="Type in a name">
+
+                        <li><a href="#">Male</a></li>
+                        <li><a href="#">Female</a></li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- col  -->
+                  <div class='col-3'>
+                    <div class="dropdown my-4">
+                      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Breed 
+                      <span class="caret"></span></button>
+                      <ul class="dropdown-menu" id="myUL3">
+                        <input class='form-control' type="text" id="myInput3" onkeyup="myFunction3()"  title="Type in a name">
+
+                        <li><a href="#">Golden Retriever</a></li>
+                        <li><a href="#">Pug</a></li>
+                        <li><a href="#">Corgi</a></li>
+                        <li><a href="#">Shiba</a></li>
+                        <li><a href="#">Beagle</a></li>
+
+                        
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- col  -->
+                  
+                  
+                <!-- end row -->
                 </div>
+                
+                
+                
+
 
             </div>
           </div>
@@ -838,8 +891,6 @@
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
   <script src="js/isotope.pkgd.min.js"></script>
-
-  
   <script src="js/main.js"></script>
 
   
