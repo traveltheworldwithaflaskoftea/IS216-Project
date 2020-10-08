@@ -1,4 +1,11 @@
+
+// Showing the filters on the search page 
+var search_age = '';
+var search_gender = '';
+var search_breed = '';
+
 function onclick_age(age){
+	var search_age = age;
 	var text = document.getElementById('filters_applied').innerHTML;
 	var text = text.replace('young', '');
 	var text = text.replace('old', '');
@@ -6,6 +13,7 @@ function onclick_age(age){
 }
 
 function onclick_gender(gender){
+	var search_gender = gender;
 	var text = document.getElementById('filters_applied').innerHTML;
 	var text = text.replace('female', '');
 	var text = text.replace('male', '');
@@ -13,6 +21,7 @@ function onclick_gender(gender){
 }
 
 function onclick_breed(breed){
+	var search_breed = breed;
 	var text = document.getElementById('filters_applied').innerHTML;
 	var text = text.replace('golden retriever', '');
 	var text = text.replace('corgi', '');
@@ -21,7 +30,10 @@ function onclick_breed(breed){
 	var text = text.replace('beagle', '');
 	document.getElementById('filters_applied').innerHTML = text + breed;
 }
+// Showing the filters on the search page 
 
+
+// Fuctions for the filter search 
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
@@ -89,6 +101,8 @@ function myFunction4() {
         }
     }
 }
+// End Fuctions for the filter search 
+
 
 AOS.init({
  	duration: 800,
