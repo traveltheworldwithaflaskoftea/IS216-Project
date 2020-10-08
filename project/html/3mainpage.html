@@ -65,25 +65,6 @@
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="#home-section" class="nav-link">Home</a></li>
                 <li><a href="#pet-section" class="nav-link">Find Your Pet</a></li>
-                <!-- <li class="has-children">
-                  <a href="#about-section" class="nav-link">Profile</a>
-                  <ul class="dropdown">
-                    <li><a href="#trainers-section" class="nav-link">Trainers</a></li>
-                    <li><a href="#pricing-section" class="nav-link">Pricing</a></li>
-                    <li><a href="#faq-section" class="nav-link">FAQ</a></li>
-                    <li><a href="#gallery-section" class="nav-link">Gallery</a></li>
-                    <li><a href="#blog-section" class="nav-link">Blog</a></li>
-                    <li class="has-children">
-                      <a href="#">More Links</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li> -->
-                
                 <li><a href="#trainers-section">Appointment</a></li>
                 <li><a href="#services-section">Wishlist</a></li>
                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
@@ -123,11 +104,11 @@
               <span class="icon-paw"></span>
             </div>
             <h2 class="mb-2 heading" data-aos="fade-up">Find Your Pet</h2>
+
+                <!-- Single row -->
                 <div class='row justify-content-center'>
 
                   <!-- // Col -->
-
-
                   <div class="col"> 
                     <div class="dropdown my-4" data-aos="fade-up">
                       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Age 
@@ -178,10 +159,9 @@
 
                   <!-- col  -->
                   
-                
-                <!-- end row -->
                 </div>
-
+                <!-- end row -->
+                
               <!-- Letting users know what fields have been selected -->
               <p id='filters_applied'>Filters Applied: <span id='age'></span><span id='gender'></span><span id='breed'></span></p>
 
@@ -911,6 +891,8 @@
   <script src="../js/jquery.sticky.js"></script>
   <script src="../js/isotope.pkgd.min.js"></script>
   <script src="../js/main.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
 
   
   </body>

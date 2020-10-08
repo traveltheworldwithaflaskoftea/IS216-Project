@@ -1,4 +1,4 @@
-// search button and API 
+// search button which takes in params and calls the PetFinder API 
 function search(){
 	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
 	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
@@ -33,14 +33,13 @@ function search(){
 
 // end search and API 
 
-// Showing the filters on the search page 
+// Showing the applied filters on the search page 
 var search_age = '';
 var search_gender = '';
 var search_breed = '';
 
 function onclick_age(age){
 	var search_age = age;
-
 	document.getElementById('age').innerHTML = ' ' + `<badge class="badge badge-dark">` + ' ' + age + ' ' + `</badge>`;
 
 	// var text = document.getElementById('filters_applied').innerHTML;
@@ -73,7 +72,7 @@ function onclick_breed(breed){
 }
 // end Showing the filters on the search page 
 
-// Fuctions for the filter search 
+// Fuctions for the filter search
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
