@@ -1,3 +1,32 @@
+function onclick_age(age){
+	var text = document.getElementById('filters_applied').innerHTML;
+	var text = text.replace('young', '');
+	var text = text.replace('old', '');
+	document.getElementById('filters_applied').innerHTML = text + age;
+}
+
+function onclick_gender(gender){
+	var text = document.getElementById('filters_applied').innerHTML;
+	var text = text.replace('female', '');
+	var text = text.replace('male', '');
+	document.getElementById('filters_applied').innerHTML = text + gender;
+}
+
+function onclick_breed(breed){
+	var text = document.getElementById('filters_applied').innerHTML;
+	var text = text.replace('golden retriever', '');
+	var text = text.replace('corgi', '');
+	var text = text.replace('pug', '');
+	var text = text.replace('shiba', '');
+	var text = text.replace('beagle', '');
+	document.getElementById('filters_applied').innerHTML = text + breed;
+}
+
+function onclick_breed(breed){
+	console.log(breed);
+	document.getElementById('filters_applied').innerHTML = breed;
+}
+
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
@@ -12,7 +41,7 @@ function myFunction() {
         } else {
             li[i].style.display = "none";
         }
-    }
+	}
 }
 
 function myFunction2() {
