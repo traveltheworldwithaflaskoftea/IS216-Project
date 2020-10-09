@@ -158,12 +158,33 @@
                   </div>
 
                   <!-- col  -->
+                  <div class="col" data-aos="fade-up">
+                    <div class="dropdown my-4">
+                      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Breed 
+                      <span class="caret"></span></button>
+                      <ul class="dropdown-menu" id="myUL3">
+                        <input class='form-control' type="text" id="myInput3" onkeyup="myFunction3()"  title="Type in a name">
+
+                        <li><a href="#myInput" onclick="onclick_breed('Golden Retriever')">Golden Retriever</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('Pug')">Pug</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('Corgi')">Corgi</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('Shiba')">Shiba</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('Beagle')">Beagle</a></li>
+                      </ul>
+                    </div>
+                  </div>
                   
+
+                <!-- end row  -->
                 </div>
                 <!-- end row -->
                 
               <!-- Letting users know what fields have been selected -->
-              <p id='filters_applied'>Filters Applied: <span id='age'></span><span id='gender'></span><span id='breed'></span></p>
+              <p id='filters_applied'>Filters Applied: 
+                <span id='age'><badge id="age_badge" class="badge badge-dark"></badge></span>
+                <span id='gender'><badge id="gender_badge" class="badge badge-dark"></badge></span>
+                <span id='breed'><badge id="breed_badge" class="badge badge-dark"></badge></span>
+              </p>
 
               <button class='btn btn-primary' onclick="search()">Click here to find your forever pet!!</button>
               </div>    

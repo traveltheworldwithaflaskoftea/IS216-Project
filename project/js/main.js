@@ -4,26 +4,15 @@ function search(){
 	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
 
 	var client  = new petfinder.Client({apiKey: id, secret: secret});
-	var search_parameters;
-
-	if(search_age != ''){
-		search_parameters += "age:'" + search_age + "'";		
-	}
-	if(search_gender != ''){
-		search_parameters += "gender:'" + search_gender + "'";		
-	}
-	if(search_breed != ''){
-		search_parameters += "breed:'" + search_breed + "'";		
-	}
-	if(search_breed != ''){
-		search_parameters += "breed:'" + search_breed + "'";		
-	}
+	var search_age = document.getElementById('age_badge').innerHTML.slice(1,-1);
+	var search_gender = document.getElementById('gender_badge').innerHTML.slice(1,-1);
+	var search_breed = document.getElementById('breed_badge').innerHTML.slice(1,-1);
 
 	client.animal.search({
 			type: 'dog',
-			breed: 'pug',
-			state: 'NJ',
-			location: 'NJ'
+			breed: search_breed,
+			age: search_age,
+			gender: search_gender
 			})
 		.then(resp => {
 			// Do something with resp.data.breeds
@@ -34,14 +23,13 @@ function search(){
 // end search and API 
 
 // Showing the applied filters on the search page 
-var search_age = '';
-var search_gender = '';
-var search_breed = '';
+// var search_age;
+// var search_gender ;
+// var search_breed;
 
 function onclick_age(age){
 	var search_age = age;
-	document.getElementById('age').innerHTML = ' ' + `<badge class="badge badge-dark">` + ' ' + age + ' ' + `</badge>`;
-
+	document.getElementById('age').innerHTML = ' ' + `<badge id="age_badge" class="badge badge-dark">` + ' ' + age + ' ' + `</badge>`;
 	// var text = document.getElementById('filters_applied').innerHTML;
 	// var text = text.replace('young', '');
 	// var text = text.replace('old', '');
@@ -50,7 +38,7 @@ function onclick_age(age){
 
 function onclick_gender(gender){
 	var search_gender = gender;
-	document.getElementById('gender').innerHTML = ' ' + `<badge class="badge badge-dark">` + ' ' + gender + ' ' + `</badge>`;
+	document.getElementById('gender').innerHTML = ' ' + `<badge id="gender_badge" class="badge badge-dark">` + ' ' + gender + ' ' + `</badge>`;
 
 	// var text = document.getElementById('filters_applied').innerHTML;
 	// var text = text.replace('female', '');
@@ -60,7 +48,7 @@ function onclick_gender(gender){
 
 function onclick_breed(breed){
 	var search_breed = breed;
-	document.getElementById('breed').innerHTML = ' ' + `<badge class="badge badge-dark">` + ' ' + breed + ' ' + `</badge>`;
+	document.getElementById('breed').innerHTML = ' ' + `<badge id="breed_badge" class="badge badge-dark">` + ' ' + breed + ' ' + `</badge>`;
 
 	// var text = document.getElementById('filters_applied').innerHTML;
 	// var text = text.replace('golden retriever', '');
