@@ -22,6 +22,10 @@ function search(){
 
 // end search and API 
 
+//Lets do a code that displays the results in cards
+
+// end of displaying cards
+
 // Showing the applied filters on the search page 
 // var search_age;
 // var search_gender ;
