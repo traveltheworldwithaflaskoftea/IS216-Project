@@ -1,19 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Log In</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
     <title>Login</title>
-
-    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
-    <script src="../js/main.js"></script>
- 
     
+    <script src="../js/main.js"></script>
+    <script src="../ownjs/1login.js"></script>
+ 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i" rel="stylesheet">
     <link rel="stylesheet" href="../fonts/icomoon/style.css">
 
@@ -42,23 +36,28 @@
         margin-bottom: 30px;
       }
     </style>
-    
+
 </head>
 <body>
-  <div class='container'>
-  
     <div class="container">
       <div class="row  d-flex justify-content-center align-middle mt-4 ">
-        <form class=" col-10 col-sm-6 col-md-7 col-lg-4 shadow white mt-5 mb-5" method="POST">
+        <div class="col-6 shadow white mt-5 mb-5">
           <div class="row d-flex justify-content-center">
-                <h1 class=" col-12 font-weight-normal mt-3" style="margin-bottom: 20px;">Login</h1> <br>
-                <input type="text" class="col-8 mb-2 form-control" name="username" id="username"  placeholder="username" required>
-                <input type="password" class="col-8 mb-2 form-control" id="password" name="password" placeholder="password" required><br>
-                <a class="col-12 text-center mb-3 blue size pf" href="">Forgot your password? </a>
-                <button type="submit" class="btn btn-primary col-8 col-offset-2 size" id="connect">Log In</button><br>
-                <a href="" class=" col-12 text-center mb-4 size">Create an account</a>
+                <h1 class="col-12 font-weight-normal mt-3" style="margin-bottom: 20px;">Login</h1> 
+                <br>
+                <!-- getElementById('username').value-->
+                <input type="text" class="col-8 mb-2 form-control" id="username"  placeholder="Username" required>
+
+                 <!-- getElementById('password').value-->
+                <input type="password" class="col-8 mb-2 form-control" id="password" placeholder="Password" required><br>
+
+                <a class="col-12 text-center mb-3 blue size pf" href="9passwordreset.html">Forgot Password? </a>
+
+                <button type="submit" class="btn btn-primary col-8 col-offset-2 size" id="connect" onclick='ifValid()'>Log In</button><br>
+
+                <a href="2signup.html" class=" col-12 text-center mb-4 size">Create an account</a>
           </div>
-        </form>
+        </div>
       </div>
     </div>
       
