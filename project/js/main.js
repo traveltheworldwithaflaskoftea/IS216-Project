@@ -67,6 +67,8 @@ function load_default_cards(){
 
 
 
+
+
 // search button which takes in params and calls the PetFinder API 
 function search(){
 	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
