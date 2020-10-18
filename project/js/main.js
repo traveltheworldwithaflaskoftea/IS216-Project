@@ -22,6 +22,26 @@ function display_cards(result_array){
 }
 // end code for display cards 
 
+// Dog API search by ID 
+function search_dog_id(id){
+	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
+	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
+
+	var client  = new petfinder.Client({apiKey: id, secret: secret});
+
+	client.animal.search({
+		type: 'dog',
+		id = id
+		})
+	.then(resp => {
+		// Do something with resp.data.breeds
+		var results_array = resp.data.animals;
+		console.log(results_array);
+		//
+	});
+}
+
+
 // Loading the cards when the page loads for the first time
 function load_default_cards(){
 	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
@@ -42,8 +62,6 @@ function load_default_cards(){
 	});
 }
 // End of loading cards for the first time
-
-
 
 // search button which takes in params and calls the PetFinder API 
 function search(){
