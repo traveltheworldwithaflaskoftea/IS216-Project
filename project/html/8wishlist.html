@@ -1,20 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wishlist</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
+    <script src="../js/main.js"></script>
+ 
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i">
+    <link rel="stylesheet" href="../fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="../css/aos.css"> 
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
 <body>
-    <!-- This is the top navigation bar -->
-    <a href='#home'>Home</a>
-    <a href='#profile'>Profile</a>
-    <a href='#appointments'>Appointments</a>
-    <a href='#wishlist'>Wishlist</a>
+    <!-- Top navigation bar -->
+    <div class="site-wrap">
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+            </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner" >
+
+        <div class="container">
+          <div class="row align-items-center">
+            
+            <div class="col-6 col-xl-2">
+              <h1 class="mb-0 site-logo"><a href="3mainpage.html" class="h2 mb-0"><span class="text-primary">FureverHome</span> </a></h1>
+            </div>
+  
+            <div class="col-12 col-md-10 d-none d-xl-block">
+              <nav class="site-navigation position-relative text-right" role="navigation">
+  
+                <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                  <li><a href="3mainpage.html" class="nav-link">Home</a></li>
+                  <li><a href= "7profilepage.html" class="nav-link">Profile</a></li>
+                  <li><a href= "6appointmentpage.html">Appointment</a></li>
+                  <li><a href="8wishlist.html">Wishlist</a></li>
+                </ul>
+              </nav>
+            </div>
+  
+            <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+  
+          </div>
+        </div>
+      </header>
+
+    <!-- Body section -->
+    <section class="site-blocks-cover overflow-hidden bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 align-self-center text-center text-md-left">
+              <div class="intro-text">
+                <h1>Your wishlist</span></h1>
+                <p class="mb-4">Here is a list of pets you have <span class="d-block"> favorited </p>
+              </div>
+            </div>
+            <div class="col-md-5 align-self-end text-center text-md-right">
+                <img src="../images/cutepets.jpg" alt="Image" class="img-fluid cover-img">
+            </div> 
+          </div>
+        </div>    
+    </section>
 
     <div class="wishlist">
-        <h1>WISHLIST</h1>
-
         <p>
             <ul>
                 <li>
@@ -52,9 +115,74 @@
     </div>
         
     <!-- Footer -->
-    <footer id="main-footer">
-        <p>Copyright &copy; ForeverHome</p>
+    <footer class="site-footer">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-5">
+                <h2 class="footer-heading mb-4">About Us</h2>
+                <p>🐶FureverHome🐱 is a one-stop Pet Adoption portal that helps you find your perfect pet! Our portal allows you to search and set appointments with the nearest pet adoption places, add interested pets into your wishlist and many more!</p>
+                </div>
+                <div class="col-md-3 ml-auto">
+                <h2 class="footer-heading mb-4">Quick Links</h2>
+                <ul class="list-unstyled">
+                    <li><a href="3mainpage.html" class="smoothscroll">Home</a></li>
+                    <li><a href= "7profilepage.html" class="smoothscroll">Profile</a></li>
+                    <li><a href= "6appointmentpage.html" class="smoothscroll">Appointment</a></li>
+                    <li><a href="8wishlist.html" class="smoothscroll">Wishlist</a></li>
+                </ul>
+                </div>
+                <!-- Social Media Buttons-->
+                <div class="col-md-3">
+                <h2 class="footer-heading mb-4">Follow Us</h2>
+                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-3">
+            <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
+            <form action="#" method="post" class="footer-subscribe">
+                <div class="input-group mb-3">
+                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-primary text-black" type="button" id="button-addon2">Send</button>
+                </div>
+                </div>
+            </form>
+            </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+            <div class="col-md-12">
+            <div class="border-top pt-5">
+                <p class="copyright"><small>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This portal is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by FureverHome
+            </small></p>
+            </div>
+            </div>
+        </div>
+        </div>
     </footer>
+
+    </div> <!-- .site-wrap -->  
+    <!-- Scripts -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/jquery.countdown.min.js"></script>
+    <script src="../js/jquery.easing.1.3.js"></script>
+    <script src="../js/aos.js"></script>
+    <script src="../js/jquery.fancybox.min.js"></script>
+    <script src="../js/jquery.sticky.js"></script>
+    <script src="../js/isotope.pkgd.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
 
 </body>
 </html>
