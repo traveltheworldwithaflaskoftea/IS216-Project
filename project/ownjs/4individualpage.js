@@ -6,11 +6,9 @@ function load_individual_dog(){
     search_dog_id(id);
 
 }
-
 function search_dog_id(id){
 	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
 	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
-
 	var client  = new petfinder.Client({apiKey: id, secret: secret});
 
 	client.animal.search({
