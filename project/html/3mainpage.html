@@ -111,8 +111,10 @@
                         <ul class="dropdown-menu" id="myUL">
                           <input class='form-control' type="text" id="myInput" onkeyup="myFunction()"  title="Type in a name">
 
+                          <li><a onclick="onclick_age('Baby')" href='#myInput'>Baby</a></li>
                           <li><a onclick="onclick_age('Young')" href='#myInput'>Young</a></li>
-                          <li><a onclick="onclick_age('Old')" href="#myInput">Old</a></li>
+                          <li><a onclick="onclick_age('Adult')" href='#myInput'>Adult</a></li>
+                          <li><a onclick="onclick_age('Senior')" href="#myInput">Senior</a></li>
 
                         </ul>
                       </div>
@@ -145,7 +147,7 @@
                         <li><a href="#myInput" onclick="onclick_breed('Golden Retriever')">Golden Retriever</a></li>
                         <li><a href="#myInput" onclick="onclick_breed('Pug')">Pug</a></li>
                         <li><a href="#myInput" onclick="onclick_breed('Corgi')">Corgi</a></li>
-                        <li><a href="#myInput" onclick="onclick_breed('Shiba')">Shiba</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('Shiba Inu')">Shiba Inu</a></li>
                         <li><a href="#myInput" onclick="onclick_breed('Beagle')">Beagle</a></li>
                       </ul>
                     </div>
@@ -165,10 +167,7 @@
                         <li><a href="#myInput" onclick="onclick_state('CA')">California</a></li>
                       </ul>
                     </div>
-                  </div>
-
-                  <button onclick="search_by_id('49505099')">search_by_id</button>
-                  
+                  </div>               
 
                 <!-- end row  -->
                 </div>
@@ -179,7 +178,7 @@
                 <span id='age'><badge id="age_badge" class="badge badge-dark"></badge></span>
                 <span id='gender'><badge id="gender_badge" class="badge badge-dark"></badge></span>
                 <span id='breed'><badge id="breed_badge" class="badge badge-dark"></badge></span>
-                <span id='state'><badge id="breed_state" class="badge badge-dark"></badge></span>
+                <span id='state'><badge id="state_badge" class="badge badge-dark"></badge></span>
               </p>
 
               <a href='#trainers-section'>
