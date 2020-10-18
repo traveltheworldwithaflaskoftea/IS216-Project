@@ -1,3 +1,27 @@
+// code for display cards
+function display_cards(result_array){
+	var html = ''; // This will be used to replace dog-card-deck innerHTML later
+		for (result of result_array){
+			if(result.photos.length > 0){ //making sure the array has pictures
+				html += `<div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
+						<div class="trainer">
+						<figure>
+						<a href='4individualpage.html?id=${result.id}'><img src="${result.photos[0]['full']}" alt="Image" class="img-fluid"></a>
+						</figure>
+						<div class="px-md-3">
+							<h3>${result.name}</h3>
+							<p>${result.description}</p>
+						</div>
+						</div>
+					</div>
+					`;
+			}	
+		// end for loop, now lets put html inside the dog-card-deck
+		document.getElementById('dog-card-deck').innerHTML = html;
+		}
+}
+// end code for display cards 
+
 // Loading the cards when the page loads for the first time
 function load_default_cards(){
 	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
@@ -11,28 +35,9 @@ function load_default_cards(){
 		})
 	.then(resp => {
 		// Do something with resp.data.breeds
-		console.log(resp.data.animals);
-		var result_array = resp.data.animals;
-		var html = ''; // This will be used to replace dog-card-deck innerHTML later
-		for (result of result_array){
-			console.log(result)
-			if(result.photos.length > 0){ //making sure the array has pictures
-				html += `<div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
-						<div class="trainer">
-						<figure>
-						<img src="${result.photos[0]['full']}" alt="Image" class="img-fluid">
-						</figure>
-						<div class="px-md-3">
-							<h3>${result.name}</h3>
-							<p>${result.description}</p>
-						</div>
-						</div>
-					</div>
-					`;
-			}	
-		// end for loop, now lets put html inside the dog-card-deck
-		document.getElementById('dog-card-deck').innerHTML = html;
-		}
+		var results_array = resp.data.animals;
+		console.log(results_array);
+		display_cards(results_array);
 		//
 	});
 }
@@ -58,7 +63,8 @@ function search(){
 			})
 		.then(resp => {
 			// Do something with resp.data.breeds
-			console.log(resp.data.animals);
+			var results_array = resp.data.animals;
+			display_cards(results_array);
 		});
 }
 
