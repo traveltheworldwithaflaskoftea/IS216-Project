@@ -30,6 +30,19 @@
 
     <link rel="stylesheet" href="../css/style.css">
 
+    <style>
+      h2.heading1 {
+        margin-top: 20px;
+      }
+      div.message{
+        margin-top: -20px;
+      }
+      textarea.form-control{
+        margin-bottom: 25px;
+      }
+
+    </style>
+
 </head>
 <body>
     <!-- This is the top navigation bar -->
@@ -38,10 +51,74 @@
     <a href='#appointments'>Appointments</a>
     <a href='#wishlist'>Wishlist</a>
 
+        
+    <section class="" id="contact-section">
+        <div class="container">
+          <div class="row no-gutters">
+            <div class="col-lg-6 bg-primary">
+              <!-- <form action="#" class="p-5 contact-form"></form> -->
+
+              <div class="container">
+                
+                <h2 class="h4 mb-5 heading1">Adoption Message</h2> 
+  
+                <div class="row form-group">
+                  <div class="col-md-12 message">
+                    <label for="message">Write A Message</label> 
+                    <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your adoption message here!"></textarea>
+                  </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        <input type="submit" value="Send Message" class="btn btn-dark btn-md text-white">
+                    </div>
+                    <div class="dropdown col-md-6">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Zoom Call Schedule 
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">Option1</a>
+                            <a class="dropdown-item" href="#">Option2</a>
+                            <a class="dropdown-item" href="#">Option3</a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-lg-6 bg-secondary">
+              <div class="row justify-content-center align-items-center h-100">
+                <div class="col-lg-6 text-center heading-section mb-5 align-self-center">
+                  <div class="paws">
+                    <span class="icon-paw"></span>
+                  </div>
+                  <h2 class="text-white mb-5">Contact Us</h2>
+                  <ul class="list-unstyled text-left address">
+                    <li>
+                      <span class="d-block">Address:</span>
+                      <p>Melbourne St,South Birbane 4101 Austraila</p>
+                    </li>
+                    <li>
+                      <span class="d-block">Phone:</span>
+                      <p>+(000) 123 4567 89</p>
+                    </li>
+                    <li>
+                      <span class="d-block">Email:</span>
+                      <p>info@yourdomain.com</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
     <!-- Footer -->
     <footer id="main-footer">
-        <p>Copyright &copy; ForeverHome</p>
+        <p>Copyright &copy; FureverHome</p>
     </footer>
 
        
