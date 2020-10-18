@@ -119,6 +119,14 @@ body:after {
     .site-section-heading {
       font-size: 3rem; } }
 
+.login-footer{ 
+  text-align: center;
+  background-color: #333333;
+  color: white; 
+  padding: 10px 50px 10px 50px; 
+  padding: auto; 
+}
+    
 .site-footer {
   padding: 4em 0;
   background: #333333; }
