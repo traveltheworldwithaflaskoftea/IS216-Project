@@ -6,7 +6,7 @@ function display_cards(result_array){
 				html += `<div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
 							<div class="trainer">
 							<figure>
-							<a href='4individualpage.html$id=${result.id}'><img src="${result.photos[0]['full']}" alt="Image" class="img-fluid"></a>
+							<a href='4individualpage.html?id=${result.id}'><img src="${result.photos[0]['full']}" alt="Image" class="img-fluid"></a>
 							</figure>
 							<div class="px-md-3">
 								<h3>${result.name}</h3>
@@ -36,6 +36,7 @@ function load_default_cards(){
 	.then(resp => {
 		// Do something with resp.data.breeds
 		var results_array = resp.data.animals;
+		console.log(results_array);
 		display_cards(results_array);
 	});
 }
@@ -73,13 +74,10 @@ function search_by_id(id){
 
 	var client  = new petfinder.Client({apiKey: id, secret: secret});
 
-	client.animal.search({
-		type: 'dog',
-		id: id
-		})
+	client.animal.show(49505058)
 	.then(resp => {
 		// Do something with resp.data.breeds
-		var results_array = resp.data.animals;
+		var results_array = resp.data.animal;
 		console.log(results_array);
 	});
 }
@@ -115,6 +113,10 @@ function onclick_breed(breed){
 	// var text = text.replace('shiba', '');
 	// var text = text.replace('beagle', '');
 	// document.getElementById('filters_applied').innerHTML = text + "  " + `<button class="badge badge-dark">` + breed + `</button>`;
+}
+function onclick_state(state){
+	var search_state = state;
+	document.getElementById('state').innerHTML = ' ' + `<badge id="state_badge" class="badge badge-dark">` + ' ' + state + ' ' + `</badge>`;
 }
 // end Showing the filters on the search page 
 
@@ -187,7 +189,6 @@ function myFunction4() {
     }
 }
 // End Fuctions for the filter search 
-
 
 AOS.init({
  	duration: 800,
