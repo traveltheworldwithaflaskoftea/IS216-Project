@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
 
     <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
-
+   
     <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
 
     <link rel="stylesheet" href="../css/aos.css">
@@ -45,6 +45,9 @@
           <div class="row d-flex justify-content-center">
                 <h1 class="col-12 font-weight-normal mt-3" style="margin-bottom: 20px;">Login</h1> 
                 <br>
+
+                <div id="error" class="col-8 mb-2" style="color:red; font-weight: bold;"></div>
+
                 <!-- getElementById('username').value-->
                 <input type="text" class="col-8 mb-2 form-control" id="username"  placeholder="Username" required>
 
@@ -53,7 +56,7 @@
 
                 <a class="col-12 text-center mb-3 blue size pf" href="9passwordreset.html">Forgot Password? </a>
 
-                <button type="submit" class="btn btn-primary col-8 col-offset-2 size" id="connect" onclick='ifValid()'>Log In</button><br>
+                <button class="btn btn-primary col-8 col-offset-2 size" id="login" href="" onclick='ifValid()'>Log In</button><br>
 
                 <a href="2signup.html" class=" col-12 text-center mb-4 size">Create an account</a>
           </div>
@@ -65,7 +68,7 @@
     <footer class="login-footer fixed-bottom">
         <span>Copyright &copy; FureverHome</span>
   </footer>
-</div>
+
 
 
 <script src="../js/jquery-3.3.1.min.js"></script>
