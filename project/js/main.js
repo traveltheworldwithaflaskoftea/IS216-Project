@@ -66,6 +66,24 @@ function search(){
 
 // end search and API 
 
+// Function4: Searching by ID 
+function search_by_id(id){
+	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
+	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
+
+	var client  = new petfinder.Client({apiKey: id, secret: secret});
+
+	client.animal.search({
+		type: 'dog',
+		id: id
+		})
+	.then(resp => {
+		// Do something with resp.data.breeds
+		var results_array = resp.data.animals;
+		console.log(results_array);
+	});
+}
+
 // Showing the applied filters on the search page 
 function onclick_age(age){
 	var search_age = age;
