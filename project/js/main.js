@@ -33,10 +33,37 @@ function load_default_cards(){
 		// end for loop, now lets put html inside the dog-card-deck
 		document.getElementById('dog-card-deck').innerHTML = html;
 		}
+<<<<<<< HEAD
+=======
+}
+// end code for display cards 
+
+// Loading the cards when the page loads for the first time
+function load_default_cards(){
+	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
+	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
+
+	var client  = new petfinder.Client({apiKey: id, secret: secret});
+
+	client.animal.search({
+		type: 'dog',
+		age: 'Young'
+		})
+	.then(resp => {
+		// Do something with resp.data.breeds
+		var results_array = resp.data.animals;
+		console.log(results_array);
+		display_cards(results_array);
+>>>>>>> parent of 8e99680... serach by ID
 		//
 	});
 }
 // End of loading cards for the first time
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> parent of 8e99680... serach by ID
 
 
 
