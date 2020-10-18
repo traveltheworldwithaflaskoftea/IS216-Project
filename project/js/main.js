@@ -1,12 +1,26 @@
-// code for display cards
-function display_cards(result_array){
-	var html = ''; // This will be used to replace dog-card-deck innerHTML later
+// Loading the cards when the page loads for the first time
+function load_default_cards(){
+	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
+	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
+
+	var client  = new petfinder.Client({apiKey: id, secret: secret});
+
+	client.animal.search({
+		type: 'dog',
+		age: 'Young'
+		})
+	.then(resp => {
+		// Do something with resp.data.breeds
+		console.log(resp.data.animals);
+		var result_array = resp.data.animals;
+		var html = ''; // This will be used to replace dog-card-deck innerHTML later
 		for (result of result_array){
+			console.log(result)
 			if(result.photos.length > 0){ //making sure the array has pictures
 				html += `<div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
 						<div class="trainer">
 						<figure>
-						<a href='4individualpage.html?id=${result.id}'><img src="${result.photos[0]['full']}" alt="Image" class="img-fluid"></a>
+						<a href='4individualpage.html$id=${result.id}'><img src="${result.photos[0]['full']}" alt="Image" class="img-fluid"></a>
 						</figure>
 						<div class="px-md-3">
 							<h3>${result.name}</h3>
@@ -19,28 +33,10 @@ function display_cards(result_array){
 		// end for loop, now lets put html inside the dog-card-deck
 		document.getElementById('dog-card-deck').innerHTML = html;
 		}
+<<<<<<< HEAD
+=======
 }
 // end code for display cards 
-
-// Dog API search by ID 
-function search_dog_id(id){
-	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
-	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
-
-	var client  = new petfinder.Client({apiKey: id, secret: secret});
-
-	client.animal.search({
-		type: 'dog',
-		id = id
-		})
-	.then(resp => {
-		// Do something with resp.data.breeds
-		var results_array = resp.data.animals;
-		console.log(results_array);
-		//
-	});
-}
-
 
 // Loading the cards when the page loads for the first time
 function load_default_cards(){
@@ -58,10 +54,20 @@ function load_default_cards(){
 		var results_array = resp.data.animals;
 		console.log(results_array);
 		display_cards(results_array);
+>>>>>>> parent of 8e99680... serach by ID
 		//
 	});
 }
 // End of loading cards for the first time
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> parent of 8e99680... serach by ID
+
+
+
+
 
 // search button which takes in params and calls the PetFinder API 
 function search(){
@@ -81,8 +87,7 @@ function search(){
 			})
 		.then(resp => {
 			// Do something with resp.data.breeds
-			var results_array = resp.data.animals;
-			display_cards(results_array);
+			console.log(resp.data.animals);
 		});
 }
 
