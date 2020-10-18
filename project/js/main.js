@@ -30,8 +30,7 @@ function load_default_cards(){
 	var client  = new petfinder.Client({apiKey: id, secret: secret});
 
 	client.animal.search({
-		type: 'dog',
-		age: 'Young'
+		type: 'dog'
 		})
 	.then(resp => {
 		// Do something with resp.data.breeds
@@ -46,13 +45,36 @@ function load_default_cards(){
 function search(){
 	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
 	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
+	// var search_state = '';
 
 	var client  = new petfinder.Client({apiKey: id, secret: secret});
 	var search_age = document.getElementById('age_badge').innerHTML.slice(1,-1);
 	var search_gender = document.getElementById('gender_badge').innerHTML.slice(1,-1);
 	var search_breed = document.getElementById('breed_badge').innerHTML.slice(1,-1);
+	var search_state = document.getElementById('state_badge').innerHTML.slice(1,-1);
+	console.log(search_state);
 
-	client.animal.search({
+	if (search_state != ''){ //Got search states 
+		client.animal.search({
+			type: 'dog',
+			breed: search_breed,
+			age: search_age,
+			gender: search_gender,
+			location: search_state
+			})
+		.then(resp => {
+			// Do something with resp.data.breeds
+			var results_array = resp.data.animals;
+			console.log(results_array);
+			display_cards(results_array);	
+			// If no results
+			if(results_array.length == 0){
+				document.getElementById('dog-card-deck').innerHTML = '<div class="rol"><p class="justify-content-center text-center">No results</p></div>';
+			}
+		});
+	}
+	else{
+		client.animal.search({ //No search states 
 			type: 'dog',
 			breed: search_breed,
 			age: search_age,
@@ -61,8 +83,15 @@ function search(){
 		.then(resp => {
 			// Do something with resp.data.breeds
 			var results_array = resp.data.animals;
+			console.log(results_array);
 			display_cards(results_array);	
+			// If no results
+			if(results_array.length == 0){
+				document.getElementById('dog-card-deck').innerHTML = '<p>No results</p>';
+			}
 		});
+	}
+	
 }
 
 // end search and API 
