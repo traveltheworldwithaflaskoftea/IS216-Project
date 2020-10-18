@@ -20,7 +20,7 @@ function load_default_cards(){
 				html += `<div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
 						<div class="trainer">
 						<figure>
-						<img src="${result.photos[0]['full']}" alt="Image" class="img-fluid">
+						<a href='4individualpage.html$id=${result.id}'><img src="${result.photos[0]['full']}" alt="Image" class="img-fluid"></a>
 						</figure>
 						<div class="px-md-3">
 							<h3>${result.name}</h3>
