@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="../css/style.css">
     
   </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section">
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section" onload="load_default_cards()">
   
 
   <div id="overlayer"></div>
@@ -288,6 +288,8 @@
       </div>
     </section> -->
 
+    <!-- Card sections for the pets -->
+    <!-- This is the nice looking header -->
     <section class="site-section trainers" id="trainers-section">
       <div class="container">
         <div class="row justify-content-center" data-aos="fade-up">
@@ -298,7 +300,9 @@
             <h2 class="mb-2 heading">Pets Available</h2>
           </div>
         </div>
-        <div class="row">
+        <!-- Here starts the row -->
+        <div class="row" id='dog-card-deck'>
+          <!-- col1 -->
           <div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
             <div class="trainer">
               <figure>
@@ -307,14 +311,11 @@
               <div class="px-md-3">
                 <h3>Jessica White</h3>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <!-- <ul class="ul-social-circle">
-                  <li><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li><a href="#"><span class="icon-instagram"></span></a></li>
-                  <li><a href="#"><span class="icon-facebook"></span></a></li>
-                </ul> -->
               </div>
             </div>
           </div>
+          <!-- end of col 1 -->
+          <!-- col 2 -->
           <div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="trainer">
               <figure>
@@ -331,7 +332,8 @@
               </div>
             </div>
           </div>
-
+          <!-- end of col2 -->
+          <!-- col 3 -->
           <div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up"  data-aos-delay="200">
             <div class="trainer">
               <figure>
@@ -348,7 +350,8 @@
               </div>
             </div>
           </div>
-
+          <!-- end of col3 -->
+        <!-- This Div ends the row -->
         </div>
       </div>
     </section>
