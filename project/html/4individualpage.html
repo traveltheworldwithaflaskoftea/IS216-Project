@@ -96,7 +96,7 @@
         
 
         <!-- Carousel Code -->
-        <section class="site-section" id="carousel">
+        <section class="site-section pb-1" id="carousel">
             <div class="rows">
                 <div class="carousel-container col-xs-12">
 
@@ -140,32 +140,149 @@
             </div> 
         </section>
 
-    <!-- Details of pet-->
-    <div class='petdetail'>
-        <p> 
-            <ul>
-                <li>Age: 12</li>
-                <li> Gender: Female</li>
-                <li> Breed: Golden Retriever</li>
-                <li> Location: Sunshine Pets </li>
-                <li>Description: Funny quirky ball of sunshine!</li>
-                <li>Health: Microchipped & Vaccinated</li>
-            </ul>        
-        </p>
-    </div>
-    <div class='buttonsdiv'>
+
+    <section class="site-section p-0">
+        <div class="container" id="accordion">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 text-center heading-section ">
+              <div class="paws">
+                <span class="icon-paw"></span>
+              </div>
+              <h2 class="text-black mb-2">Information</h2>
+            </div>
+          </div>
+
+          
+          <div class="row accordion justify-content-center block__76208">
+            <div class="col-lg-5 mr-auto order-lg-1">
+              <div class="accordion-item">
+                <h3 class="mb-0 heading">
+                  <a class="btn-block" data-toggle="collapse show"  role="button" aria-expanded="true" aria-controls="collapseFive">Description<span class="icon"></span></a>
+                </h3>
+                <div id="collapseFive" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="body-text">
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                  </div>
+                </div>
+              </div> <!-- .accordion-item -->
+
+              <div class="accordion-item">
+                <h3 class="mb-0 heading">
+                  <a class="btn-block" data-toggle="collapse show"  role="button" aria-expanded="true" >Address<span class="icon"></span></a>
+                </h3>
+                <div id="collapseSeven" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="body-text">
+                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                  </div>
+                </div>
+              </div> <!-- .accordion-item -->
+
+              <div class="accordion-item">
+                <h3 class="mb-0 heading">
+                  <a class="btn-block" data-toggle="collapse show"  role="button" aria-expanded="true" >Age<span class="icon"></span></a>
+                </h3>
+                <div id="collapseSix" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="body-text">
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                  </div>
+                </div>
+              </div> <!-- .accordion-item -->
+  
+              <div class="accordion-item">
+                <h3 class="mb-0 heading">
+                  <a class="btn-block" data-toggle="collapse show"  role="button" aria-expanded="true" >Breed<span class="icon"></span></a>
+                </h3>
+                <div id="collapseSix" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="body-text">
+                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                  </div>
+                </div>
+              </div> <!-- .accordion-item -->
+  
+              <div class="accordion-item">
+                <h3 class="mb-0 heading">
+                  <a class="btn-block" data-toggle="collapse show"  role="button" aria-expanded="true" >Gender<span class="icon"></span></a>
+                </h3>
+                <div id="collapseSeven" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="body-text">
+                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                  </div>
+                </div>
+              </div> <!-- .accordion-item -->
+            </div>
+  
+            
+          </div>
+        </div>
+      </section>
+
+    
+        
         <!-- Wishlist Button-->
-        <button id='wishlistbutton' name='wishlistbutton'>😍 Wishlist </button>
+        
+        <div class='row justify-content-center'> 
+        <button class=" col mx-5 btn btn-primary dropdown-toggle" id='wishlistbutton' name='wishlistbutton'>😍 Wishlist </button>
         <br>
         <!-- Share button-->
-        <button id='sharebutton' name='sharebutton'>📩 Share</button>
+        <button class="col mx-5 btn btn-primary dropdown-toggle" id='sharebutton' name='sharebutton'>📩 Share</button>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <footer id="main-footer" >
-        <p>Copyright &copy; FureverHome</p>
-    </footer>        
-    </div> 
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-5">
+                  <h2 class="footer-heading mb-4">About Us</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
+                </div>
+                <div class="col-md-3 ml-auto">
+                  <h2 class="footer-heading mb-4">Quick Links</h2>
+                  <ul class="list-unstyled">
+                    <li><a href="#home-section" class="smoothscroll">Home</a></li>
+                    <li><a href="#trainers-section" class="smoothscroll">Profile</a></li>
+                    <li><a href="#services-section" class="smoothscroll">Appointment</a></li>
+                    <li><a href="#testimonials-section" class="smoothscroll">Wishlist</a></li>
+                    <li><a href="#contact-section" class="smoothscroll">Contact Us</a></li>
+                  </ul>
+                </div>
+                <!-- Social Media Buttons-->
+                <div class="col-md-3">
+                  <h2 class="footer-heading mb-4">Follow Us</h2>
+                  <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                  <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
+                  <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
+                  <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
+              <form action="#" method="post" class="footer-subscribe">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary text-black" type="button" id="button-addon2">Send</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row pt-5 mt-5 text-center">
+            <div class="col-md-12">
+              <div class="border-top pt-5">
+                 <p class="copyright"><small>
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This project is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by G25
+              </small></p> 
+         
+    
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </footer>
 
 
     
@@ -173,5 +290,21 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+     <!-- Scripts -->
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.countdown.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.fancybox.min.js"></script>
+  <script src="../js/jquery.sticky.js"></script>
+  <script src="../js/isotope.pkgd.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
 </body>
 </html>
