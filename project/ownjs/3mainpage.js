@@ -18,10 +18,10 @@ function list_dog() {
     request.onreadystatechange = function() {
         if( this.readyState == 4 && this.status == 200 ) {
             var dog_dataset= JSON.parse(this.responseText);
-            console.log(dog_dataset);
             for (dog of dog_dataset){
                 dog_list_html+=`<li><a href="#myInput" onclick="onclick_breed('${dog.name}')">${dog.name}</a></li>`;
             }
+            console.log(dog_list_html);
             document.getElementById("insert_list1").innerHTML=dog_list_html;
         }
     }
