@@ -23,9 +23,6 @@ function list_dog() {
             document.getElementById("insert_list1").innerHTML=dog_list_html;
         }
     }
-
-    
-
     var url = '';
     url = "https://api.thedogapi.com/v1/breeds?"
     request.open("GET", url, true);
