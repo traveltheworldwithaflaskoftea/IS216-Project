@@ -6,6 +6,8 @@ function list_states(){
     console.log("hello")
     for (var[key,value] of Object.entries(us_states))
     {
-        document.getElementById("myInput3").innerHTML+=`<li><a href="#myInput" onclick="onclick_state('${key}')">${value}</a></li>`
+        list_html+=`<li><a href="#myInput" onclick="onclick_state('${key}')">${value}</a></li>`;
     }
+    console.log(list_html);
+    document.getElementById("myInput3").innerHTML=list_html;
 }
