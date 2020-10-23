@@ -14,6 +14,7 @@ accountsArr= [
 // Get the input field
 var input = document.getElementById("username");
 
+
 function ifValid(){
     var username = document.getElementById('username').value; 
     //console.log(username); 
