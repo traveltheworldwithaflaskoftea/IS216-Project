@@ -43,3 +43,9 @@ function ifValid(){
         }
     }
 
+function rememberMe(){
+  var username = document.getElementById('username').value; 
+  document.getElementById('username').value = username;
+  var password = document.getElementById('password').value;
+  document.getElementById('password').value = password; 
+}
