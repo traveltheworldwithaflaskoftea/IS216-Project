@@ -4,6 +4,10 @@
     <title>📆Appointment Page</title>
 
     <!-- scripts -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="../js/main.js"></script>
 
     <!---Internal CSS Styling -->
@@ -24,7 +28,7 @@
         .appointmentpage{ 
             position: absolute;
             top: 10; 
-            left: 100px; 
+            left: 20px; 
             max-width: 80%;           
         }
      
@@ -35,9 +39,9 @@
 
     <!-- Top navigation bar -->
 
+<!-- 
 
-
-    <!--- This is the side menu bar -->
+   
     <div class='sidebar'>
         
         <input name='day[]' type='checkbox' value=1>
@@ -52,7 +56,8 @@
         <a href="#day3"> Day 3</a> 
         <br/>
                     
-    </div>
+    </div> -->
+    
 
 
     <!--- End of container div -->
@@ -87,6 +92,8 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
             
         </p>
+
+
 
         <h2 id='day1'> Day 1 Schedule </h2>
         
@@ -147,6 +154,123 @@
                 </tr>
             </table>
         </p>
+        <!-- <div class="container">
+            
+            <div class="row">
+              <div class="col-sm">
+                One of three columns
+              </div>
+              <div class="col-sm">
+                One of three columns
+              </div>
+              <div class="col-sm">
+                One of three columns
+              </div>
+            </div>
+          </div> -->
+
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Day 1 Schedule
+                  </button>
+                </h2>
+              </div>
+          
+              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  
+                    <h2 id='day1'> Day 1 Schedule </h2>
+                    
+                    <p> 
+                        <table border='1'> 
+                            <tr>
+                                <th colspan='2'>Love cats </th>
+                            </tr> 
+                            <tr>
+                                <th>Meeting method</th>
+                                <td>
+                                    <a href='zoom.us'> Zoom </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Date & Time</th>
+                                <td>23 November 3.30pm</td>
+                            </tr>
+                        </table>
+                    </p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Day 2 Schedule
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h2 id='day2'> Day 2 Schedule </h2>
+        
+                    <p> 
+                        <table border='1'> 
+                            <tr>
+                                <th colspan='2'>Sunshine Pets </th>
+                            </tr> 
+                            <tr>
+                                <th>Meeting method</th>
+                                <td>
+                                    1201 Macklind Ave, St. Louis, MO 63110, United States
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Date & Time</th>
+                                <td>27 November 3.30pm</td>
+                            </tr>
+                        </table>
+                    </p>
+            
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Day 3 Schedule
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <h2 id='day3'> Day 3 Schedule </h2>
+        
+                    <p> 
+                        <table border='1'> 
+                            <tr>
+                                <th colspan='2'>Kitty Doggy Party </th>
+                            </tr> 
+                            <tr>
+                                <th>Meeting method</th>
+                                <td>
+                                    <a href='zoom.us'> Zoom </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Date & Time</th>
+                                <td>30 November 9.30am</td>
+                            </tr>
+                        </table>
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
 
         <p> 
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, earum molestias temporibus, accusantium, velit provident modi repellat nisi commodi omnis rem aut nihil deserunt sunt quibusdam odio. Dolorum, numquam consequatur?
@@ -174,7 +298,8 @@
 
 
     
-        </div>
+    </div>
+
 
     <!-- Footer -->
     
