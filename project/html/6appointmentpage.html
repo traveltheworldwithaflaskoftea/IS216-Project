@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>🐶 Appointment Page 🐱</title>
+        <script src="../js/main.js"></script>
+        <script src="../ownjs/6appointmentpage.js"></script>
 
     <!-- screipts -->
     <script src="../js/main.js"></script>
@@ -29,34 +31,252 @@
             max-width: 80%; 
             
         }
+
+                /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+
+
+        /* Add Animation */
+        @-webkit-keyframes animatetop {
+            from {top:-300px; opacity:0}
+            to {top:0; opacity:1}
+        }
+
+        @keyframes animatetop {
+            from {top:-300px; opacity:0}
+            to {top:0; opacity:1}
+        }
+
+        /* The Close Button */
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-header {
+            padding: 2px 16px;
+            background-color: #a2c0be;
+            color: white;
+        }
+
+        .modal-body {
+            padding: 2px 16px;
+        }
+
+        .modal-footer {
+            padding: 2px 16px;
+            background-color: #a2c0be;
+            color: white;
+        }
+
      
     </style>
     </head>
    
+<<<<<<< Updated upstream
     <body onload="maps_api(75212,91723)">
+=======
+    <body>
+        </div>
+>>>>>>> Stashed changes
 
         <!-- This is the top navigation bar -->
         <a href='#home'>Home</a>
         <a href='#profile'>Profile</a>
         <a href='#appointments'>Appointments</a>
         <a href='#wishlist'>Wishlist</a>
-
+  
         <!--- This is the side menu bar -->
-        <div class='sidebar'>
-            
-           <input name='day[]' type='checkbox' value=1>
-           <a href="#day1"> Day 1</a> 
-           <br/>
-            
-           <input name='day[]' type='checkbox' value=2>
-           <a href="#day2"> Day 2</a> 
-           <br/>
-            
-           <input name='day[]' type='checkbox' value=3>
-           <a href="#day3"> Day 3</a> 
-           <br/>
-            
+        
+        <div class='sidebar'>      
+            <!-- Trigger/Open The Modal -->
+
+            <button class="modal-button" href="#myModal1">Day 1</button>
+
+                <!-- The Modal -->
+                <div id="myModal1" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                    <span class="close">×</span>
+                    <h2 id='day1'> Day 1 Schedule </h2>
+                    </div>
+
+                    <p> 
+                        <table border='1'> 
+                            <tr>
+                                <th colspan='2'>Love cats </th>
+                            </tr> 
+                            <tr>
+                                <th>Meeting method</th>
+                                <td>
+                                    <a href='zoom.us'> Zoom </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Date & Time</th>
+                                <td>23 November 3.30pm</td>
+                            </tr>
+                        </table>
+                    </p>
+        
+                </div>
+
+                </div>
+                <br/>
+
+            <button class="modal-button" href="#myModal2">Day 2</button>
+
+            <!-- The Modal -->
+            <div id="myModal2" class="modal">
+
+                <div class="modal-content">
+                    
+                    <div class="modal-header">
+                    <span class="close">×</span>
+                    <h2 id='day2'> Day 2 Schedule </h2>
+                    </div>
+                    <p> 
+                        <table border='1'> 
+                            <tr>
+                                <th colspan='2'>Sunshine Pets </th>
+                            </tr> 
+                            <tr>
+                                <th>Meeting method</th>
+                                <td>
+                                    1201 Macklind Ave, St. Louis, MO 63110, United States
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Date & Time</th>
+                                <td>27 November 3.30pm</td>
+                            </tr>
+                        </table>
+                    </p>
+        
+                </div>
+
+            </div>
+            <br/>
+
+
+            <button class="modal-button" href="#myModal3">Day 3</button>
+
+            <!-- The Modal -->
+            <div id="myModal3" class="modal">
+
+            <!-- Modal content -->
+
+            <div class="modal-content">
+                    <div class="modal-header">
+                    <span class="close">×</span>
+                    <h2 id='day3'> Day 3 Schedule </h2>
+                    </div>
+
+                    <p> 
+                        <table border='1'> 
+                            <tr>
+                                <th colspan='2'>Kitty Doggy Party </th>
+                            </tr> 
+                            <tr>
+                                <th>Meeting method</th>
+                                <td>
+                                    <a href='zoom.us'> Zoom </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Date & Time</th>
+                                <td>30 November 9.30am</td>
+                            </tr>
+                        </table>
+                    </p>
+
+            </div>
+
+            </div>
+            <br/>
+            <br/>
+                
         </div>
+
+
+        <script>
+            // Get the button that opens the modal
+            var btn = document.querySelectorAll("button.modal-button");
+    
+            // All page modals
+            var modals = document.querySelectorAll('.modal');
+    
+            // Get the <span> element that closes the modal
+            var spans = document.getElementsByClassName("close");
+    
+            // When the user clicks the button, open the modal
+            for (var i = 0; i < btn.length; i++) {
+            btn[i].onclick = function(e) {
+                e.preventDefault();
+                modal = document.querySelector(e.target.getAttribute("href"));
+                modal.style.display = "block";
+            }
+            }
+    
+            // When the user clicks on <span> (x), close the modal
+            for (var i = 0; i < spans.length; i++) {
+            spans[i].onclick = function() {
+                for (var index in modals) {
+                if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+                }
+            }
+            }
+    
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target.classList.contains('modal')) {
+                for (var index in modals) {
+                if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+                }
+                }
+            }
+            </script>
+        
+
 
         <!--- End of container div -->
 
