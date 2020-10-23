@@ -3,6 +3,9 @@
     <head>
         <title>🐶 Appointment Page 🐱</title>
 
+    <!-- screipts -->
+    <script src="../js/main.js"></script>
+
     <!---Internal CSS Styling -->
     <style> 
       
@@ -30,7 +33,7 @@
     </style>
     </head>
    
-    <body >
+    <body onload="maps_api(75212,91723)">
 
         <!-- This is the top navigation bar -->
         <a href='#home'>Home</a>
@@ -61,7 +64,7 @@
 
             <h1> Appointment Page </h1>
 
-            <h2> IM THE MAP!</h2>
+            <h2 id='map'> IM THE MAP!</h2>
             <p>
                 insert map api
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>🐶 Welcome to FureverHome! 🐱</title>
+    <title>🐶 Welcome to FureverHome!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
     
@@ -57,16 +57,23 @@
               <!-- getElementById('password').value-->
               <input type="password" class="col-8 mb-2 form-control" id="password" placeholder="Password" required><br>
 
-              <a class="col-12 text-center mb-3 blue size pf" href="9passwordreset.html">Forgot Password? </a>
+              <span> 
+                <input type="checkbox" id="remember" style="margin-bottom:15px;" onclick="return function1()"> Remember me
+              </span>
+             
+            
+              <a class="col-12 text-center mt-3 mb-3 blue size pf" href="9passwordreset.html">Forgot Password? </a>
 
               <button class="btn btn-primary col-8 col-offset-2 size" id="login" href="" onclick='ifValid()'>Log In</button><br>
 
               <a href="2signup.html" class=" col-12 text-center mb-4 size" style="margin-top: 10px;">Create an account</a>
+
         </div>
       </div>
     </div>
   </div>
-        
+
+
   <!-- Footer -->
   <footer class="login-footer fixed-bottom">
       <span>Copyright &copy; FureverHome</span>

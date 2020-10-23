@@ -11,15 +11,22 @@ function search_dog_id(pet_id){
 	.then(resp => {
 		// Do something with resp.data.breeds
 		var results_array = resp.data.animal;
-		console.log(results_array);
+        console.log(results_array);
+        return results_array
     });
     console.log('done running');
 }
+
 function load_individual_dog(){
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const pet_id = urlParams.get('id')
     console.log(pet_id); 
-    search_dog_id(pet_id);
+    dog_array = search_dog_id(pet_id);
+
+    //time to update some values!!
+
 
 }
+
+
