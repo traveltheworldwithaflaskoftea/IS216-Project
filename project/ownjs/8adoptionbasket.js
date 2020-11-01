@@ -1,15 +1,15 @@
-let pet_list = [];
+// let pet_list = [];
 
-function addPets(){
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const pet_id = urlParams.get('id')
-    check=pet_list.includes(pet_list)
-    if (check==false){
-        pet_list.push(pet_id);
-    }
-    console.log(pet_list);
-}
+// function addPets(){
+//     const queryString = window.location.search;
+//     const urlParams = new URLSearchParams(queryString);
+//     const pet_id = urlParams.get('id')
+//     check=pet_list.includes(pet_list)
+//     if (check==false){
+//         pet_list.push(pet_id);
+//     }
+//     console.log(pet_list);
+// }
 
 
 
