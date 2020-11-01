@@ -100,7 +100,7 @@ class accountDAO {
 
         // STEP 1 - Connect to MySQL Database
         $connMgr = new ConnectionManager(); 
-        $pdo = $connMgt->connect(); 
+        $pdo = $connMgr->connect(); 
 
         // STEP 2 - Prepare SQL Query
         $sql = "
@@ -123,6 +123,41 @@ class accountDAO {
         
         // STEP 5
         return $isOk;
+    }
+
+    // Function to retrieve Dogbasket, input is user name 
+    public function getadoptionbasket($username) {
+
+        // STEP 1 - Connect to MySQL Database
+        $connMgr = new ConnectionManager(); 
+        $pdo = $connMgr->connect(); 
+
+        // STEP 2 - Prepare SQL Query
+        $sql = "
+            select 
+                *
+            from
+                account
+            WHERE 
+                username = :username
+        ";
+        $stmt = $pdo->prepare($sql); 
+        $stmt->bindParam(':username', $username, PDO::PARAM_STR); 
+        // STEP 3 - Run Query
+        $isOk = $stmt->execute();
+        
+        // STEP 4 - Fetch query results  
+        $adoption_basket = [];
+        while ( $row = $stmt->fetch() ) {
+            $adoption_basket = $row['adoption_basket']; 
+        }
+        
+        // STEP 5
+        $stmt = null; // clear memory
+        $pdo = null; // clear memory
+        
+        // STEP 6
+        return $adoption_basket;
     }
 }
 ?>

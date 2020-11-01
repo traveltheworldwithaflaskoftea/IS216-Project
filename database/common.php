@@ -6,6 +6,8 @@ spl_autoload_register(function ($class_name) {
 
 session_start();
 
+$_SESSION['username'] = 'SupremeLeader555';
+
 function printErrors() {
     if(isset($_SESSION['errors'])){
         print "<ul style='color:red;'>";

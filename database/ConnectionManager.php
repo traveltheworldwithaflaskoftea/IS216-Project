@@ -6,7 +6,7 @@ class ConnectionManager {
         $servername = 'localhost';//12.34.12.45
         $username = 'root';
         $password = '';
-        $dbname = 'animals'; //schema name 
+        $dbname = 'fureverhome'; //schema name 
         $port = '3306'; // WAMP 
         
         // Create connection
