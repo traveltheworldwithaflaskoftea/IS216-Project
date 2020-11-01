@@ -10,7 +10,6 @@
 // $dao->updateAdoptionBasket($user_id,$dog_id);
 
 header('Location: https://www.freecodecamp.org/news/the-best-jquery-examples/');
-header('Location: ..\html\4individualpage.html');
 return;
     
 ?>

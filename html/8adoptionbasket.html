@@ -1,10 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>🐶 Profile 🐱</title>
+    <title>🛒Adoption Basket</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
     <script src="../js/main.js"></script>
- 
+    <script src="../ownjs/8adoptionbasket.js"></script>
+
     <!-- Style sheets -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i">
     <link rel="stylesheet" href="../fonts/icomoon/style.css">
@@ -20,71 +22,69 @@
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
-<body>
-  <!-- Top navigation bar -->
-  <!-- Navigation bar -->
-  <div class="site-wrap">
-    <div class="site-mobile-menu site-navbar-target">
-    <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-        <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-    </div>
-    <div class="site-mobile-menu-body"></div>
-  </div>
-
-  <header class="site-navbar js-sticky-header site-navbar-target" role="banner" >
-
-      <div class="container">
-
-      <div class="row align-items-center">
-          <div class="col-6 col-xl-2">
-          <h1 class="mb-0 site-logo">
-              <a href="3mainpage.html" class="h2 mb-0 navbar-brand">
-              <img src="../html/images/logo_no_bg.png" height="55" alt="Furever_home_logo">
-              <span class="text-primary">FureverHome</span>
-              </a>
-          </h1>
+<body onload="adoptionBasket()">
+    <!-- Navigation bar -->
+    <div class="site-wrap">
+      <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
           </div>
-
-          <div class="col-12 col-md-10 d-none d-xl-block">
-          <nav class="site-navigation position-relative text-right" role="navigation">
-
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-              <li><a href="3mainpage.html" class="nav-link">Home</a></li>
-              <li><a href= "7profilepage.html" class="nav-link">🙍Profile</a></li>
-              <li><a href= "6appointmentpage.html">📆Appointment</a></li>
-              <li><a href="8adoptionbasket.html">🛒Adoption Basket</a></li>
-              </ul>
-          </nav>          
-          </div>   
-
-          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
-
       </div>
-      </div>
-  </header>
-
-  <!-- Body -->
-  <section class="site-section" id="adoption_basket">
-    <div class="container" id="accordion">
-        <div class="row justify-content-center" data-aos="fade-up">
-        <div class="col-lg-6 text-center heading-section mb-5">
-            <div class="paws">
-            <span class="icon-paw"></span>
-            </div>
-            <h2 class="text-black mb-2">Profile</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-        </div>
+      <div class="site-mobile-menu-body"></div>
     </div>
+  
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner" >
 
-    <!-- Profile -->
-    <div id="profile" class="container justify-content-center"></div>
-      <p>
-          <a class="col-12 text-center mb-3 blue size pf" href="9passwordreset.html">Password reset </a>
-      </p>
-  </section>
+        <div class="container">
 
+        <div class="row align-items-center">
+            <div class="col-6 col-xl-2">
+            <h1 class="mb-0 site-logo">
+                <a href="3mainpage.html" class="h2 mb-0 navbar-brand">
+                <img src="../html/images/logo_no_bg.png" height="55" alt="Furever_home_logo">
+                <span class="text-primary">FureverHome</span>
+                </a>
+            </h1>
+            </div>
+
+            <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+                <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li><a href="3mainpage.html" class="nav-link">Home</a></li>
+                <li><a href= "7profilepage.html" class="nav-link">🙍Profile</a></li>
+                <li><a href= "6appointmentpage.html">📆Appointment</a></li>
+                <li><a href="8adoptionbasket.html">🛒Adoption Basket</a></li>
+                </ul>
+            </nav>          
+            </div>   
+
+            <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+        </div>
+        </div>
+    </header>
+
+    <!-- Body -->
+    <section class="site-section" id="adoption_basket">
+      <div class="container" id="accordion">
+          <div class="row justify-content-center" data-aos="fade-up">
+          <div class="col-lg-6 text-center heading-section mb-5">
+              <div class="paws">
+              <span class="icon-paw"></span>
+              </div>
+              <h2 class="text-black mb-2">Adoption Basket</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          </div>
+      </div>
+    
+
+      <!-- Wishlist -->
+      <div id="wishlist" class="container justify-content-center"></div>
+
+    </section>
+        
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
@@ -143,7 +143,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  
+
   <!-- Scripts -->
   <script src="../js/jquery-3.3.1.min.js"></script>
   <script src="../js/jquery-ui.js"></script>

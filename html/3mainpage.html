@@ -1,100 +1,200 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>ForeverHome</title>
+    <title>🐶 FureverHome 😺</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
-    <script src="js/main.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
+    <script src="../js/main.js"></script>
+    
+    
  
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i">
+    <link rel="stylesheet" href="../fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="../css/aos.css"> 
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+      div.container{
+        text-align:center;
+      }
+      
+          
+      /* Full-width input fields */
+      input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      /* Set a style for all buttons */
+      button {
+        background-color: #a2c0be;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+
+      /* Extra styles for the cancel button */
+      .closebtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color:#2b5c59;
+      }
+
+      /* Position the close button */
+
+      .container {
+        padding: 16px;
+      }
+
+      span.psw {
+        float: right;
+        padding-top: 16px;
+      }
+
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        padding-top: 60px;
+      }
+
+      /* Modal Content/Box */
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
+
+      /* Close Button */
+      .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: red;
+        cursor: pointer;
+      }
+
+      /* Add Zoom Animation */
+      .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+      }
+
+      @-webkit-keyframes animatezoom {
+        from {-webkit-transform: scale(0)} 
+        to {-webkit-transform: scale(1)}
+      }
+        
+      @keyframes animatezoom {
+        from {transform: scale(0)} 
+        to {transform: scale(1)}
+      }
+
+      /* Change styles for span and cancel button on extra small screens */
+      @media screen and (max-width: 300px) {
+        span.psw {
+          display: block;
+          float: none;
+        }
+        .closebtn {
+          width: 100%;
+        }
+      }
+
+  </style>
     
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i" rel="stylesheet">
-    
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/style.css">
-    
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section">
+</head>
   
 
-  <div id="overlayer"></div>
-  <div class="loader">
-    <div class="spinner-border text-primary" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-  </div>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section" onload="load_default_cards()">
 
-
-  <div class="site-wrap">
-
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
+    <link href="navbar.html" rel="import" />
+    <!-- Navigation Bar -->
+    <div class="site-wrap">
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
         </div>
-      </div>
       <div class="site-mobile-menu-body"></div>
     </div>
    
-    
     <header class="site-navbar js-sticky-header site-navbar-target" role="banner" >
 
       <div class="container">
+
         <div class="row align-items-center">
-          
           <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0"><span class="text-primary">ForeverHome.</span> </a></h1>
+            <h1 class="mb-0 site-logo">
+              <a href="3mainpage.html" class="h2 mb-0 navbar-brand">
+                <img src="../html/images/logo_no_bg.png" height="55" alt="Furever_home_logo">
+                <span class="text-primary">FureverHome</span>
+              </a>
+            </h1>
           </div>
 
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="#home-section" class="nav-link">Home</a></li>
-                <li><a href="#pet-section" class="nav-link">Find Your Pet</a></li>
-
-                <!-- <li class="has-children">
-                  <a href="#about-section" class="nav-link">Profile</a>
-                  <ul class="dropdown">
-                    <li><a href="#trainers-section" class="nav-link">Trainers</a></li>
-                    <li><a href="#pricing-section" class="nav-link">Pricing</a></li>
-                    <li><a href="#faq-section" class="nav-link">FAQ</a></li>
-                    <li><a href="#gallery-section" class="nav-link">Gallery</a></li>
-                    <li><a href="#blog-section" class="nav-link">Blog</a></li>
-                    <li class="has-children">
-                      <a href="#">More Links</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
-                      </ul>
-                    </li>
-                  </ul>
+                <li><a href="3mainpage.html" class="nav-link">Home</a></li>
+                <li><a href="#pet-section" class="nav-link">🐶Find Your Pet</a></li>
+                <li><a href= "7profilepage.html" class="nav-link">🙍Profile</a></li>
+                <li><a href= "6appointmentpage.html">📆Appointment</a></li>
+                <li><a href="#contact-section" class="nav-link">☎️Contact</a></li>
+                <li><a href="8adoptionbasket.html">🛒Adoption Basket</a></li>
+                <!-- <li>
+                  <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="cart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Adoption Basket
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Doggie1</a>
+                      <a class="dropdown-item" href="#">Doggie2</a>
+                      <a class="dropdown-item" href="#">Doggie3</a>
+                    </div>
+                  </div>
                 </li> -->
-                
-                <li><a href="#trainers-section">Appointment</a></li>
-                <li><a href="#services-section">Wishlist</a></li>
-                <li><a href="#contact-section" class="nav-link">Contact</a></li>
               </ul>
-            </nav>
-          </div>
-
+            </nav>          
+          </div>   
 
           <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
 
@@ -102,18 +202,18 @@
       </div>
     </header>
 
-
+    <!-- Body Section -->
     <section class="site-blocks-cover overflow-hidden bg-light">
       <div class="container">
         <div class="row">
           <div class="col-md-7 align-self-center text-center text-md-left">
             <div class="intro-text">
-              <h1>We Care For <span class="d-md-block">My Dog</span></h1>
-              <p class="mb-4">We always try to provide your dog the best<span class="d-block"> services.</p>
+              <h1> We Care For <span class="d-md-block">You! </span></h1>
+              <p class="mb-4">Helping these pets find their <span class="d-block"> 🐶 FureverHome 🐱</p>
             </div>
           </div>  
-          <div class="col-md-5 align-self-end text-center text-md-right">
-            <img src="images/dogger_img_1.png" alt="Image" class="img-fluid cover-img">
+          <div class="col-md-5 align-self-end text-center text-md-right" style="margin-top: 50px;">
+            <img src="../images/dogger_img_1.png" alt="Image" class="img-fluid cover-img">
           </div>
         </div>
       </div>    
@@ -127,6 +227,8 @@
               <span class="icon-paw"></span>
             </div>
             <h2 class="mb-2 heading" data-aos="fade-up">Find Your Pet</h2>
+
+                <!-- Single row -->
                 <div class='row justify-content-center'>
 
                   <!-- // Col -->
@@ -136,9 +238,12 @@
                       <span class="caret"></span></button>
                       <div class='form-group'>
                         <ul class="dropdown-menu" id="myUL">
+                          <input class='form-control' type="text" id="myInput" onkeyup="myFunction()"  title="Type in a name">
 
+                          <li><a onclick="onclick_age('Baby')" href='#myInput'>Baby</a></li>
                           <li><a onclick="onclick_age('Young')" href='#myInput'>Young</a></li>
-                          <li><a onclick="onclick_age('Old')" href="#myInput">Old</a></li>
+                          <li><a onclick="onclick_age('Adult')" href='#myInput'>Adult</a></li>
+                          <li><a onclick="onclick_age('Senior')" href="#myInput">Senior</a></li>
 
                         </ul>
                       </div>
@@ -165,14 +270,26 @@
                     <div class="dropdown my-4">
                       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Breed 
                       <span class="caret"></span></button>
-                      <ul class="dropdown-menu" id="myUL3">
+                      <ul class="dropdown-menu pre-scrollable" id="myUL3">
                         <input class='form-control' type="text" id="myInput3" onkeyup="myFunction3()"  title="Type in a name">
 
-                        <li><a href="#myInput" onclick="onclick_breed('Golden Retriever')">Golden Retriever</a></li>
+                        <div id="insert_list1">
+                        <!-- <li><a href="#myInput" onclick="onclick_breed('Golden Retriever')">Golden Retriever</a></li>
                         <li><a href="#myInput" onclick="onclick_breed('Pug')">Pug</a></li>
                         <li><a href="#myInput" onclick="onclick_breed('Corgi')">Corgi</a></li>
-                        <li><a href="#myInput" onclick="onclick_breed('Shiba')">Shiba</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('Shiba Inu')">Shiba Inu</a></li>
                         <li><a href="#myInput" onclick="onclick_breed('Beagle')">Beagle</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('Labrador Retriever')">Labrador Retriever</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('German Shepherd')">German Shepherd</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('French Bulldog')">French Bulldog</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('Bulldog')">Bulldog</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('Poodle')">Poodle</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('Rottweiler')">Rottweiler</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('German Shorthaired Pointer')">German Shorthaired Pointer</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('Yorkshire Terriers')">Yorkshire Terriers</a></li> -->
+                        </div>
+
+                        
                       </ul>
                     </div>
                   </div>
@@ -180,29 +297,40 @@
                   <!-- col  -->
                   <div class="col" data-aos="fade-up">
                     <div class="dropdown my-4">
-                      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> 
+                      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">State 
                       <span class="caret"></span></button>
-                      <ul class="dropdown-menu" id="myUL3">
-                        <input class='form-control' type="text" id="myInput3" onkeyup="myFunction3()"  title="Type in a name">
+                      <ul class="dropdown-menu pre-scrollable" id="myUL4">
+                        <input class='form-control' type="text" id="myInput3" onkeyup="myFunction4()"  title="Type in a name">
 
-                        <li><a href="#myInput" onclick="onclick_breed('Golden Retriever')">Golden Retriever</a></li>
-                        <li><a href="#myInput" onclick="onclick_breed('Pug')">Pug</a></li>
-                        <li><a href="#myInput" onclick="onclick_breed('Corgi')">Corgi</a></li>
-                        <li><a href="#myInput" onclick="onclick_breed('Shiba')">Shiba</a></li>
-                        <li><a href="#myInput" onclick="onclick_breed('Beagle')">Beagle</a></li>
+                        <div id="insert_list2">
+                        <!-- <li><a href="#myInput" onclick="onclick_state('AL')">Alabama</a></li>
+                        <li><a href="#myInput" onclick="onclick_state('AL')">Alaska</a></li>
+                        <li><a href="#myInput" onclick="onclick_state('AZ')">Arizona</a></li>
+                        <li><a href="#myInput" onclick="onclick_state('AK')">Arkansas</a></li>
+                        <li><a href="#myInput" onclick="onclick_state('CA')">California</a></li> -->
+                        </div>
+                    
+
+                        
                       </ul>
                     </div>
-                  </div>
+                  </div>               
 
-                  <!-- end of cols  -->
-
+                <!-- end row  -->
                 </div>
                 <!-- end row -->
                 
               <!-- Letting users know what fields have been selected -->
-              <p id='filters_applied'>Filters Applied: <span id='age'></span><span id='gender'></span><span id='breed'></span></p>
+              <p id='filters_applied'>Filters Applied: 
+                <span id='age'><badge id="age_badge" class="badge badge-dark"></badge></span>
+                <span id='gender'><badge id="gender_badge" class="badge badge-dark"></badge></span>
+                <span id='breed'><badge id="breed_badge" class="badge badge-dark"></badge></span>
+                <span id='state'><badge id="state_badge" class="badge badge-dark"></badge></span>
+              </p>
 
-              <button class='btn btn-primary' onclick="search()">Click here to find your forever pet!!</button>
+              <a href='#trainers-section'>
+                <button class='btn btn-primary' onclick="search()">Click here to find your forever pet!!</button>
+              </a>
               </div>    
             </div>
           </div>
@@ -304,6 +432,8 @@
       </div>
     </section> -->
 
+    <!-- Card sections for the pets -->
+    <!-- This is the nice looking header -->
     <section class="site-section trainers" id="trainers-section">
       <div class="container">
         <div class="row justify-content-center" data-aos="fade-up">
@@ -314,27 +444,26 @@
             <h2 class="mb-2 heading">Pets Available</h2>
           </div>
         </div>
-        <div class="row">
+        <!-- Here starts the row -->
+        <div class="row" id='dog-card-deck'>
+          <!-- col1 -->
           <div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
             <div class="trainer">
               <figure>
-              <img src="images/dogger_trainer_1.jpg" alt="Image" class="img-fluid">
+              <img src="../images/dogger_trainer_1.jpg" alt="Image" class="img-fluid">
               </figure>
               <div class="px-md-3">
                 <h3>Jessica White</h3>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <!-- <ul class="ul-social-circle">
-                  <li><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li><a href="#"><span class="icon-instagram"></span></a></li>
-                  <li><a href="#"><span class="icon-facebook"></span></a></li>
-                </ul> -->
               </div>
             </div>
           </div>
+          <!-- end of col 1 -->
+          <!-- col 2 -->
           <div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="trainer">
               <figure>
-              <img src="images/dogger_trainer_2.jpg" alt="Image" class="img-fluid">
+              <img src="../images/dogger_trainer_2.jpg" alt="Image" class="img-fluid">
               </figure>
               <div class="px-md-3">
                 <h3>Valerie Elash</h3>
@@ -347,11 +476,12 @@
               </div>
             </div>
           </div>
-
+          <!-- end of col2 -->
+          <!-- col 3 -->
           <div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up"  data-aos-delay="200">
             <div class="trainer">
               <figure>
-              <img src="images/dogger_trainer_3.jpg" alt="Image" class="img-fluid">
+              <img src="../images/dogger_trainer_3.jpg" alt="Image" class="img-fluid">
               </figure>
               <div class="px-md-3">
                 <h3>Alicia Jones</h3>
@@ -364,7 +494,8 @@
               </div>
             </div>
           </div>
-
+          <!-- end of col3 -->
+        <!-- This Div ends the row -->
         </div>
       </div>
     </section>
@@ -609,29 +740,29 @@
         </div>
         <div class="row no-gutters">
           
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/dogger_img_sm_1.jpg" data-fancybox="gal"><img src="images/dogger_img_sm_1.jpg" alt="Image" class="img-fluid"></a>
+            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="../images/dogger_img_sm_1.jpg" data-fancybox="gal"><img src="../images/dogger_img_sm_1.jpg" alt="Image" class="img-fluid"></a>
 
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/dogger_img_sm_2.jpg" data-fancybox="gal"><img src="images/dogger_img_sm_2.jpg" alt="Image" class="img-fluid"></a>
+            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="../images/dogger_img_sm_2.jpg" data-fancybox="gal"><img src="../images/dogger_img_sm_2.jpg" alt="Image" class="img-fluid"></a>
           
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/dogger_img_sm_3.jpg" data-fancybox="gal"><img src="images/dogger_img_sm_3.jpg" alt="Image" class="img-fluid"></a>
+            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="../images/dogger_img_sm_3.jpg" data-fancybox="gal"><img src="../images/dogger_img_sm_3.jpg" alt="Image" class="img-fluid"></a>
 
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/dogger_img_sm_4.jpg" data-fancybox="gal"><img src="images/dogger_img_sm_4.jpg" alt="Image" class="img-fluid"></a>
+            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="../images/dogger_img_sm_4.jpg" data-fancybox="gal"><img src="../images/dogger_img_sm_4.jpg" alt="Image" class="img-fluid"></a>
           
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/dogger_img_sm_5.jpg" data-fancybox="gal"><img src="images/dogger_img_sm_5.jpg" alt="Image" class="img-fluid"></a>
+            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="../images/dogger_img_sm_5.jpg" data-fancybox="gal"><img src="../images/dogger_img_sm_5.jpg" alt="Image" class="img-fluid"></a>
           
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/dogger_img_sm_6.jpg" data-fancybox="gal"><img src="images/dogger_img_sm_6.jpg" alt="Image" class="img-fluid"></a>
+            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="../images/dogger_img_sm_6.jpg" data-fancybox="gal"><img src="../images/dogger_img_sm_6.jpg" alt="Image" class="img-fluid"></a>
           
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/dogger_img_sm_1.jpg" data-fancybox="gal"><img src="images/dogger_img_sm_1.jpg" alt="Image" class="img-fluid"></a>
+            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="../images/dogger_img_sm_1.jpg" data-fancybox="gal"><img src="../images/dogger_img_sm_1.jpg" alt="Image" class="img-fluid"></a>
           
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/dogger_img_sm_2.jpg" data-fancybox="gal"><img src="images/dogger_img_sm_2.jpg" alt="Image" class="img-fluid"></a>
+            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="../images/dogger_img_sm_2.jpg" data-fancybox="gal"><img src="../images/dogger_img_sm_2.jpg" alt="Image" class="img-fluid"></a>
           
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/dogger_img_sm_3.jpg" data-fancybox="gal"><img src="images/dogger_img_sm_3.jpg" alt="Image" class="img-fluid"></a>
+            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="../images/dogger_img_sm_3.jpg" data-fancybox="gal"><img src="../images/dogger_img_sm_3.jpg" alt="Image" class="img-fluid"></a>
           
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/dogger_img_sm_4.jpg" data-fancybox="gal"><img src="images/dogger_img_sm_4.jpg" alt="Image" class="img-fluid"></a>
+            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="../images/dogger_img_sm_4.jpg" data-fancybox="gal"><img src="../images/dogger_img_sm_4.jpg" alt="Image" class="img-fluid"></a>
           
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/dogger_img_sm_5.jpg" data-fancybox="gal"><img src="images/dogger_img_sm_5.jpg" alt="Image" class="img-fluid"></a>
+            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="../images/dogger_img_sm_5.jpg" data-fancybox="gal"><img src="../images/dogger_img_sm_5.jpg" alt="Image" class="img-fluid"></a>
           
-            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="images/dogger_img_sm_6.jpg" data-fancybox="gal"><img src="images/dogger_img_sm_6.jpg" alt="Image" class="img-fluid"></a>
+            <a class="col-6 col-md-6 col-lg-4 col-xl-3 gal-item d-block" data-aos="fade-up" data-aos-delay="100" href="../images/dogger_img_sm_6.jpg" data-fancybox="gal"><img src="../images/dogger_img_sm_6.jpg" alt="Image" class="img-fluid"></a>
 
         </div>
       </div>
@@ -776,8 +907,7 @@
       </div>
     </section> -->
 
-    
-    
+    <!-- Contact -->
     <section class="" id="contact-section">
       <div class="container">
         <div class="row no-gutters">
@@ -857,7 +987,7 @@
       </div>
     </section>
     
-    
+    <!-- Footer -->
     <footer class="site-footer">
       <div class="container">
         <div class="row">
@@ -865,28 +995,30 @@
             <div class="row">
               <div class="col-md-5">
                 <h2 class="footer-heading mb-4">About Us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
+                <p>🐶FureverHome🐱 is a one-stop Pet Adoption portal that helps you find your perfect pet! Our portal allows you to search and set appointments with the nearest pet adoption places, add interested pets into your wishlist and many more!</p>
               </div>
               <div class="col-md-3 ml-auto">
                 <h2 class="footer-heading mb-4">Quick Links</h2>
                 <ul class="list-unstyled">
                   <li><a href="#home-section" class="smoothscroll">Home</a></li>
-                  <li><a href="#trainers-section" class="smoothscroll">Profile</a></li>
-                  <li><a href="#services-section" class="smoothscroll">Appointment</a></li>
-                  <li><a href="#testimonials-section" class="smoothscroll">Wishlist</a></li>
-                  <li><a href="#contact-section" class="smoothscroll">Contact Us</a></li>
+                  <li><a href="#pet-section" class="smoothscroll">Find Your Pet</a></li>
+                  <li><a href="7profilepage.html" class="smoothscroll">Profile</a></li>
+                  <li><a href= "6appointmentpage.html" class="smoothscroll">Appointment</a></li>
+                  <li><a href="8adoptionbasket.html" class="smoothscroll">Adoption Basket</a></li>
+                  <li><a href="#contact-section" class="smoothscroll">Contact</a></li>
                 </ul>
               </div>
-              <!-- <div class="col-md-3">
+              <!-- Social Media Buttons-->
+              <div class="col-md-3">
                 <h2 class="footer-heading mb-4">Follow Us</h2>
                 <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
                 <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-              </div> -->
+              </div>
             </div>
           </div>
-          <!-- <div class="col-md-3">
+          <div class="col-md-3">
             <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
             <form action="#" method="post" class="footer-subscribe">
               <div class="input-group mb-3">
@@ -896,37 +1028,37 @@
                 </div>
               </div>
             </form>
-          </div> -->
+          </div>
         </div>
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
             <div class="border-top pt-5">
-              <!-- <p class="copyright"><small>
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            </small></p> -->
-        
+              <p class="copyright"><small>
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This portal is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by FureverHome
+              </small></p> 
             </div>
-          </div>
-          
+          </div> 
         </div>
       </div>
     </footer>
 
-  </div> <!-- .site-wrap -->
+  </div> <!-- .site-wrap -->  
 
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/jquery.sticky.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
-  <script src="js/main.js"></script>
-
-  
-  </body>
+  <!-- Scripts -->
+  <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/owl.carousel.min.js"></script>
+  <script src="../js/jquery.countdown.min.js"></script>
+  <script src="../js/jquery.easing.1.3.js"></script>
+  <script src="../js/aos.js"></script>
+  <script src="../js/jquery.fancybox.min.js"></script>
+  <script src="../js/jquery.sticky.js"></script>
+  <script src="../js/isotope.pkgd.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../ownjs/3mainpage.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
+</body>
 </html>
