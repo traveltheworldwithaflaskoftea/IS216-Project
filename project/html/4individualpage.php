@@ -259,7 +259,9 @@
       Check Adoption Basket to see the list!
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href='8adoptionbasket.php'> 
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Check Basket</button>
+        </a>
       </div>
     </div>
   </div>
@@ -288,7 +290,7 @@
                 <li><a href="3mainpage.html" class="smoothscroll">Home</a></li>
                 <li><a href="7profilepage.html" class="smoothscroll">Profile</a></li>
                 <li><a href= "6appointmentpage.html" class="smoothscroll">Appointment</a></li>
-                <li><a href="8adoptionbasket.html" class="smoothscroll">Adoption Basket</a></li>
+                <li><a href="8adoptionbasket.php" class="smoothscroll">Adoption Basket</a></li>
               </ul>
             </div>
             <!-- Social Media Buttons-->
