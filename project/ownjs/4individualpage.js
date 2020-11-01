@@ -71,8 +71,6 @@ function display_individual_page(dog_array){
         document.getElementById('caro_buttons_left').innerHTML = '';
         document.getElementById('caro_buttons_right').innerHTML = '';
     }
-    //time to update some values!!
-    
 
     document.getElementById('dog_description').innerHTML = `
                                                         <p>${dog_array.description}</p>
@@ -117,5 +115,6 @@ function display_individual_page(dog_array){
                                                 </ul>
                                                 `;                                                                                                   
 }
+
 
 

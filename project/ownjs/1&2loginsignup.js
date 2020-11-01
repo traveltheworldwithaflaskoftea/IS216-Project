@@ -36,3 +36,4 @@ function rememberMe(){
   var password = document.getElementById('password').value;
   document.getElementById('password').value = password; 
 }
+
