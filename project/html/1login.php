@@ -45,30 +45,42 @@
       <div class="row  d-flex justify-content-center align-middle mt-4 ">
         <div class="col-6 shadow white mt-5 mb-5">
           <div class="row d-flex justify-content-center">
-              <h1 class="col-12 font-weight-normal mt-3" style="margin-bottom: 2modal0px;">Login</h1> 
+              <h1 class="col-12 font-weight-normal mt-3" style="margin-bottom: 15px;">Login</h1> 
               <br>
 
               <div id="error" class="col-8 mb-2" style="color:red; font-weight: bold;"></div>
 
-              <!-- getElementById('username').value-->
-              <input type="text" class="col-8 mb-2 form-control" id="username"  placeholder="Username" required>
+              <form>
+                <!-- getElementById('username').value-->
+                <!-- <input type="text" class="col-8 mb-2 form-control" id="username"  placeholder="Username" required> -->
+                <div class="form-group row">
+                  <label for="username" class="col-sm-3 col-form-label text-right">Username</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="username" placeholder="Username" required>
+                  </div>
+                </div>
 
-              <!-- getElementById('password').value-->
-              <input type="password" class="col-8 mb-2 form-control" id="password" placeholder="Password" required>
+                <!-- getElementById('password').value-->
+                <div class="form-group row">
+                  <label for="inputPassword" class="col-sm-3 col-form-label text-right">Password</label>
+                  <div class="col-sm-9">
+                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                  </div>
+                </div>
+
+                <br>
+
+                <span> 
+                  <input type="checkbox" id="remember" style="margin-bottom:15px;" onclick="return function1()"> Remember me
+                </span>
               
-              <br>
+              
+                <a class="col-12 text-center mt-3 mb-3 blue size pf" href="9passwordreset.html">Forgot Password? </a>
 
-              <span> 
-                <input type="checkbox" id="remember" style="margin-bottom:15px;" onclick="return function1()"> Remember me
-              </span>
-             
-            
-              <a class="col-12 text-center mt-3 mb-3 blue size pf" href="9passwordreset.html">Forgot Password? </a>
+                <button class="btn btn-primary col-8 col-offset-2 size" id="login" href="" onclick='ifValid()'>Log In</button><br>
 
-              <button class="btn btn-primary col-8 col-offset-2 size" id="login" href="" onclick='ifValid()'>Log In</button><br>
-
-              <a href="2signup.html" class=" col-12 text-center mb-4 size" style="margin-top: 10px;">Create an account</a>
-
+                <a href="2signup.html" class=" col-12 text-center mb-4 size" style="margin-top: 10px;">Create an account</a>
+              </form>
         </div>
       </div>
     </div>
