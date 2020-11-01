@@ -112,7 +112,17 @@ foreach ($accounts as $account){
   </div>
 
   <!-- Session -->
+  <?php
+    // $_SESSION['username'] = "";
+    // $_SESSION['password'] = "";
+    
+    // if (!isset($_SESSION['username']) || !isset($_SESSION)){
+    //   echo "Please input your username and password!"
+    // }
+    // else{
 
+    // }
+  ?>
 
   <!-- Footer -->
   <footer class="login-footer fixed-bottom">
