@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <title>🐶 Profile 🐱</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
-    <script src="../js/main.js"></script>
- 
+  <meta charset="UTF-8">
+  <title>Multi Step Bootstrap Form with animations</title>
+
     <!-- Style sheets -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i">
     <link rel="stylesheet" href="../fonts/icomoon/style.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/jquery-ui.css">
@@ -18,69 +18,386 @@
     <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="../css/aos.css"> 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css"> -->
 
-<span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt">
-    <strong><em>Tell us your preferences and we will match the best dog to you! 🐶 (Please check as many as apply)</em></strong><o:p></o:p></span>
+  
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <ol class="style15">
-        <li>
-        <p><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt">Age:<span style="mso-spacerun: yes">&nbsp;<br>
-        </span><input name="Age" type="checkbox" value="Kitten_puppy">Puppy (under 16 weeks old)<span style="mso-spacerun: yes">&nbsp;</span><br><input name="Age" type="checkbox" value="Adolescent">Adolescent 
-        (5-11 months)<span style="mso-spacerun: yes">&nbsp; </span>
-        <input name="Age" type="checkbox" value="Adult">Adult<span style="mso-spacerun: yes">&nbsp;
-        </span><br>
-        <input name="Age" type="checkbox" value="No_preference">No preference<o:p></o:p></span></p>
-        </li>
-        <li>
-        <p><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt">Coat:<span style="mso-spacerun: yes">&nbsp;<br></span><input name="Coat" type="checkbox" value="Long_hair">Long 
-        hair/fluffy<span style="mso-spacerun: yes">&nbsp;<br> <input name="Coat" type="checkbox" value="Short_hair">Short 
-        hair<span style="mso-spacerun: yes">&nbsp;&nbsp;<br> </span>
-        <input name="Coat" type="checkbox" value="No_preference">No preference<o:p></o:p></span></p>
-        </li>
-        <li>
-        <p><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt">Gender:<span style="mso-spacerun: yes">&nbsp;<br></span><input name="Gender" type="checkbox" value="Male">Male<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;<br></span><input name="Gender" type="checkbox" value="Female">Female<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;</span><br><input name="Gender" type="checkbox" value="No_preference">No 
-        preference</span></p>
-        </li>
-        <li>
-        <p><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt">Playfulness:<span style="mso-spacerun: yes">&nbsp;<br>
-        </span><input name="Playfulness" type="checkbox" value="Extremely">Extremely<br>
-        <input name="Playfulness" type="checkbox" value="Moderately">Moderately<br>
-        <input name="Playfulness" type="checkbox" value="Intermittently">Intermittently<br><span style="mso-spacerun: yes">
-        </span><input name="Playfulness" type="checkbox" value="Observer">Observer<o:p></o:p></span></p>
-        </li>
-        <li>
-        <p><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt">Temperament:<span style="mso-spacerun: yes">&nbsp;<br></span><input name="Temperament" type="checkbox" value="Extrovert">Extrovert/Confident<span style="mso-spacerun: yes"><br></span><input name="Temperament" type="checkbox" value="Selective">Friendly/Selective<span style="mso-spacerun: yes">&nbsp;<br></span><input name="Temperament" type="checkbox" value="Quiet">Quiet/serene<span style="mso-spacerun: yes">&nbsp;</span><br>
-        <input name="Temperament" type="checkbox" value="No_preference">No 
-        preference<o:p></o:p></span></p>
-        </li>
-        <li>
-        <p><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt">Affection 
-        Preference:<span style="mso-spacerun: yes"><br></span><input name="Affection" type="checkbox" value="Lap_cat_dog">Lap 
-        <span style="mso-spacerun: yes">Dog<br></span><input name="Affection" type="checkbox" value="Cuddly">Cuddly<br><span style="mso-spacerun: yes">
-        </span><input name="Affection" type="checkbox" value="Sit_next_to_me">Sit next to me<br><span style="mso-spacerun: yes">
-        </span><input name="Affection" type="checkbox" value="Independent">Independent<br><span style="mso-spacerun: yes">
-        </span><span><input name="Affection" type="checkbox" value="Likes_to_be_held">Likes to be held<br><span style="mso-spacerun: yes"></span>
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #2c2c2c;
+}
+body a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header__btn {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-right: 10px;
+  background-color: #fff;
+  border: 1px solid #2c2c2c;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+}
+.header__btn:last-child {
+  margin-right: 0;
+}
+.header__btn:hover, .header__btn.js-active {
+  color: #fff;
+  background-color: #2c2c2c;
+}
+
+.header {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.header__title {
+  margin-bottom: 30px;
+  font-size: 2.1rem;
+}
+
+.content {
+  width: 95%;
+  margin: 0 auto 50px;
+}
+
+.content__title {
+  margin-bottom: 40px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.content__title--m-sm {
+  margin-bottom: 10px;
+}
+
+.multisteps-form__progress {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+.multisteps-form__progress-btn {
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  position: relative;
+  padding-top: 20px;
+  color: rgba(108, 117, 125, 0.7);
+  text-indent: -9999px;
+  border: none;
+  background-color: transparent;
+  outline: none !important;
+  cursor: pointer;
+}
+@media (min-width: 500px) {
+  .multisteps-form__progress-btn {
+    text-indent: 0;
+  }
+}
+.multisteps-form__progress-btn:before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 13px;
+  height: 13px;
+  content: '';
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  transition: all 0.15s linear 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+  transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+  transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index: 3;
+}
+.multisteps-form__progress-btn:after {
+  position: absolute;
+  top: 5px;
+  left: calc(-50% - 13px / 2);
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  display: block;
+  width: 100%;
+  height: 2px;
+  content: '';
+  background-color: currentColor;
+  z-index: 1;
+}
+.multisteps-form__progress-btn:first-child:after {
+  display: none;
+}
+.multisteps-form__progress-btn.js-active {
+  color: #007bff;
+}
+.multisteps-form__progress-btn.js-active:before {
+  -webkit-transform: translateX(-50%) scale(1.2);
+          transform: translateX(-50%) scale(1.2);
+  background-color: currentColor;
+}
+
+.multisteps-form__form {
+  position: relative;
+}
+
+.multisteps-form__panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.multisteps-form__panel.js-active {
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+}
+.multisteps-form__panel[data-animation="scaleOut"] {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.multisteps-form__panel[data-animation="scaleOut"].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.multisteps-form__panel[data-animation="slideHorz"] {
+  left: 50px;
+}
+.multisteps-form__panel[data-animation="slideHorz"].js-active {
+  transition-property: all;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.2, 1.13, 0.38, 1.43);
+  transition-delay: 0s;
+  left: 0;
+}
+.multisteps-form__panel[data-animation="slideVert"] {
+  top: 30px;
+}
+.multisteps-form__panel[data-animation="slideVert"].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  top: 0;
+}
+.multisteps-form__panel[data-animation="fadeIn"].js-active {
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+.multisteps-form__panel[data-animation="scaleIn"] {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.multisteps-form__panel[data-animation="scaleIn"].js-active {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<!--PEN HEADER-->
+<header class="header">
+  <h1 class="header__title">Preferences</h1>
+  
+</header>
+<!--PEN CONTENT     -->
+<div class="content">
+  <!--content inner-->
+  <div class="content__inner">
+    <div class="container">
+
+
+      <!--content title-->
+      <h2 class="content__title">Tell us your preferences and we will match the best dog to you! 🐶 (Please check as many as apply)</h2>
+    </div>
+    <div class="container overflow-hidden">
+      <!--multisteps-form-->
+      <div class="multisteps-form">
+        <!--progress bar-->
+        <div class="row">
+          <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
+            <div class="multisteps-form__progress">
+              <button class="multisteps-form__progress-btn js-active" type="button" title="Age">1</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Coat">2</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Gender">3</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Playfulness">4</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Temperament">5</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Affection">6</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Activity_level">7</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Interest">8</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Done">done!</button>
+            </div>
+          </div>
+        </div>
+        <!--form panels-->
+        <div class="row">
+          <div class="col-12 col-lg-8 m-auto">
+            
+            <form class="multisteps-form__form">
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Age:</h3>
+
+                <div class="multisteps-form__content">
+                  </span><input name="Age" type="checkbox" value="Kitten_puppy">Puppy (under 16 weeks old)<span style="mso-spacerun: yes">&nbsp;</span><br><input name="Age" type="checkbox" value="Adolescent">Adolescent 
+                  (5-11 months)<span style="mso-spacerun: yes"><br> </span>
+                  <input name="Age" type="checkbox" value="Adult">Adult<span style="mso-spacerun: yes">&nbsp;
+                  </span><br>
+                  <input name="Age" type="checkbox" value="No_preference">No preference<o:p></o:p></span></p>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Coat:</h3>
+                <div class="multisteps-form__content">
+                    <input name="Coat" type="checkbox" value="Long_hair">Long 
+                    hair/fluffy<span style="mso-spacerun: yes">&nbsp;<br> <input name="Coat" type="checkbox" value="Short_hair">Short 
+                    hair<span style="mso-spacerun: yes">&nbsp;&nbsp;<br> </span>
+                    <input name="Coat" type="checkbox" value="No_preference">No preference<o:p></o:p></span></p>
+                    </li>
  
-        <li>
-        <p><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt">How would you 
-        describe the activity level in your home environment? <br>
-        <input name="Activity_home" type="checkbox" value="very_active">Very active/lots of 
-        coming/going/visitors<br><span style="mso-spacerun: yes"></span><input name="Activity_home" type="checkbox" value="Busy">Busy 
-        with children &amp;/or other pets<br>
-        <input name="Activity_home" type="checkbox" value="Quiet">Routine/Quiet<br><span style="mso-spacerun: yes"></span><input name="Activity_home" type="checkbox" value="Noisy">Noisy<br><span style="mso-spacerun: yes"></span><input name="Activity_home" type="checkbox" value="Not_home_much">Extremely 
-        quiet/not home much<o:p></o:p></span></p>
-        </li>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Gender:</h3>
+                <div class="multisteps-form__content">
+                  <input name="Gender" type="checkbox" value="Male">Male<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;<br></span><input name="Gender" type="checkbox" value="Female">Female<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;</span><br><input name="Gender" type="checkbox" value="No_preference">No 
+                    preference</span></p>
+      
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Playfulness of dog:</h3>
+                <div class="multisteps-form__content">
+                  <input name="Playfulness" type="checkbox" value="Extremely">Extremely<br>
+                  <input name="Playfulness" type="checkbox" value="Moderately">Moderately<br>
+                  <input name="Playfulness" type="checkbox" value="Intermittently">Intermittently<br><span style="mso-spacerun: yes">
+                  </span><input name="Playfulness" type="checkbox" value="Observer">Observer<o:p></o:p>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Temperament of dog:</h3>
+                <div class="multisteps-form__content">
+                  <input name="Temperament" type="checkbox" value="Extrovert">Extrovert/Confident<span style="mso-spacerun: yes"><br></span><input name="Temperament" type="checkbox" value="Selective">Friendly/Selective<span style="mso-spacerun: yes">&nbsp;<br></span><input name="Temperament" type="checkbox" value="Quiet">Quiet/serene<span style="mso-spacerun: yes">&nbsp;</span><br>
+                  <input name="Temperament" type="checkbox" value="No_preference">No 
+                  preference<o:p></o:p>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Affection Preference:</h3>
+                <div class="multisteps-form__content">
+                  <input name="Affection" type="checkbox" value="Lap_cat_dog">Lap 
+                  <span style="mso-spacerun: yes">Dog<br></span><input name="Affection" type="checkbox" value="Cuddly">Cuddly<br><span style="mso-spacerun: yes">
+                  </span><input name="Affection" type="checkbox" value="Sit_next_to_me">Sit next to me<br><span style="mso-spacerun: yes">
+                  </span><input name="Affection" type="checkbox" value="Independent">Independent<br><span style="mso-spacerun: yes">
+                  </span><span><input name="Affection" type="checkbox" value="Likes_to_be_held">Likes to be held<br>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">How would you describe the activity level in your home environment?</h3>
+                <div class="multisteps-form__content">
+                  <input name="Activity_home" type="checkbox" value="very_active">Very active with many visitors<br><span style="mso-spacerun: yes"></span><input name="Activity_home" type="checkbox" value="Busy">Busy 
+                  with children &amp;/or other pets<br>
+                  <input name="Activity_home" type="checkbox" value="Quiet">Routine/Quiet<br><span style="mso-spacerun: yes"></span><input name="Activity_home" type="checkbox" value="Noisy">Noisy<br><span style="mso-spacerun: yes"></span><input name="Activity_home" type="checkbox" value="Not_home_much">Extremely 
+                  quiet/not home much<o:p></o:p>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Why are you interested in adopting an animal?</h3>
+                <div class="multisteps-form__content">
+                  <input name="Why_adopting" type="checkbox" value="Pet"> Family pet<br><span style="mso-tab-count: 2">
+                  </span><input name="Why_adopting" type="checkbox" value="playmate"> Playmate for child/children<br><span style="mso-spacerun: yes">
+                  </span><input name="Why_adopting" type="checkbox" value="Companion">Personal Companion<br><input name="Why_adopting" type="checkbox" value="Gift">Gift for friend/family member
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Additional Comments</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <textarea class="multisteps-form__textarea form-control" placeholder="Additional Comments and Requirements"></textarea>
+                  </div>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-success ml-auto" type="button" title="Send">Send</button>
+                  </div>
+                </div>
+              </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
+<script  src="../ownjs/questionnaire.js"></script>
 
-        <li>
-            <p><span style="font-size: 12.0pt; mso-bidi-font-size: 10.0pt">Why are you 
-                interested in adopting an animal?<br>
-                <input name="Why_adopting" type="checkbox" value="Pet"> Family pet<br><span style="mso-tab-count: 2">
-                </span><input name="Why_adopting" type="checkbox" value="playmate"> Playmate for child/children<br><span style="mso-spacerun: yes">
-                </span><input name="Why_adopting" type="checkbox" value="Companion">Personal Companion<br><input name="Why_adopting" type="checkbox" value="Gift">Gift for friend/family member
-            </li>
-
-    </ol>
-    <input class="btn btn-primary" type="submit" value="Submit">
-
+</body>
 </html>
