@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
     <script src="../js/main.js"></script>
+    
+    
  
     <!-- Style sheets -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i">
@@ -19,17 +21,130 @@
     <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="../css/aos.css"> 
     <link rel="stylesheet" href="../css/style.css">
-    
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section" onload="load_default_cards()">
-  
-    <div id="overlayer"></div>
-    <div class="loader">
-      <div class="spinner-border text-primary" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
-    </div>
 
+    <style>
+      div.container{
+        text-align:center;
+      }
+      
+          
+      /* Full-width input fields */
+      input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      /* Set a style for all buttons */
+      button {
+        background-color: #a2c0be;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+
+      /* Extra styles for the cancel button */
+      .closebtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color:#2b5c59;
+      }
+
+      /* Position the close button */
+
+      .container {
+        padding: 16px;
+      }
+
+      span.psw {
+        float: right;
+        padding-top: 16px;
+      }
+
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        padding-top: 60px;
+      }
+
+      /* Modal Content/Box */
+      .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
+
+      /* Close Button */
+      .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: red;
+        cursor: pointer;
+      }
+
+      /* Add Zoom Animation */
+      .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+      }
+
+      @-webkit-keyframes animatezoom {
+        from {-webkit-transform: scale(0)} 
+        to {-webkit-transform: scale(1)}
+      }
+        
+      @keyframes animatezoom {
+        from {transform: scale(0)} 
+        to {transform: scale(1)}
+      }
+
+      /* Change styles for span and cancel button on extra small screens */
+      @media screen and (max-width: 300px) {
+        span.psw {
+          display: block;
+          float: none;
+        }
+        .closebtn {
+          width: 100%;
+        }
+      }
+
+  </style>
+    
+</head>
+  
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section" onload="load_default_cards()">
+
+    <link href="navbar.html" rel="import" />
     <!-- Navigation Bar -->
     <div class="site-wrap">
       <div class="site-mobile-menu site-navbar-target">
@@ -155,10 +270,11 @@
                     <div class="dropdown my-4">
                       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Breed 
                       <span class="caret"></span></button>
-                      <ul class="dropdown-menu" id="myUL3">
+                      <ul class="dropdown-menu pre-scrollable" id="myUL3">
                         <input class='form-control' type="text" id="myInput3" onkeyup="myFunction3()"  title="Type in a name">
 
-                        <li><a href="#myInput" onclick="onclick_breed('Golden Retriever')">Golden Retriever</a></li>
+                        <div id="insert_list1">
+                        <!-- <li><a href="#myInput" onclick="onclick_breed('Golden Retriever')">Golden Retriever</a></li>
                         <li><a href="#myInput" onclick="onclick_breed('Pug')">Pug</a></li>
                         <li><a href="#myInput" onclick="onclick_breed('Corgi')">Corgi</a></li>
                         <li><a href="#myInput" onclick="onclick_breed('Shiba Inu')">Shiba Inu</a></li>
@@ -170,7 +286,10 @@
                         <li><a href="#myInput" onclick="onclick_breed('Poodle')">Poodle</a></li>
                         <li><a href="#myInput" onclick="onclick_breed('Rottweiler')">Rottweiler</a></li>
                         <li><a href="#myInput" onclick="onclick_breed('German Shorthaired Pointer')">German Shorthaired Pointer</a></li>
-                        <li><a href="#myInput" onclick="onclick_breed('Yorkshire Terriers')">Yorkshire Terriers</a></li>
+                        <li><a href="#myInput" onclick="onclick_breed('Yorkshire Terriers')">Yorkshire Terriers</a></li> -->
+                        </div>
+
+                        
                       </ul>
                     </div>
                   </div>
@@ -180,14 +299,19 @@
                     <div class="dropdown my-4">
                       <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">State 
                       <span class="caret"></span></button>
-                      <ul class="dropdown-menu" id="myUL4">
+                      <ul class="dropdown-menu pre-scrollable" id="myUL4">
                         <input class='form-control' type="text" id="myInput3" onkeyup="myFunction4()"  title="Type in a name">
 
+                        <div id="insert_list2">
                         <!-- <li><a href="#myInput" onclick="onclick_state('AL')">Alabama</a></li>
                         <li><a href="#myInput" onclick="onclick_state('AL')">Alaska</a></li>
                         <li><a href="#myInput" onclick="onclick_state('AZ')">Arizona</a></li>
                         <li><a href="#myInput" onclick="onclick_state('AK')">Arkansas</a></li>
                         <li><a href="#myInput" onclick="onclick_state('CA')">California</a></li> -->
+                        </div>
+                    
+
+                        
                       </ul>
                     </div>
                   </div>               
@@ -783,7 +907,7 @@
       </div>
     </section> -->
 
-    
+    <!-- Contact -->
     <section class="" id="contact-section">
       <div class="container">
         <div class="row no-gutters">
@@ -863,7 +987,7 @@
       </div>
     </section>
     
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="site-footer">
       <div class="container">
         <div class="row">
@@ -936,5 +1060,5 @@
   <script src="../ownjs/3mainpage.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
-  </body>
+</body>
 </html>
