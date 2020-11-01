@@ -1,11 +1,7 @@
-<<<<<<< Updated upstream:html/6appointmentpage.html
-<!DOCTYPE html>
-=======
 <?php
   session_start();
 ?>
 
->>>>>>> Stashed changes:project/html/6appointmentpage.php
 <html>
 <head>
     <title>📆Appointment Page</title>
