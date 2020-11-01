@@ -148,7 +148,6 @@
             <span class="icon-paw"></span>
           </div>
           <h2 class="text-black mb-2"  id="dog_name">Details</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
         </div>
       </div>
 
