@@ -80,8 +80,24 @@
       </div>
     
 
-      <!-- Wishlist -->
-      <div id="wishlist" class="container justify-content-center"></div>
+      <!-- Display Adoption Basket -->
+      <div class="container justify-content-center">
+        <div id="Display_Adoption_Basket" class="form-group form-check">
+              <div id="Display_Adoption_Basket" class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
+                  <div class="trainer">
+                    <figure>
+                    <img src="${result.photos[0]['full']}" alt="Image" class="img-fluid">
+                    </figure>
+                    <div class="px-md-3">
+                      <h3>${result.name}</h3>
+                      <p>${result.description}</p>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="selected_pets[]" value="${result.id}">
+                        <label class="form-check-label" for="exampleCheck1">Add to Cart</label>
+                    </div>
+                  </div>
+              </div>
+        </div>
+      </div>
 
     </section>
         
