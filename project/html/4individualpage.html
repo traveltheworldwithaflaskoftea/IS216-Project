@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>🐶 FureverHome 🐱</title>
@@ -244,10 +244,14 @@
 
   <!-- Wishlist Button-->
   <div class='row justify-content-center'> 
-  <button class="col mx-5 btn btn-primary" onclick="addPets()" name='wishlistbutton'>🛒 Add to Basket </button>
+    <form action='../database/Testing2.php' method='POST'>
+      <!-- <button class="col mx-5 btn btn-primary" onclick="addPets()" name='wishlistbutton'>🛒 Add to Basket </button> -->
+      <input type='hidden' name='dog_id' id='dog_id' value=''>
+      <input type='submit' value='🛒 Add to Basket' class='col mx-5 btn btn-primary'  name='wishlistbutton'>
+    </form>
   <br>
   <!-- Share button-->
-  <button class="col mx-5 btn btn-primary" id='sharebutton' name='sharebutton'>📩 Share</button>
+  <!-- <button class="col mx-5 btn btn-primary" id='sharebutton' name='sharebutton'>📩 Share</button> -->
   </div>
   </section>
   <hr>

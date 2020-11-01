@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 class account {
 
@@ -48,6 +48,7 @@ class account {
     public function getAdoptionBasket() {
         return $this->adoption_basket;
     }
+
 
 }
 
