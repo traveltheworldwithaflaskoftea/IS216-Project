@@ -19,5 +19,5 @@ function sent(){
 }
 
 function back(){
-    window.location.href = "../html/1login.html";
+    window.location.href = "../html/1login.php";
 }

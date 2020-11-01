@@ -6,19 +6,16 @@ $accounts = $dao->getAccounts();
 var_dump($accounts); 
 
 ?>
-<!-- 
 <html>
 <body>
 
-    <h1>Our Cats</h1>
-
-    <form action='display.php' method='POST'>
+    <h1>lol</h1>
 
         <table border='1'>
             <tr>
+                <th>Username</th>
                 <th>Name</th>
-                <th>Age</th>
-                <th>Gender</th>
+                <th>Password</th>
                 <th>Status</th>
             </tr>
 
@@ -86,4 +83,4 @@ var_dump($accounts);
 Click <a href='display.php'>here</a> to Reset This Page<br>
 
 </body>
-</html> -->
+</html> 
