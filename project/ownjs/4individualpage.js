@@ -23,7 +23,6 @@ function load_individual_dog(){
     const pet_id = urlParams.get('id')
     console.log(pet_id); 
 
-<<<<<<< Updated upstream
     // Calling the API 
     search_dog_id(pet_id);
 }
@@ -72,10 +71,8 @@ function display_individual_page(dog_array){
         document.getElementById('caro_buttons_left').innerHTML = '';
         document.getElementById('caro_buttons_right').innerHTML = '';
     }
-=======
     //time to update some values!!
     
->>>>>>> Stashed changes
 
     document.getElementById('dog_description').innerHTML = `
                                                         <p>${dog_array.description}</p>
