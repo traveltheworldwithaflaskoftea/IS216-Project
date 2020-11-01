@@ -77,12 +77,12 @@
                 <input type="checkbox" id="remember" style="margin-bottom:15px;" onclick="return function1()"> Remember me
               </span>
             
-            
+
               <a class="col-12 text-center mt-3 mb-3 blue size pf" href="9passwordreset.html">Forgot Password? </a>
 
               <button class="btn btn-primary col-8 col-offset-2 size" id="login" href="" onclick='ifValid()'>Log In</button><br>
 
-              <a href="2signup.html" class=" col-12 text-center mb-4 size" style="margin-top: 10px;">Create an account</a>
+              <a href="2signup.html" class="col-12 text-center my-4 size">Create an account</a>
             </form>
         </div>
       </div>
