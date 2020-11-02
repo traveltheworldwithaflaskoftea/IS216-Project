@@ -1,11 +1,7 @@
-<<<<<<< Updated upstream:html/7profilepage.php
-<!DOCTYPE html>
-=======
 <?php
   session_start();
 ?>
 
->>>>>>> Stashed changes:project/html/7profilepage.php
 <html lang="en">
 <head>
     <title>🐶 Profile 🐱</title>

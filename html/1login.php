@@ -1,7 +1,7 @@
 <?php 
   require_once '../database/accountDAO.php'; 
   $dao = new accountDAO(); 
-  $accounts = $dao->getAccounts(); 
+  $accounts = $dao->getAccounts();
 
   // Form processing 
   $username = '';
