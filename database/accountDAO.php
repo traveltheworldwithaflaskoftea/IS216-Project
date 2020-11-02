@@ -59,6 +59,48 @@ class accountDAO {
         // STEP 6
         return $accounts;
     }
+    // Getting specific account details
+    public function get_Account_detail($username) {
+
+        // STEP 1 - Connect to MySQL Database
+        $connMgr = new ConnectionManager(); 
+        $pdo = $connMgr->connect(); 
+
+        // STEP 2 - Prepare SQL Query
+        $sql = "
+            select 
+                *
+            from
+                account
+            WHERE 
+                username = :username
+        ";
+        $stmt = $pdo->prepare($sql); 
+        $stmt->bindParam(':username', $username, PDO::PARAM_STR); 
+        // STEP 3 - Run Query
+        $isOk = $stmt->execute();
+        
+        // STEP 4 - Fetch query results  
+        $account_details = [];
+        while ( $row = $stmt->fetch() ) {
+            $account_details =new account( 
+                $row['username'], 
+                $row['name'], 
+                $row['password'], 
+                $row['email'], 
+                $row['phone_number'], 
+                $row['postal_code'], 
+                $row['adoption_basket'] 
+            );
+        }
+        
+        // STEP 5
+        $stmt = null; // clear memory
+        $pdo = null; // clear memory
+        
+        // STEP 6
+        return $account_details;
+    }
 
     // Adds a new account
     // Return TRUE (if no SQL error) or FALSE (SQL error)
