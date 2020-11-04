@@ -104,12 +104,14 @@
                 <li>Phone Number: <?php echo $phone_number ?></li>
                 <li>Postal Code: <?php echo $postalcode ?></li>
             </ul>
-              <button type="button" class="btn btn-primary">
-                <a href="9passwordreset.php" class="text-white"> Password reset </a>
+            <button type="button" class="btn btn-primary">
+                <a href="9passwordreset.html" class="text-white"> Password reset </a>
               </button>
+              <button class="btn btn-primary" id='sharebutton' name='sharebutton'> <a href='logout.php' class="text-white">Log Out</a></button>
           </div>
         </div>
         <div class="col-md-3 col-0"></div>
+          
     </div>
 
   </section>
