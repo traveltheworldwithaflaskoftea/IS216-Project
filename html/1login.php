@@ -68,6 +68,7 @@ foreach ($accounts as $account){
       <div class="row  d-flex justify-content-center align-middle mt-4 ">
         <div class="col-6 shadow white mt-5 mb-5">
           <div class="row d-flex justify-content-center">
+              <img src="/images/logo_no_bg.png">
               <h1 class="col-12 font-weight-normal mt-3" style="margin-bottom: 15px;">Login</h1> 
               <br>
 
@@ -102,7 +103,7 @@ foreach ($accounts as $account){
 
                 <button class="btn btn-primary col-8 col-offset-2 size" id="login" href="" onclick='ifValid()'>Log In</button><br>
 
-                <a href="2signup.html" class=" col-12 text-center mb-4 size" style="margin-top: 10px;">Create an account</a>
+                <a href="2signup.php" class=" col-12 text-center mb-4 size" style="margin-top: 10px;">Create an account</a>
               </form>
         </div>
       </div>

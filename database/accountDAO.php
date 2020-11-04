@@ -49,7 +49,7 @@ class accountDAO {
                         $row['postal_code'], 
                         $row['adoption_basket'] 
                     ); // new account object
-            $accounts[] = $account; // add account object to ret array
+            // $accounts[] = $account; // add account object to ret array
         }
         
         // STEP 5
