@@ -18,11 +18,9 @@ foreach ($accounts as $account){
   if (($account->getUsername() == $username) && ($account->getPassword()) == $password){
       header('location: ./3mainpage.html'); 
   } else{ 
-    $msg = ''
-
+    $msg = '';
+  }
 }
-
-
 ?>
 
 <html lang="en">
