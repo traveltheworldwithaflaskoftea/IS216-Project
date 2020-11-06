@@ -71,7 +71,7 @@ async function adoptionBasket(){
                                 <p class="card-text">${result.description}.</p>
                                 <input type="checkbox" id="${result.id}" value="${result.id}" v-model="checkeddogs">
                                 <label for="${result.id}">I choose you!!</label>
-                                <p class="card-text"><small class="text-muted">Leaing this blank for now</small></p>
+                                <p class="card-text"><small class="text-muted">Checked Dogs: {{checkeddogs}}</small></p>
                                 </div>
                             </div>`;
                     }
