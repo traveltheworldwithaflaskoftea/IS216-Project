@@ -10,6 +10,7 @@
     <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
     <script src="../js/main.js"></script>
     <script src="../ownjs/8.1adoptionbasket.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     
     <!-- Axios -->
     <script src="https://unpkg.com/axios/dist/axios.js"></script>
@@ -27,9 +28,10 @@
     <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="../css/aos.css"> 
     <link rel="stylesheet" href="../css/style.css">
-
+  
 </head>
 <body onload="adoptionBasket()">
+<!-- <body> -->
     <!-- Navigation bar -->
     <div class="site-wrap">
       <div class="site-mobile-menu site-navbar-target">
@@ -73,71 +75,31 @@
     </header>
 
     <!-- Body -->
-    <!-- Card sections for the pets -->
-    <!-- This is the nice looking header -->
-    <section class="site-section trainers" id="trainers-section">
-      <div class="container">
-        <div class="row justify-content-center" data-aos="fade-up">
-          <div class="col-lg-7 text-center heading-section mb-5">
-            <div class="paws">
-              <span class="icon-paw"></span>
-            </div>
-            <h1>what is goin on here</h1>
-            <h2 class="mb-2 heading">Pets Available</h2>
+    <section style="margin-top: 120px;">
+      <div class="card-deck" id='dog_card_deck'>
+        <div class="card">
+          <img class="card-img-top" src="images/golden1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
-        <!-- Here starts the row -->
-        <div class="row" id='dog-card-deck'>
-          <!-- col1 -->
-          <div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
-            <div class="trainer">
-              <figure>
-              <img src="../images/dogger_trainer_1.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-md-3">
-                <h3>Jessica White</h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              </div>
-            </div>
+        <div class="card">
+          <img class="card-img-top" src="images/golden2.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
-          <!-- end of col 1 -->
-          <!-- col 2 -->
-          <div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="trainer">
-              <figure>
-              <img src="../images/dogger_trainer_2.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-md-3">
-                <h3>Valerie Elash</h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <!-- <ul class="ul-social-circle">
-                  <li><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li><a href="#"><span class="icon-instagram"></span></a></li>
-                  <li><a href="#"><span class="icon-facebook"></span></a></li>
-                </ul> -->
-              </div>
-            </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="images/golden3.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
-          <!-- end of col2 -->
-          <!-- col 3 -->
-          <div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up"  data-aos-delay="200">
-            <div class="trainer">
-              <figure>
-              <img src="../images/dogger_trainer_3.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-md-3">
-                <h3>Alicia Jones</h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <!-- <ul class="ul-social-circle">
-                  <li><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li><a href="#"><span class="icon-instagram"></span></a></li>
-                  <li><a href="#"><span class="icon-facebook"></span></a></li>
-                </ul> -->
-              </div>
-            </div>
-          </div>
-          <!-- end of col3 -->
-        <!-- This Div ends the row -->
         </div>
       </div>
     </section>

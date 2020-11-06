@@ -17,8 +17,6 @@ console.log("main.js is loaded");
 // 	});
 // }
 
-console.log('adoption basket is defined!!');
-
 // CODE DO MAKE THE FUCKING MAPS start and end 
 function maps_api(start,end){
 	console.log("map api triggered")

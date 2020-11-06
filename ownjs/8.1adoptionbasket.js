@@ -65,45 +65,25 @@ async function adoptionBasket(){
         var html = ''; // This will be used to replace dog-card-deck innerHTML later
             for (result of result_array){
                     console.log(result);
-                    html += `<div id="Display_Adoption_Basket" class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
-                      <div class="trainer">
-                        <figure>
-                        <img src="${result.photos[0]['full']}" alt="Image" class="img-fluid">
-                        </figure>
-                        <div class="px-md-3">
-                          <h3>${result.name}</h3>
-                          <p>${result.description}</p>
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1" name="selected_pets[]" value="${result.id}">
-                            <label class="form-check-label" for="exampleCheck1">Add to Cart</label>
-                        </div>
-                      </div>
-                  </div>`;
+                    html += `<div class="card">
+                                <a href='4individualpage.php?id=${result.id}'><img src="${result.photos[0]['full']}" alt="Image" class="img-fluid"></a>                            <div class="card-body">
+                                <h5 class="card-title">${result.name}</h5>
+                                <p class="card-text">${result.description}.</p>
+                                <input type="checkbox" id="${result.id}" value="${result.id}" v-model="checkeddogs">
+                                <label for="${result.id}">I choose you!!</label>
+                                <p class="card-text"><small class="text-muted">Leaing this blank for now</small></p>
+                                </div>
+                            </div>`;
                     }
             // end for loop, now lets put html inside the dog-card-deck
             console.log(html);
-            document.getElementById('dog-card-deck').innerHTML = html;}, 5000, compiled_array);
+            document.getElementById('dog_card_deck').innerHTML = html;}, 5000, compiled_array);
     
 }
 
-
-function display_adoption_basket_cards(result_array){
-    console.log('I am in display_adoption_basket_cards');
-    var html = ''; // This will be used to replace dog-card-deck innerHTML later
-		for (result of result_array){
-                html += `<div id="Display_Adoption_Basket" class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
-                  <div class="trainer">
-                    <figure>
-                    <img src="${result.photos[0]['full']}" alt="Image" class="img-fluid">
-                    </figure>
-                    <div class="px-md-3">
-                      <h3>${result.name}</h3>
-                      <p>${result.description}</p>
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="selected_pets[]" value="${result.id}">
-                        <label class="form-check-label" for="exampleCheck1">Add to Cart</label>
-                    </div>
-                  </div>
-              </div>`;
-				}
-		// end for loop, now lets put html inside the dog-card-deck
-		document.getElementById('Display_Adoption_Basket').innerHTML = html;
-}
+new Vue({
+    el: '#dog_card_deck',
+    data: {
+        checkeddogs: []
+    }
+})
