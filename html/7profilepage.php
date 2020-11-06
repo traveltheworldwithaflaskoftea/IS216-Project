@@ -1,11 +1,17 @@
-<<<<<<< Updated upstream:html/7profilepage.php
-<!DOCTYPE html>
-=======
 <?php
-  session_start();
+  require_once '../database/common.php';
+  require_once '../database/account.php';
+  // $user_id = $_SESSION['user_id']; We use this once the sessions are set up 
+  $username = $_SESSION['username'];
+  $dao = new AccountDAO();
+  $account_details = $dao->get_Account_detail($username);
+  
+  $name=$account_details->getName();
+  $email=$account_details->getEmail();
+  $phone_number=$account_details->getPhoneNumber();
+  $postalcode=$account_details->getPostalCode();
 ?>
 
->>>>>>> Stashed changes:project/html/7profilepage.php
 <html lang="en">
 <head>
     <title>🐶 Profile 🐱</title>
@@ -60,8 +66,8 @@
 
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
               <li><a href="3mainpage.html" class="nav-link">Home</a></li>
-              <li><a href= "7profilepage.html" class="nav-link">🙍Profile</a></li>
-              <li><a href= "6appointmentpage.html">📆Appointment</a></li>
+              <li><a href= "7profilepage.php" class="nav-link">🙍Profile</a></li>
+              <li><a href= "6appointmentpage.php">📆Appointment</a></li>
               <li><a href="8adoptionbasket.html">🛒Adoption Basket</a></li>
               </ul>
           </nav>          
@@ -82,16 +88,35 @@
             <span class="icon-paw"></span>
             </div>
             <h2 class="text-black mb-2">Profile</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
         </div>
     </div>
 
-    <!-- Profile -->
-    <div id="profile" class="container justify-content-center"></div>
-      <p>
-          <a class="col-12 text-center mb-3 blue size pf" href="9passwordreset.html">Password reset </a>
-      </p>
+    <div lass="container justify-content-center ">
+      <div class="row justify-content-center" data-aos="fade-up">
+        <div class="col-md-5 col-0 "></div>
+        <div class="col-md-4 justify-content-center text-left heading-section mb-5">
+          <div>
+            <h4> <?php echo $name ?> </h4>
+              <p>
+              <ul class="list-unstyled ul-paw primary mb-0">
+                <li>Username: <?php echo $username ?></li>
+                <li>Email: <?php echo $email ?></li>
+                <li>Phone Number: <?php echo $phone_number ?></li>
+                <li>Postal Code: <?php echo $postalcode ?></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-0"></div>
+    </div>
+
+    <div class="row justify-content-center"> 
+              <button type="button" class=" col-xl-2 col-lg-3  col-sm-3 col-5  mx-2 mb-2 btn btn-primary">
+                <a href="9passwordreset.html" class="text-white"> Password reset </a>
+              </button>
+              <button type="button" class="col-xl-2 col-lg-3  col-sm-3 col-5 mx-2 mb-2 btn btn-primary"> <a href='logout.php' class="text-white">Log Out</a></button>
+    </div>
   </section>
+
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -107,8 +132,8 @@
               <h2 class="footer-heading mb-4">Quick Links</h2>
               <ul class="list-unstyled">
                 <li><a href="3mainpage.html" class="smoothscroll">Home</a></li>
-                <li><a href="7profilepage.html" class="smoothscroll">Profile</a></li>
-                <li><a href= "6appointmentpage.html" class="smoothscroll">Appointment</a></li>
+                <li><a href="7profilepage.php" class="smoothscroll">Profile</a></li>
+                <li><a href= "6appointmentpage.php" class="smoothscroll">Appointment</a></li>
                 <li><a href="8adoptionbasket.html" class="smoothscroll">Adoption Basket</a></li>
               </ul>
             </div>

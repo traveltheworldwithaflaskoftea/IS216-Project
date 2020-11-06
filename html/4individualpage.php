@@ -92,8 +92,8 @@
 
             <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
               <li><a href="3mainpage.html" class="nav-link">Home</a></li>
-              <li><a href= "7profilepage.html" class="nav-link">🙍Profile</a></li>
-              <li><a href= "6appointmentpage.html">📆Appointment</a></li>
+              <li><a href= "7profilepage.php" class="nav-link">🙍Profile</a></li>
+              <li><a href= "6appointmentpage.php">📆Appointment</a></li>
               <li><a href="8adoptionbasket.html">🛒Adoption Basket</a></li>
             </ul>
           </nav>          
@@ -245,7 +245,8 @@
   <div class='row justify-content-center'> 
   <form action="../database/add_to_cart.php" method="POST">
     <!-- <button class="col mx-5 btn btn-primary" onclick="addPets()" name='wishlistbutton'>🛒 Add to Basket </button> -->
-    <input type='submit' value='🛒 Add to Basket' class="col mx-5 btn btn-primary">
+    <input type='hidden' id='dog_id' name='dog_id' value=''>
+    <input type='submit' value='🛒 Add to Basket' class="col mx-5 btn btn-primary" >
   </form>
   <br>
   <!-- Share button-->
@@ -270,8 +271,8 @@
               <h2 class="footer-heading mb-4">Quick Links</h2>
               <ul class="list-unstyled">
                 <li><a href="3mainpage.html" class="smoothscroll">Home</a></li>
-                <li><a href="7profilepage.html" class="smoothscroll">Profile</a></li>
-                <li><a href= "6appointmentpage.html" class="smoothscroll">Appointment</a></li>
+                <li><a href="7profilepage.php" class="smoothscroll">Profile</a></li>
+                <li><a href= "6appointmentpage.php" class="smoothscroll">Appointment</a></li>
                 <li><a href="8adoptionbasket.html" class="smoothscroll">Adoption Basket</a></li>
               </ul>
             </div>

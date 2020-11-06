@@ -8,7 +8,11 @@
 
     <!-- scripts -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <!-- this stylesheet below make our layout weird tbh -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+
+    <!-- Normal -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta charset="utf-8">
@@ -30,7 +34,8 @@
     <link rel="stylesheet" href="../css/style.css">
     
     <!---Internal CSS Styling -->
-    <style> 
+    <!-- The internal css styling also makes this weird -->
+    <!-- <style> 
       
         .sidebar{ 
             background-color: #cbe7e5; 
@@ -51,7 +56,7 @@
             max-width: 80%;           
         }
      
-    </style>
+    </style> -->
 </head>
    
 <body onload="maps_api(75212,91723)">
@@ -86,8 +91,8 @@
 
                 <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="3mainpage.html" class="nav-link">Home</a></li>
-                <li><a href= "7profilepage.html" class="nav-link">🙍Profile</a></li>
-                <li><a href= "6appointmentpage.html">📆Appointment</a></li>
+                <li><a href= "7profilepage.php" class="nav-link">🙍Profile</a></li>
+                <li><a href= "6appointmentpage.php">📆Appointment</a></li>
                 <li><a href="8adoptionbasket.html">🛒Adoption Basket</a></li>
                 </ul>
             </nav>          
@@ -111,7 +116,7 @@
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
             </div>
         </div>
-        
+    
         <div class="row accordion justify-content-center block__76208">
             <div class="col-lg-6 order-lg-2 mb-5 mb-lg-0" data-aos="fade-up"  data-aos-delay="">
                 <div class='sidebar'>
@@ -387,8 +392,8 @@
                   <h2 class="footer-heading mb-4">Quick Links</h2>
                   <ul class="list-unstyled">
                     <li><a href="3mainpage.html" class="smoothscroll">Home</a></li>
-                    <li><a href="7profilepage.html" class="smoothscroll">Profile</a></li>
-                    <li><a href= "6appointmentpage.html" class="smoothscroll">Appointment</a></li>
+                    <li><a href="7profilepage.php" class="smoothscroll">Profile</a></li>
+                    <li><a href= "6appointmentpage.php" class="smoothscroll">Appointment</a></li>
                     <li><a href="8adoptionbasket.html" class="smoothscroll">Adoption Basket</a></li>
                   </ul>
                 </div>

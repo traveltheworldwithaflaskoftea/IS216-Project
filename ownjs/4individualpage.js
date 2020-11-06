@@ -1,9 +1,14 @@
+
+
 function search_dog_id(pet_id){
     console.log("pet id");
 	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
 	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
 
 	var client  = new petfinder.Client({apiKey: id, secret: secret});
+
+    //Input dog ID into hidden form field
+    document.getElementById('dog_id').value = pet_id;
 
     console.log(typeof(pet_id));
 

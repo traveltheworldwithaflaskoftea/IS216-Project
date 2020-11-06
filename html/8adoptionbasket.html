@@ -1,11 +1,4 @@
-<<<<<<< Updated upstream:html/8adoptionbasket.html
 <!DOCTYPE html>
-=======
-<?php
-  session_start();
-?>
-
->>>>>>> Stashed changes:project/html/8adoptionbasket.php
 <html lang="en">
 <head>
     <title>🛒Adoption Basket</title>
@@ -60,8 +53,8 @@
 
                 <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="3mainpage.html" class="nav-link">Home</a></li>
-                <li><a href= "7profilepage.html" class="nav-link">🙍Profile</a></li>
-                <li><a href= "6appointmentpage.html">📆Appointment</a></li>
+                <li><a href= "7profilepage.php" class="nav-link">🙍Profile</a></li>
+                <li><a href= "6appointmentpage.php">📆Appointment</a></li>
                 <li><a href="8adoptionbasket.html">🛒Adoption Basket</a></li>
                 </ul>
             </nav>          
@@ -87,8 +80,24 @@
       </div>
     
 
-      <!-- Wishlist -->
-      <div id="wishlist" class="container justify-content-center"></div>
+      <!-- Display Adoption Basket -->
+      <div class="container justify-content-center">
+        <div id="Display_Adoption_Basket" class="form-group form-check">
+              <div id="Display_Adoption_Basket" class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
+                  <div class="trainer">
+                    <figure>
+                    <img src="${result.photos[0]['full']}" alt="Image" class="img-fluid">
+                    </figure>
+                    <div class="px-md-3">
+                      <h3>${result.name}</h3>
+                      <p>${result.description}</p>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="selected_pets[]" value="${result.id}">
+                        <label class="form-check-label" for="exampleCheck1">Add to Cart</label>
+                    </div>
+                  </div>
+              </div>
+        </div>
+      </div>
 
     </section>
         
@@ -106,8 +115,8 @@
               <h2 class="footer-heading mb-4">Quick Links</h2>
               <ul class="list-unstyled">
                 <li><a href="3mainpage.html" class="smoothscroll">Home</a></li>
-                <li><a href="7profilepage.html" class="smoothscroll">Profile</a></li>
-                <li><a href= "6appointmentpage.html" class="smoothscroll">Appointment</a></li>
+                <li><a href="7profilepage.php" class="smoothscroll">Profile</a></li>
+                <li><a href= "6appointmentpage.php" class="smoothscroll">Appointment</a></li>
                 <li><a href="8adoptionbasket.html" class="smoothscroll">Adoption Basket</a></li>
               </ul>
             </div>
@@ -163,7 +172,9 @@
   <script src="../js/jquery.fancybox.min.js"></script>
   <script src="../js/jquery.sticky.js"></script>
   <script src="../js/isotope.pkgd.min.js"></script>
+  <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../ownjs/8adoptionbasket.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
 
