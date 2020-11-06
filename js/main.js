@@ -1,5 +1,24 @@
 console.log("main.js is loaded");
 
+// adoption baseket for page 8
+// function adoptionBasket(){
+//     var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
+// 	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
+
+// 	var client  = new petfinder.Client({apiKey: id, secret: secret});
+
+// 	client.animal.search({
+// 		type: 'dog'
+// 		})
+// 	.then(resp => {
+// 		// Do something with resp.data.breeds
+// 		var results_array = resp.data.animals;
+// 		console.log(results_array);
+// 	});
+// }
+
+console.log('adoption basket is defined!!');
+
 // CODE DO MAKE THE FUCKING MAPS start and end 
 function maps_api(start,end){
 	console.log("map api triggered")

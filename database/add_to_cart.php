@@ -9,8 +9,8 @@ $user_id = $_SESSION['username'];
 
 // 
 $dao = new AccountDAO();
-$adoption_basket = $dao->getadoptionbasket($user_id,$dog_id);
-var_dump("Initial dog basket" . $adoption_basket);
+$adoption_basket = $dao->getadoptionbasket($user_id);
+var_dump("Initial dog basket: " . $adoption_basket);
 // Check if dog alreay exists inside the basket
 $basket_array = explode(",",$adoption_basket);
 $is_exist = false;
@@ -24,7 +24,7 @@ if($is_exist == false){
     $new_adoption_basket = $adoption_basket . "," . $dog_id;
     $dao->updateAdoptionBasket($user_id,$new_adoption_basket);
     $adoption_basket = $dao->getadoptionbasket($user_id);
-    var_dump("current dog basket" . $adoption_basket);
+    var_dump("current dog basket: " . $adoption_basket);
 }
 
 
