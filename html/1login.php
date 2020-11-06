@@ -12,23 +12,23 @@
   $accounts = $dao->getAccounts();
 
   // Form processing 
-  $username = '';
-  $password = ''; 
-  if( isset($_POST['username']) && isset($_POST['password']) ) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-}
-// var_dump($username);
-// var_dump($password); 
+//   $username = '';
+//   $password = ''; 
+//   if( isset($_POST['username']) && isset($_POST['password']) ) {
+//     $username = $_POST['username'];
+//     $password = $_POST['password'];
+// }
+// // var_dump($username);
+// // var_dump($password); 
 
-// Verify if password match 
-foreach ($accounts as $account){
-  if (($account->getUsername() == $username) && ($account->getPassword()) == $password){
-      header('location: ./3mainpage.html'); 
-  } else{ 
-    $msg = '';
-  }
-}
+// // Verify if password match 
+// foreach ($accounts as $account){
+//   if (($account->getUsername() == $username) && ($account->getPassword()) == $password){
+//       header('location: ./3mainpage.html'); 
+//   } else{ 
+//     $msg = '';
+//   }
+// }
 
 if( isset($_SESSION['error']) ) {
   $error = $_SESSION['error'];
