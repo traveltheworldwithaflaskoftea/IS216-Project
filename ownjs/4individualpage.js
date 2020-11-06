@@ -1,4 +1,7 @@
 
+function addedtocart(){
+    alert("added to cart");
+}
 
 function search_dog_id(pet_id){
     console.log("pet id");

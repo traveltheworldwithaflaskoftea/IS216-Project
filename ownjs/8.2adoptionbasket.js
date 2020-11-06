@@ -74,6 +74,10 @@ async function adoptionBasket(pet_list){
                                     <input type="checkbox" id="${result.id}" value="${result.id}" v-model="checkeddogs">
                                     <label for="${result.id}">I choose you!!</label>
                                     <p class="card-text"><small class="text-muted">Checked Dogs: {{checkeddogs}}</small></p>
+                                    <form action='../database/delete_from_cart.php' method='POST'>
+                                        <input type='hidden' id='${result.id}' name='dog_id' value='${result.id}'>
+                                        <input type='submit' value='Remove from cart'>
+                                    </form>
                                     </div>
                                 </div>
                             </div>

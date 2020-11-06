@@ -28,9 +28,9 @@ if($is_exist == false){
 }
 
 
-$location = "Location: " . "../html/4individualpage.php" . "?id=" . $dog_id;
+$location = "Location: " . "../html/4individualpage.php" . "?id=" . $dog_id . "&" . "incart=true";
 
-// header($location);
-// return;
+header($location);
+return;
     
 ?>

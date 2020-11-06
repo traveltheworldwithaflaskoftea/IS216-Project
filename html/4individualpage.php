@@ -245,12 +245,16 @@
   <div class='row justify-content-center'> 
   <form action="../database/add_to_cart.php" method="POST">
     <!-- <button class="col mx-5 btn btn-primary" onclick="addPets()" name='wishlistbutton'>🛒 Add to Basket </button> -->
+    <?php 
+      if($_GET['incart'] == 'true'){
+        echo "<p class='text-center'>already in cart<p>";}
+    ?>
     <input type='hidden' id='dog_id' name='dog_id' value=''>
-    <input type='submit' value='🛒 Add to Basket' class="col mx-5 btn btn-primary" >
+    <input type='submit' onclick="addedtocart()" value='🛒 Add to Basket' class="col mx-5 btn btn-primary" >
   </form>
   <br>
   <!-- Share button-->
-  <!-- <button class="col mx-5 btn btn-primary" id='sharebutton' name='sharebutton'>📩 Share</button> -->
+  <!-- <button class="col mx-5 btn btn-primary" id='sharebutton' name='sharebutton'>📩 Share</button> --> 
   </div>
   </section>
   <hr>
