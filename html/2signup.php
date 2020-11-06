@@ -1,11 +1,10 @@
 <?php
-  session_start();
   require_once '../database/accountDAO.php'; 
-  $dao = new accountDAO(); 
+  require_once('../database/common.php');
 
   $msg = '';
-  var_dump($_POST['password']); 
-  var_dump($_POST['submit']); 
+  // var_dump($_POST['password']); 
+  // var_dump($_POST['submit']); 
   
   // if (isset($_POST['submit']) && $_POST['name'] != '' // is checking that they are not empty
   // && $_POST['age'] != '' && $_POST['gender'] != ''){  // necessary?

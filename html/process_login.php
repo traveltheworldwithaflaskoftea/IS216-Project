@@ -1,8 +1,13 @@
 <?php
 
 require_once '../database/accountDAO.php'; 
+require_once '../database/common.php'; 
 
-if( isset($_POST['username']) && isset($_POST['password']) ) {
+var_dump($_POST);
+var_dump($_GET);
+
+
+if( isset($_POST['username']) && isset($_POST['password'])) {
 
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -23,15 +28,6 @@ if( isset($_POST['username']) && isset($_POST['password']) ) {
         return;
     }
 }
-else {
-    // 1) Register Error message
-    $msg = "Please provide both username and password";
-    // Store Session Variable
-    $_SESSION['error'] = $msg;
 
-    // 2) Forward user to login.php
-    header("Location: 1login.php");
-    return;
-}
 
 ?>

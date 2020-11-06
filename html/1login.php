@@ -1,41 +1,13 @@
 <?php 
   require_once '../database/accountDAO.php';
   require_once '../database/common.php'; 
-  If( isset($_SESSION['error']) ) {
+ 
+  if( isset($_SESSION['error']) ) {
     $error = $_SESSION['error'];
     
     // once retrieve, remove it
     unset($_SESSION['error']);
   }
-
-  $dao = new accountDAO(); 
-  $accounts = $dao->getAccounts();
-
-  // Form processing 
-//   $username = '';
-//   $password = ''; 
-//   if( isset($_POST['username']) && isset($_POST['password']) ) {
-//     $username = $_POST['username'];
-//     $password = $_POST['password'];
-// }
-// // var_dump($username);
-// // var_dump($password); 
-
-// // Verify if password match 
-// foreach ($accounts as $account){
-//   if (($account->getUsername() == $username) && ($account->getPassword()) == $password){
-//       header('location: ./3mainpage.html'); 
-//   } else{ 
-//     $msg = '';
-//   }
-// }
-
-if( isset($_SESSION['error']) ) {
-  $error = $_SESSION['error'];
-  
-  // once retrieve, remove it
-  unset($_SESSION['error']);
-}
 ?>
 
 <html lang="en">
@@ -84,6 +56,19 @@ if( isset($_SESSION['error']) ) {
         <div class="col-6 shadow white mt-5 mb-5">
           <div class="row d-flex justify-content-center">
               <img src="../images/logo_no_bg.png">
+
+              <!-- Sign in error messages -->
+              <?php
+                if( isset($error) ) {
+                  echo "
+                      <font color='red'>
+                          <h2>
+                              $error
+                          </h2>
+                      </font>
+                  ";
+              }
+              ?>
               <h1 class="col-12 font-weight-normal mt-3" style="margin-bottom: 15px;">Login</h1> 
               <br>
 
@@ -116,7 +101,7 @@ if( isset($_SESSION['error']) ) {
               
                 <a class="col-12 text-center mt-3 mb-3 blue size pf" href="9passwordreset.html">Forgot Password? </a>
 
-                <button class="btn btn-primary col-8 col-offset-2 size" id="login" href="" onclick='ifValid()'>Log In</button><br>
+                <button class="btn btn-primary col-8 col-offset-2 size" id="login" onclick='ifValid()'>Log In</button><br>
 
                 <a href="2signup.php" class=" col-12 text-center mb-4 size" style="margin-top: 10px;">Create an account</a>
               </form>
@@ -124,28 +109,6 @@ if( isset($_SESSION['error']) ) {
       </div>
     </div>
   </div>
-
-  <!-- Session -->
-  <?php
-    // $_SESSION['username'] = "";
-    // $_SESSION['password'] = "";
-    
-    // if (!isset($_SESSION['username']) || !isset($_SESSION)){
-    //   echo "Please input your username and password!"
-    // }
-    // else{
-
-    // }
-    if( isset($error) ) {
-      echo "
-          <font color='red'>
-              <h2>
-                  $error
-              </h2>
-          </font>
-      ";
-  }
-  ?>
 
   <!-- Footer -->
   <footer class="login-footer fixed-bottom">
