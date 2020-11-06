@@ -46,9 +46,10 @@
     <div class="row  d-flex justify-content-center align-middle mt-4 ">
       <div class="col-6 shadow white mt-5 mb-5">
         <div class="row d-flex justify-content-center" style="margin-bottom: 15px;">
-              <h1 class="col-12 font-weight-normal mt-3">Sign Up</h1> 
-              <span class="mb-0">Create An Account With Us!</span>
-              <br>
+          <img src="../images/logo_no_bg.png">  
+          <h1 class="col-12 font-weight-normal mt-3">Sign Up</h1> 
+          <span class="mb-0">Create An Account With Us!</span>
+          <br>
         </div>
         <form>
           <div class="form-group row">

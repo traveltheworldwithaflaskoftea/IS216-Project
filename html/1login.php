@@ -10,8 +10,8 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
 }
-var_dump($username);
-var_dump($password); 
+// var_dump($username);
+// var_dump($password); 
 
 // Verify if password match 
 foreach ($accounts as $account){
@@ -92,7 +92,7 @@ foreach ($accounts as $account){
                   </div>
                 </div>
 
-                <br>
+              
 
                 <span> 
                   <input type="checkbox" id="remember" style="margin-bottom:15px;" onclick="return function1()"> Remember me
