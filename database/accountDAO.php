@@ -124,5 +124,5 @@ class accountDAO {
         // STEP 5
         return $isOk;
     }
-   
+}
 ?>

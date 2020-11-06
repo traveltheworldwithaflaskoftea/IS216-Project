@@ -1,4 +1,29 @@
+<?php 
+  require_once '../database/accountDAO.php'; 
+  $dao = new accountDAO(); 
+  $accounts = $dao->getAccounts(); 
 
+  // Form processing 
+  $username = '';
+  $password = ''; 
+  if( isset($_POST['username']) && isset($_POST['password']) ) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+}
+var_dump($username);
+var_dump($password); 
+
+// Verify if password match 
+foreach ($accounts as $account){
+  if (($account->getUsername() == $username) && ($account->getPassword()) == $password){
+      header('location: ./3mainpage.html'); 
+  } else{ 
+    $msg = ''
+
+}
+
+
+?>
 
 <html lang="en">
 <head>
@@ -50,13 +75,13 @@
 
               <div id="error" class="col-8 mb-2" style="color:red; font-weight: bold;"></div>
 
-              <form>
+              <form action='1login.php' method='POST'>
                 <!-- getElementById('username').value-->
                 <!-- <input type="text" class="col-8 mb-2 form-control" id="username"  placeholder="Username" required> -->
                 <div class="form-group row">
                   <label for="username" class="col-sm-3 col-form-label text-right">Username</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" id="username" placeholder="Username" required>
+                    <input type="text" class="form-control" id="username" placeholder="Username" name='username' required>
                   </div>
                 </div>
 
@@ -64,7 +89,7 @@
                 <div class="form-group row">
                   <label for="inputPassword" class="col-sm-3 col-form-label text-right">Password</label>
                   <div class="col-sm-9">
-                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                    <input type="password" class="form-control" id="password" placeholder="Password" name='password' required>
                   </div>
                 </div>
 
@@ -87,7 +112,17 @@
   </div>
 
   <!-- Session -->
+  <?php
+    // $_SESSION['username'] = "";
+    // $_SESSION['password'] = "";
+    
+    // if (!isset($_SESSION['username']) || !isset($_SESSION)){
+    //   echo "Please input your username and password!"
+    // }
+    // else{
 
+    // }
+  ?>
 
   <!-- Footer -->
   <footer class="login-footer fixed-bottom">

@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <html lang="en">
 <head>
   <title>🐶 Sign Up 🐱</title>

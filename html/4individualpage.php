@@ -243,10 +243,13 @@
 
   <!-- Wishlist Button-->
   <div class='row justify-content-center'> 
-  <button class="col mx-5 btn btn-primary" onclick="addPets()" name='wishlistbutton'>🛒 Add to Basket </button>
+  <form action="../database/add_to_cart.php" method="POST">
+    <!-- <button class="col mx-5 btn btn-primary" onclick="addPets()" name='wishlistbutton'>🛒 Add to Basket </button> -->
+    <input type='submit' value='🛒 Add to Basket' class="col mx-5 btn btn-primary">
+  </form>
   <br>
   <!-- Share button-->
-  <button class="col mx-5 btn btn-primary" id='sharebutton' name='sharebutton'>📩 Share</button>
+  <!-- <button class="col mx-5 btn btn-primary" id='sharebutton' name='sharebutton'>📩 Share</button> -->
   </div>
   </section>
   <hr>
