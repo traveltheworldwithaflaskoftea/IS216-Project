@@ -1,5 +1,13 @@
 <?php 
-  require_once '../database/accountDAO.php'; 
+  require_once '../database/accountDAO.php';
+  require_once '../database/common.php'; 
+  If( isset($_SESSION['error']) ) {
+    $error = $_SESSION['error'];
+    
+    // once retrieve, remove it
+    unset($_SESSION['error']);
+  }
+
   $dao = new accountDAO(); 
   $accounts = $dao->getAccounts();
 
@@ -20,6 +28,13 @@ foreach ($accounts as $account){
   } else{ 
     $msg = '';
   }
+}
+
+if( isset($_SESSION['error']) ) {
+  $error = $_SESSION['error'];
+  
+  // once retrieve, remove it
+  unset($_SESSION['error']);
 }
 ?>
 
@@ -74,7 +89,7 @@ foreach ($accounts as $account){
 
               <div id="error" class="col-8 mb-2" style="color:red; font-weight: bold;"></div>
 
-              <form action='1login.php' method='POST'>
+              <form action='process_login.php' method='POST'>
                 <!-- getElementById('username').value-->
                 <!-- <input type="text" class="col-8 mb-2 form-control" id="username"  placeholder="Username" required> -->
                 <div class="form-group row">
@@ -121,6 +136,15 @@ foreach ($accounts as $account){
     // else{
 
     // }
+    if( isset($error) ) {
+      echo "
+          <font color='red'>
+              <h2>
+                  $error
+              </h2>
+          </font>
+      ";
+  }
   ?>
 
   <!-- Footer -->
