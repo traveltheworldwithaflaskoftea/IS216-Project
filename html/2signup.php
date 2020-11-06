@@ -1,6 +1,27 @@
 <?php
   session_start();
+  require_once '../database/accountDAO.php'; 
+  $dao = new accountDAO(); 
+
+  $msg = '';
+  var_dump($_POST['password']); 
+  var_dump($_POST['submit']); 
+  
+  // if (isset($_POST['submit']) && $_POST['name'] != '' // is checking that they are not empty
+  // && $_POST['age'] != '' && $_POST['gender'] != ''){  // necessary?
+  //     $name = $_POST['name']; 
+  //     $age = $_POST['age']; 
+  //     $gender= $_POST['gender']; 
+  //     $dao->add($name, $age, $gender);
+  //     $cats= $dao->getCats(); 
+  //     $msg = 'A new cat has been added'; 
+  // } else {
+  //     $cats = $dao->getCats();
+  // }
+  
+  
 ?>
+
 
 <html lang="en">
 <head>
@@ -46,36 +67,37 @@
     <div class="row  d-flex justify-content-center align-middle mt-4 ">
       <div class="col-6 shadow white mt-5 mb-5">
         <div class="row d-flex justify-content-center" style="margin-bottom: 15px;">
-              <h1 class="col-12 font-weight-normal mt-3">Sign Up</h1> 
-              <span class="mb-0">Create An Account With Us!</span>
-              <br>
+          <img src="../images/logo_no_bg.png">  
+          <h1 class="col-12 font-weight-normal mt-3">Sign Up</h1> 
+          <span class="mb-0">Create An Account With Us!</span>
+          <br>
         </div>
-        <form>
+        <form method='POST' action='2signup.php'>
           <div class="form-group row">
             <label for="username" class="col-sm-3 col-form-label text-right">Username</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="username" placeholder="Username">
+              <input type="text" class="form-control" name='username' id="username" placeholder="Username">
             </div>
           </div>
 
           <div class="form-group row">
             <label for="name" class="col-sm-3 col-form-label text-right">Name</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="name" placeholder="Name">
+              <input type="text" class="form-control" name='name'  id="name" placeholder="Name">
             </div>
           </div>
 
           <div class="form-group row">
             <label for="inputPassword" class="col-sm-3 col-form-label text-right">Password</label>
             <div class="col-sm-9">
-              <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+              <input type="password" class="form-control" name='password' id="inputPassword" placeholder="Password">
             </div>
           </div>
 
           <div class="form-group row">
             <label for="email" class="col-sm-3 col-form-label text-right">Email</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="email" placeholder="Email">
+              <input type="text" class="form-control" id="email" name='email' placeholder="Email">
             </div>
           </div>
 
@@ -98,7 +120,7 @@
   
               <p>By creating an account, you agree to our <a href="https://www.termsandconditionsgenerator.com/live.php?token=4T0tnknEDWPdrvAaDG4MDUdR5cyhn35h" style="color:dodgerblue">Terms & Conditions</a>.</p>
               
-              <button type="submit" style="margin-bottom: 20px;" class="btn btn-primary col-8 col-offset-2 size" id="connect" onclick='signup()'>Sign Up!</button><br>
+              <button type="submit" style="margin-bottom: 20px;" class="btn btn-primary col-8 col-offset-2 size" id="connect">Sign Up!</button><br>
 
         </div>
       </div>
