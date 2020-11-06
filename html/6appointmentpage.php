@@ -118,260 +118,257 @@
         </div>
     
         <div class="row accordion justify-content-center block__76208">
-            <div class="col-lg-6 order-lg-2 mb-5 mb-lg-0" data-aos="fade-up"  data-aos-delay="">
-                <div class='sidebar'>
-                    
-                    <input name='day[]' type='checkbox' value=1>
-                    <a href="#day1"> Day 1</a> 
-                    <br/>
-                                
-                    <input name='day[]' type='checkbox' value=2>
-                    <a href="#day2"> Day 2</a> 
-                    <br/>
-                                
-                    <input name='day[]' type='checkbox' value=3>
-                    <a href="#day3"> Day 3</a> 
-                    <br/>
-                                
-                </div> -->
-                
-                <!--- End of container div -->
-
+            <div class="col-lg-7 order-lg-2 mb-5 mb-lg-0" data-aos="fade-up"  data-aos-delay="">
                 <div class='appointmentpage'>
 
-                    <h1> Appointment Page </h1>
+                    <h1>Directions</h1>
 
                     <h2 id='map'> IM THE MAP!</h2>
                     <p>
                         insert map api
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                        
-                        v Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                        
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                        
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                        
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                        
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                        
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                        
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                        
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                        
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
                         
                     </p>
-
-
-
-                    <h2 id='day1'> Day 1 Schedule </h2>
-                    
-                    <p> 
-                        <table border='1'> 
-                            <tr>
-                                <th colspan='2'>Love cats </th>
-                            </tr> 
-                            <tr>
-                                <th>Meeting method</th>
-                                <td>
-                                    <a href='zoom.us'> Zoom </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Date & Time</th>
-                                <td>23 November 3.30pm</td>
-                            </tr>
-                        </table>
-                    </p>
-
-                    <h2 id='day2'> Day 2 Schedule </h2>
-                    
-                    <p> 
-                        <table border='1'> 
-                            <tr>
-                                <th colspan='2'>Sunshine Pets </th>
-                            </tr> 
-                            <tr>
-                                <th>Meeting method</th>
-                                <td>
-                                    1201 Macklind Ave, St. Louis, MO 63110, United States
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Date & Time</th>
-                                <td>27 November 3.30pm</td>
-                            </tr>
-                        </table>
-                    </p>
-
-                    <h2 id='day3'> Day 3 Schedule </h2>
-                    
-                    <p> 
-                        <table border='1'> 
-                            <tr>
-                                <th colspan='2'>Kitty Doggy Party </th>
-                            </tr> 
-                            <tr>
-                                <th>Meeting method</th>
-                                <td>
-                                    <a href='zoom.us'> Zoom </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Date & Time</th>
-                                <td>30 November 9.30am</td>
-                            </tr>
-                        </table>
-                    </p>
-                    <!-- <div class="container">
-                        
-                        <div class="row">
-                        <div class="col-sm">
-                            One of three columns
-                        </div>
-                        <div class="col-sm">
-                            One of three columns
-                        </div>
-                        <div class="col-sm">
-                            One of three columns
-                        </div>
-                        </div>
-                    </div> -->
-
-                    <div class="accordion" id="accordionExample">
-                        <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h2 class="mb-0">
-                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Day 1 Schedule
-                            </button>
-                            </h2>
-                        </div>
-                    
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                            <div class="card-body">
-                            
-                                <h2 id='day1'> Day 1 Schedule </h2>
-                                
-                                <p> 
-                                    <table border='1'> 
-                                        <tr>
-                                            <th colspan='2'>Love cats </th>
-                                        </tr> 
-                                        <tr>
-                                            <th>Meeting method</th>
-                                            <td>
-                                                <a href='zoom.us'> Zoom </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>Date & Time</th>
-                                            <td>23 November 3.30pm</td>
-                                        </tr>
-                                    </table>
-                                </p>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h2 class="mb-0">
-                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Day 2 Schedule
-                            </button>
-                            </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <h2 id='day2'> Day 2 Schedule </h2>
-                    
-                                <p> 
-                                    <table border='1'> 
-                                        <tr>
-                                            <th colspan='2'>Sunshine Pets </th>
-                                        </tr> 
-                                        <tr>
-                                            <th>Meeting method</th>
-                                            <td>
-                                                1201 Macklind Ave, St. Louis, MO 63110, United States
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>Date & Time</th>
-                                            <td>27 November 3.30pm</td>
-                                        </tr>
-                                    </table>
-                                </p>
-                        
-                            </div>
-                        </div>
-                        </div>
-                        <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h2 class="mb-0">
-                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Day 3 Schedule
-                            </button>
-                            </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <h2 id='day3'> Day 3 Schedule </h2>
-                    
-                                <p> 
-                                    <table border='1'> 
-                                        <tr>
-                                            <th colspan='2'>Kitty Doggy Party </th>
-                                        </tr> 
-                                        <tr>
-                                            <th>Meeting method</th>
-                                            <td>
-                                                <a href='zoom.us'> Zoom </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th>Date & Time</th>
-                                            <td>30 November 9.30am</td>
-                                        </tr>
-                                    </table>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Button -->
+                        <div class="col-sm-5 col-md-3 col-lg-3 col-xl-2 text-left">
+                            <!-- JavaScript display_reviews() function populates this section of HTML -->
+                            <button style="margin-bottom: 10px;" class="btn btn-primary p-2" type="button" data-toggle="collapse" data-target="#day1">Day 1
+                            </button>
+
+                            <button style="margin-bottom: 10px;" class="btn btn-primary p-2" type="button" data-toggle="collapse" data-target="#day2">Day 2
+                            </button>
+
+                            <button style="margin-bottom: 10px;" class="btn btn-primary p-2" type="button" data-toggle="collapse" data-target="#day3">Day 3
+                            </button>
+                        </div>
+
+                        <!-- Day Information -->
+                        <div  class="col-sm-7 col-md-9 col-lg-9 col-xl-10">
+                            <div class="collapse show" id="day1"> 
+                                <!-- <div class="card-body"> 
+                                    <div class="card card-body">  -->
+                                        <div class="container-fluid">  
+                                            <h2 style="font-weight: bold">Day 1 Schedule </h2>
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                        <li>
+                                                        Organization:
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-7">Love Dogs</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                        <li>
+                                                        Meeting Method:
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-7"><a href='zoom.us'> Zoom </a></div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                        <li>
+                                                        Date:
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-7">23 November</div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                        <li>
+                                                        Time:
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-7">3.30pm</div>
+                                            </div>
+                                            <!-- <p> 
+                                                <table border='1' width=100%> 
+                                                    <tr>
+                                                        <th colspan='2'>Love cats </th>
+                                                    </tr> 
+                                                    <tr>
+                                                        <th>Meeting method</th>
+                                                        <td>
+                                                            <a href='zoom.us'> Zoom </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Date & Time</th>
+                                                        <td>23 November 3.30pm</td>
+                                                    </tr>
+                                                </table>
+                                            </p> -->
+                                        </div>
+                                    <!-- </div>
+                                </div> -->
+                            </div>
+                        
+                            <div class="collapse" id="day2"> 
+                                <div class="card-body"> 
+                                    <!-- <div class="card card-body"> 
+                                        <div class="container-fluid">   -->
+                                            <h2 style="font-weight: bold">Day 2 Schedule </h2>
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                        <li>
+                                                        Organization:
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-7">Sunshine Pets</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                        <li>
+                                                        Meeting Method:
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-7">1201 Macklind Ave, St. Louis, MO 63110, United States</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                        <li>
+                                                        Date:
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-7">27 November</div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                        <li>
+                                                        Time:
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-7">4.00pm</div>
+                                            </div>
+                                            <!-- <p> 
+                                                <table border='1' width=100%> 
+                                                    <tr>
+                                                        <th colspan='2'>Sunshine Pets </th>
+                                                    </tr> 
+                                                    <tr>
+                                                        <th>Meeting method</th>
+                                                        <td>
+                                                            1201 Macklind Ave, St. Louis, MO 63110, United States
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Date & Time</th>
+                                                        <td>27 November 3.30pm</td>
+                                                    </tr>
+                                                </table>
+                                            </p> -->
+                                        <!-- </div>
+                                    </div> -->
+                                </div>
+                            </div>
+
+                            <div class="collapse" id="day3"> 
+                                <div class="card-body"> 
+                                    <!-- <div class="card card-body"> 
+                                        <div class="container-fluid">   -->
+                                            <h2 style="font-weight: bold">Day 3 Schedule </h2>
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                        <li>
+                                                        Organization:
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-7"> Kitty Doggy Party</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                        <li>
+                                                        Meeting Method:
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-7"> <a href='zoom.us'> Zoom </a></div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                        <li>
+                                                        Date:
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-7">30 November</div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                        <li>
+                                                        Time:
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-7">9.30am</div>
+                                            </div>
+                                            <!-- <p> 
+                                                <table border='1' width=100% > 
+                                                    <tr>
+                                                        <th colspan='2'>Kitty Doggy Party </th>
+                                                    </tr> 
+                                                    <tr>
+                                                        <th>Meeting method</th>
+                                                        <td>
+                                                            <a href='zoom.us'> Zoom </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Date & Time</th>
+                                                        <td>30 November 9.30am</td>
+                                                    </tr>
+                                                </table>
+                                            </p> -->
+                                        <!-- </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div> 
+                    </div> <!-- End of row div -->
+                </div> <!-- End of container div -->
+
             </div>
-            
 
-            <p> 
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, earum molestias temporibus, accusantium, velit provident modi repellat nisi commodi omnis rem aut nihil deserunt sunt quibusdam odio. Dolorum, numquam consequatur?
 
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
-                
-            </p>
 
+                    
         </div>
     </div>
     </section>
