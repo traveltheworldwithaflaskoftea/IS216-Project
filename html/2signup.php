@@ -75,42 +75,42 @@
           <div class="form-group row">
             <label for="username" class="col-sm-3 col-form-label text-right">Username</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name='username' id="username" placeholder="Username">
+              <input type="text" class="form-control" name='username' id="username" placeholder="Username" required>
             </div>
           </div>
 
           <div class="form-group row">
             <label for="name" class="col-sm-3 col-form-label text-right">Name</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name='name'  id="name" placeholder="Name">
+              <input type="text" class="form-control" name='name'  id="name" placeholder="Name" required>
             </div>
           </div>
 
           <div class="form-group row">
             <label for="inputPassword" class="col-sm-3 col-form-label text-right">Password</label>
             <div class="col-sm-9">
-              <input type="password" class="form-control" name='password' id="inputPassword" placeholder="Password">
+              <input type="password" class="form-control" name='password' id="inputPassword" placeholder="Password" required>
             </div>
           </div>
 
           <div class="form-group row">
             <label for="email" class="col-sm-3 col-form-label text-right">Email</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="email" name='email' placeholder="Email">
+              <input type="text" class="form-control" id="email" name='email' placeholder="Email" required>
             </div>
           </div>
 
           <div class="form-group row">
             <label for="phone_number" class="col-sm-3 col-form-label text-right">Phone number</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="phone_number" placeholder="Phone number">
+              <input type="text" class="form-control" id="phone_number" placeholder="Phone number" required>
             </div>
           </div>
 
           <div class="form-group row">
             <label for="postal_code" class="col-sm-3 col-form-label text-right">Postal code</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="postal_code" placeholder="Postal code">
+              <input type="text" class="form-control" id="postal_code" placeholder="Postal code" required>
             </div>
           </div>
 
