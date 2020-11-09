@@ -74,9 +74,8 @@
 
               <div id="error" class="col-8 mb-2" style="color:red; font-weight: bold;"></div>
 
-              <form action='process_login.php' method='POST'>
-                <!-- getElementById('username').value-->
-                <!-- <input type="text" class="col-8 mb-2 form-control" id="username"  placeholder="Username" required> -->
+              <form action='process_login.php' method='POST' class='p-2'>
+            
                 <div class="form-group row">
                   <label for="username" class="col-sm-3 col-form-label text-right">Username</label>
                   <div class="col-sm-9">
