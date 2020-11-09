@@ -169,6 +169,7 @@ function search_by_id(id){
 function onclick_age(age){
 	var search_age = age;
 	document.getElementById('age').innerHTML = ' ' + `<badge id="age_badge" class="badge badge-dark">` + ' ' + age + ' ' + `</badge>`;
+	document.getElementById('reset').innerHTML =`<button class='btn btn-primary p-0' style="width: 7%;height: 30px;" onclick="reset()">Reset</button>`;
 	// var text = document.getElementById('filters_applied').innerHTML;
 	// var text = text.replace('young', '');
 	// var text = text.replace('old', '');
@@ -178,6 +179,7 @@ function onclick_age(age){
 function onclick_gender(gender){
 	var search_gender = gender;
 	document.getElementById('gender').innerHTML = ' ' + `<badge id="gender_badge" class="badge badge-dark">` + ' ' + gender + ' ' + `</badge>`;
+	document.getElementById('reset').innerHTML =`<button class='btn btn-primary p-0' style="width: 7%;height: 30px;" onclick="reset()">Reset</button>`;
 
 	// var text = document.getElementById('filters_applied').innerHTML;
 	// var text = text.replace('female', '');
@@ -188,6 +190,7 @@ function onclick_gender(gender){
 function onclick_breed(breed){
 	var search_breed = breed;
 	document.getElementById('breed').innerHTML = ' ' + `<badge id="breed_badge" class="badge badge-dark">` + ' ' + breed + ' ' + `</badge>`;
+	document.getElementById('reset').innerHTML =`<button class='btn btn-primary p-0' style="width: 7%;height: 30px;" onclick="reset()">Reset</button>`;
 
 	// var text = document.getElementById('filters_applied').innerHTML;
 	// var text = text.replace('golden retriever', '');
@@ -200,8 +203,17 @@ function onclick_breed(breed){
 function onclick_state(state){
 	var search_state = state;
 	document.getElementById('state').innerHTML = ' ' + `<badge id="state_badge" class="badge badge-dark">` + ' ' + state + ' ' + `</badge>`;
+	document.getElementById('reset').innerHTML =`<button class='btn btn-primary p-0' style="width: 7%;height: 30px;" onclick="reset()">Reset</button>`;
 }
 // end Showing the filters on the search page 
+
+function reset(){
+	document.getElementById('age').innerHTML =``;
+	document.getElementById('gender').innerHTML =``;
+	document.getElementById('breed').innerHTML =``;
+	document.getElementById('state').innerHTML =``;
+	document.getElementById('reset').innerHTML =``;
+}
 
 // Fuctions for the filter search
 function myFunction() {
