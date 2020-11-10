@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <?php
+      //Uncomment once our website is done 
+      // require_once '../database/protect.php';   
+  ?> 
   
-
-    <title>🛒Adoption Basket</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
+  <title>🛒Adoption Basket</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
     
-    <!-- More scripts -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../ownjs/8.2adoptionbasket.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <!-- More scripts -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../ownjs/8.2adoptionbasket.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
-    <!-- Axios -->
-    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+  <!-- Axios -->
+  <script src="https://unpkg.com/axios/dist/axios.js"></script>
 
-    <!-- Style sheets -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i">
-    <link rel="stylesheet" href="../fonts/icomoon/style.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/jquery-ui.css">
-    <link rel="stylesheet" href="../css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="../css/aos.css"> 
-    <link rel="stylesheet" href="../css/style.css">
+  <!-- Style sheets -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i">
+  <link rel="stylesheet" href="../fonts/icomoon/style.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="../css/aos.css"> 
+  <link rel="stylesheet" href="../css/style.css">
 
-    <style> 
-      div.container{
-          text-align:center;
-      }
-    </style>
+  <style> 
+    div.container{
+        text-align:center;
+    }
+  </style>
   
 </head>
 <body onload="run_sql()">

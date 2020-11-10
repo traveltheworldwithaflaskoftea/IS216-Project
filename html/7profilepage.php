@@ -1,6 +1,9 @@
 <?php
   require_once '../database/common.php';
   require_once '../database/account.php';
+  //Uncomment once our website is done 
+  // require_once '../database/protect.php';   
+
   // $user_id = $_SESSION['user_id']; We use this once the sessions are set up 
   $username = $_SESSION['username'];
   $dao = new AccountDAO();

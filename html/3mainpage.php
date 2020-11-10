@@ -1,7 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
-   
+    <?php
+      //Uncomment once our website is done 
+      // require_once '../database/protect.php';   
+    ?> 
+
     <title>🐶 FureverHome 😺</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   

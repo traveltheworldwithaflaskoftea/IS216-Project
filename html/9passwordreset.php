@@ -1,148 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🐶 Password Reset 🐱</title>
+  <?php
+      //Uncomment once our website is done 
+      // require_once '../database/protect.php';   
+  ?> 
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐶 Password Reset 🐱</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
-    <script src="../js/main.js"></script>
-    <script src="../ownjs/9passwordreset.js"></script>
- 
-    
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i" rel="stylesheet">
-    <link rel="stylesheet" href="../fonts/icomoon/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
+  <script src="../js/main.js"></script>
+  <script src="../ownjs/9passwordreset.js"></script>
 
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/jquery-ui.css">
-    <link rel="stylesheet" href="../css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i" rel="stylesheet">
+  <link rel="stylesheet" href="../fonts/icomoon/style.css">
 
-    <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
 
-    <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
 
-    <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
 
-    <link rel="stylesheet" href="../css/aos.css">
+  <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
 
-    <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/aos.css">
 
-    
+  <link rel="stylesheet" href="../css/style.css">
 
-    <style>
-      /* Full-width input fields */
-      input[type=text], input[type=password] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-      }
+  
 
-      /* Set a style for all buttons */
-      button {
-        background-color: #a2c0be;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        cursor: pointer;
-        width: 100%;
-      }
+  <style>
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
 
-      button:hover {
-        opacity: 0.8;
-      }
+    /* Set a style for all buttons */
+    button {
+      background-color: #a2c0be;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
 
-      /* Extra styles for the cancel button */
-      .closebtn {
-        width: auto;
-        padding: 10px 18px;
-        background-color:#2b5c59;
-      }
+    button:hover {
+      opacity: 0.8;
+    }
 
-      /* Position the close button */
+    /* Extra styles for the cancel button */
+    .closebtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color:#2b5c59;
+    }
 
-      .container {
-        padding: 16px;
-      }
+    /* Position the close button */
 
+    .container {
+      padding: 16px;
+    }
+
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      padding-top: 60px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    /* Close Button */
+    .close {
+      position: absolute;
+      right: 25px;
+      top: 0;
+      color: #000;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: red;
+      cursor: pointer;
+    }
+
+    /* Add Zoom Animation */
+    .animate {
+      -webkit-animation: animatezoom 0.6s;
+      animation: animatezoom 0.6s
+    }
+
+    @-webkit-keyframes animatezoom {
+      from {-webkit-transform: scale(0)} 
+      to {-webkit-transform: scale(1)}
+    }
+      
+    @keyframes animatezoom {
+      from {transform: scale(0)} 
+      to {transform: scale(1)}
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
       span.psw {
-        float: right;
-        padding-top: 16px;
+        display: block;
+        float: none;
       }
+      .closebtn {
+        width: 100%;
+      }
+    }
 
-      /* The Modal (background) */
-      .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-        padding-top: 60px;
-      }
-
-      /* Modal Content/Box */
-      .modal-content {
-        background-color: #fefefe;
-        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-        border: 1px solid #888;
-        width: 80%; /* Could be more or less, depending on screen size */
-      }
-
-      /* Close Button */
-      .close {
-        position: absolute;
-        right: 25px;
-        top: 0;
-        color: #000;
-        font-size: 35px;
-        font-weight: bold;
-      }
-
-      .close:hover,
-      .close:focus {
-        color: red;
-        cursor: pointer;
-      }
-
-      /* Add Zoom Animation */
-      .animate {
-        -webkit-animation: animatezoom 0.6s;
-        animation: animatezoom 0.6s
-      }
-
-      @-webkit-keyframes animatezoom {
-        from {-webkit-transform: scale(0)} 
-        to {-webkit-transform: scale(1)}
-      }
-        
-      @keyframes animatezoom {
-        from {transform: scale(0)} 
-        to {transform: scale(1)}
-      }
-
-      /* Change styles for span and cancel button on extra small screens */
-      @media screen and (max-width: 300px) {
-        span.psw {
-          display: block;
-          float: none;
-        }
-        .closebtn {
-          width: 100%;
-        }
-      }
-
-    </style>
+  </style>
 </head>
 <body onload= 'showModal()'>
 
