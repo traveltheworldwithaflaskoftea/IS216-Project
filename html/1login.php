@@ -1,4 +1,4 @@
-<?php 
+<?php  
   require_once '../database/accountDAO.php';
   require_once '../database/common.php'; 
  
@@ -94,7 +94,7 @@
               
 
                 <span> 
-                  <input type="checkbox" id="remember" style="margin-bottom:15px;" onclick="return function1()"> Remember me
+                  <input type="checkbox" id="remember" style="margin-bottom:15px;" onclick="rememberMe()"> Remember me
                 </span>
               
               
