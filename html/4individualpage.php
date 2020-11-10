@@ -251,16 +251,20 @@
       <form action="../database/add_to_cart.php" method="POST">
         <input type='hidden' id='dog_id' name='dog_id' value=''>
         <!-- Adoption basket Button-->
-        <input type='button' onClick="addedToCart()" value='🛒 Add to Adoption Basket' class="btn btn-primary btn-lg btn-block" >
+        <input <?php   if(isset($_GET['incart'])){echo"disabled";}?>
+        type='submit' onClick="addedToCart()" value='🛒 Add to Adoption Basket' class="btn btn-primary btn-lg btn-block" >
       </form>
     </div>
     <div class='col'>
       <!-- Share button-->
-      <button class="btn btn-primary btn-lg btn-block" id='sharebutton' name='sharebutton'>📩 Share</button> 
+      <button class="btn btn-primary btn-lg btn-block" id='sharebutton' name='sharebutton' >📩 Share</button> 
     </div>
   </div>
     <div id='success'> 
-      
+    
+    <?php   if(isset($_GET['incart'])){echo"<div class='alert alert-success justify-content-center' role='alert'>
+    👍 Added to Basket!
+    </div>";}?>
     </div>
   </div>
 

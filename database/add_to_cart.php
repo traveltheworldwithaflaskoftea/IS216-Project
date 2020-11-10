@@ -1,5 +1,4 @@
 <?php
-session_start(); 
 require_once 'common.php';
 require_once 'account.php';
 require_once 'ConnectionManager.php';
@@ -30,9 +29,9 @@ if($is_exist == false){
 }
 
 
-//$location = "Location: " . "../html/4individualpage.php" . "?id=" . $dog_id . "&" . "incart=true";
+$location = "Location: " . "../html/4individualpage.php" . "?id=" . $dog_id . "&" . "incart=true";
 
-//header($location);
-//return;
+header($location);
+return;
     
 ?>
