@@ -18,7 +18,7 @@ if( isset($_POST['username']) && isset($_POST['password'])) {
 
     if( $isValid ) {
         $_SESSION['username'] = $username;
-        header('Location: 3mainpage.html');
+        header('Location: 3mainpage.php');
         return;
     }
     else {
