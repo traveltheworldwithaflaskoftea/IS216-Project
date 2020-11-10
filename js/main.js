@@ -1,6 +1,6 @@
 console.log("main.js is loaded");
 
-// adoption baseket for page 8
+// adoption basket for page 8
 // function adoptionBasket(){
 //     var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
 // 	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
@@ -17,7 +17,7 @@ console.log("main.js is loaded");
 // 	});
 // }
 
-// CODE DO MAKE THE FUCKING MAPS start and end 
+// Code to make the maps start & end 
 function maps_api(start,end){
 	console.log("map api triggered")
 	var maps_api_key = 'AIzaSyCegO83Ox84AikzfCIn4XMtmBgLOKdIgS0';
@@ -31,7 +31,7 @@ function maps_api(start,end){
 
 }
 
-// CODE DO MAKE THE FUCKING MAPS start and end 
+//  Code to make the maps start & end 
 function maps_api_waypoints(start,end,waypoints_arary){
 	console.log("map api  with waypoints is triggered")
 	var maps_api_key = 'AIzaSyCegO83Ox84AikzfCIn4XMtmBgLOKdIgS0';

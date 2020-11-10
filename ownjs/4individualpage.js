@@ -1,10 +1,14 @@
 
-function addedtocart(){
-    alert("added to cart");
+function addedToCart(){
+    var successMsg = `<div class="alert alert-success justify-content-center" role="alert">
+    👍 Added to Basket!
+    </div>`; 
+    document.getElementById('success').innerHTML = successMsg; 
+
 }
 
+
 function search_dog_id(pet_id){
-    console.log("pet id");
 	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
 	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
 
@@ -12,8 +16,9 @@ function search_dog_id(pet_id){
 
     //Input dog ID into hidden form field
     document.getElementById('dog_id').value = pet_id;
+    console.log(pet_id); 
 
-    console.log(typeof(pet_id));
+    //console.log(typeof(pet_id));
 
 	client.animal.show(pet_id)
 	.then(resp => {
@@ -29,7 +34,7 @@ function load_individual_dog(){
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const pet_id = urlParams.get('id')
-    console.log(pet_id); 
+    //console.log(pet_id); 
 
     // Calling the API 
     search_dog_id(pet_id);

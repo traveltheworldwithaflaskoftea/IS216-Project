@@ -57,7 +57,7 @@
     <title>Paris</title>
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section" onload="load_individual_dog()"> 
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section" onload="load_individual_dog()">
   <div class="site-wrap">
       <div class="site-mobile-menu site-navbar-target">
         <div class="site-mobile-menu-header">
@@ -153,8 +153,7 @@
           <div class="paws">
             <span class="icon-paw"></span>
           </div>
-          <h2 class="text-black mb-2"  id="dog_name">Details</h2>
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          <h2 class="text-black mb-2"  id="dog_name">Name</h2>
         </div>
       </div>
 
@@ -201,7 +200,7 @@
             </h3>
             <div id="collapseFive" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="body-text" id='dog_details'>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <p>Woof</p>
               </div>
             </div>
           </div> 
@@ -212,7 +211,7 @@
             </h3>
             <div id="collapseSix" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="body-text" id="dog_attributes">
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                <p>Woof</p>
               </div>
             </div>
           </div> 
@@ -223,7 +222,7 @@
             </h3>
             <div id="collapseSeven" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="body-text" id='dog_description'>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                <p>Woof</p>
               </div>
             </div>
           </div> 
@@ -234,7 +233,7 @@
             </h3>
             <div id="collapseEight" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="body-text" id="dog_contact_details">
-                <p>Enter some random IDs</p>
+                <p>Woof</p>
               </div>
             </div>
           </div> 
@@ -245,25 +244,25 @@
       </div>
     </div>
   </section>
-  <!--  -->
-
-  <!-- Wishlist Button-->
-  <div class='row justify-content-center'> 
-  <form action="../database/add_to_cart.php" method="POST">
-    <!-- <button class="col mx-5 btn btn-primary" onclick="addPets()" name='wishlistbutton'>🛒 Add to Basket </button> -->
-    <?php 
-      if($_GET['incart'] == 'true'){
-        echo "<p class='text-center'>already in cart<p>";}
-    ?>
-    <input type='hidden' id='dog_id' name='dog_id' value=''>
-    <input type='submit' onclick="addedtocart()" value='🛒 Add to Basket' class="col mx-5 btn btn-primary" >
-  </form>
-  <br>
-  <!-- Share button-->
-  <!-- <button class="col mx-5 btn btn-primary" id='sharebutton' name='sharebutton'>📩 Share</button> --> 
+  <div class='container'>
+  <div class='row'> 
+    <div class='col'> 
+      <form action="../database/add_to_cart.php" method="POST">
+        <input type='hidden' id='dog_id' name='dog_id' value=''>
+        <!-- Adoption basket Button-->
+        <input type='button' onClick="addedToCart()" value='🛒 Add to Adoption Basket' class="btn btn-primary btn-lg btn-block" >
+      </form>
+    </div>
+    <div class='col'>
+      <!-- Share button-->
+      <button class="btn btn-primary btn-lg btn-block" id='sharebutton' name='sharebutton'>📩 Share</button> 
+    </div>
   </div>
-  </section>
-  <hr>
+    <div id='success'> 
+      
+    </div>
+  </div>
+
   <!-- end of information part -->
   
 
@@ -280,7 +279,7 @@
               <div class="col-md-3 ml-auto">
                 <h2 class="footer-heading mb-4">Quick Links</h2>
                 <ul class="list-unstyled">
-                  <li><a href="#home-section" class="smoothscroll">Home</a></li>
+                  <li><a href="3mainpage.html" class="smoothscroll">Home</a></li>
                   <li><a href="#pet-section" class="smoothscroll">Find Your Pet</a></li>
                   <li><a href="7profilepage.php" class="smoothscroll">Profile</a></li>
                   <li><a href= "6appointmentpage.php" class="smoothscroll">Appointment</a></li>

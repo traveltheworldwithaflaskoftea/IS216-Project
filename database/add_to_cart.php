@@ -1,6 +1,8 @@
 <?php
 
 require_once 'common.php';
+require_once 'account.php';
+require_once 'ConnectionManager.php';
 
 $dog_id = $_POST['dog_id'];
 var_dump("Dog id:" . $dog_id);
@@ -28,9 +30,9 @@ if($is_exist == false){
 }
 
 
-$location = "Location: " . "../html/4individualpage.php" . "?id=" . $dog_id . "&" . "incart=true";
+//$location = "Location: " . "../html/4individualpage.php" . "?id=" . $dog_id . "&" . "incart=true";
 
-header($location);
-return;
+//header($location);
+//return;
     
 ?>
