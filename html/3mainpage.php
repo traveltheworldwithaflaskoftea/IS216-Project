@@ -1,11 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <?php
-      //Uncomment once our website is done 
-      // require_once '../database/protect.php';   
-    ?> 
-
     <title>🐶 FureverHome 😺</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
@@ -211,8 +206,8 @@
         <div class="row">
           <div class="col-md-7 align-self-center text-center text-md-left">
             <div class="intro-text">
-              <h1> We Care For <span class="d-md-block">You! </span></h1>
-              <p class="mb-4">Helping these dogs find their <span class="d-block"> 🐶 FureverHome 🐱</p>
+              <h1> Find your <span class="d-md-block">Furever Pet! </span></h1>
+              <p class="mb-4">Matching these furry buddies to their<span class="d-block"> 🐶 FureverHome 🐱</p>
             </div>
           </div>  
           <div class="col-md-5 align-self-end text-center text-md-right" style="margin-top: 50px;">

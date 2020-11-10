@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php
-      //Uncomment once our website is done 
-      // require_once '../database/protect.php';   
-    ?> 
    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
