@@ -32,6 +32,13 @@
     <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="../css/aos.css"> 
     <link rel="stylesheet" href="../css/style.css">
+
+    <style> 
+        div.container{
+            text-align:center;
+        }
+    </style>
+   
     
     <!---Internal CSS Styling -->
     <!-- The internal css styling also makes this weird -->

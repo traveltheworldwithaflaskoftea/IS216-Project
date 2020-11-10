@@ -33,6 +33,12 @@
     <link rel="stylesheet" href="../css/aos.css"> 
     <link rel="stylesheet" href="../css/style.css">
 
+    <style> 
+        div.container{
+            text-align:center;
+        }
+    </style>
+    
 </head>
 <body>
   <!-- Top navigation bar -->
