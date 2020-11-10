@@ -6,7 +6,6 @@ require_once '../database/common.php';
 var_dump($_POST);
 var_dump($_GET);
 
-
 if( isset($_POST['username']) && isset($_POST['password'])) {
 
     $username = $_POST['username'];

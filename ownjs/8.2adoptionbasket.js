@@ -7,6 +7,8 @@ console.log('8Js is loaded');
 
 function run_sql(){
     // Requiring modules 
+    
+    
     console.log('I am here in run_sql');
     axios.post('../database/getadoptionbasket.php')
     .then(response => {
@@ -16,6 +18,7 @@ function run_sql(){
         console.log(response_str);
         var response_array = response_str.split(",");
         console.log("array_response: ", response_array);
+        console.log('Finished running run_sql()')
         adoptionBasket(response_array);
         return response_array        
         })
@@ -61,15 +64,17 @@ async function adoptionBasket(pet_list){
     setTimeout(meh(), 1000);
 
     setTimeout(function display_adoption_basket_cards(result_array){
-        console.log('I am in display_adoption_basket_cards');
+        
+        console.log('I am in display_adoption_basket_cards HEHEHE');
         var html = ''; // This will be used to replace dog-card-deck innerHTML later
             for (result of result_array){
                     console.log(result);
                     html += `
+                            {{ testing }} TESTING 
                             <div class="col-sm-3 my-3">
                                 <div class="card">
                                     <a href='4individualpage.php?id=${result.id}'><img src="${result.photos[0]['full']}" alt="Image" class="img-fluid"></a>                            <div class="card-body">
-                                    <h5 class="card-title">${result.name}</h5>
+                                    <h5 class="card-title">Name: ${result.name}</h5>
                                     <p class="card-text">${result.description}.</p>
                                     <input type="checkbox" id="${result.id}" value="${result.id}" v-model="checkeddogs">
                                     <label for="${result.id}">I choose you!!</label>
@@ -92,6 +97,7 @@ async function adoptionBasket(pet_list){
 new Vue({
     el: '#dog_card_deck',
     data: {
-        checkeddogs: []
+        checkeddogs: [],
+        testing: 'THIS IS A TEST'
     }
 })

@@ -52,9 +52,10 @@ function maps_api_waypoints(start,end,waypoints_arary){
 //END OF MAPS
 // Function1: Displaying the card decks
 function display_cards(result_array){
+	console.log('I am in display cards');
 	var html = ''; // This will be used to replace dog-card-deck innerHTML later
 		for (result of result_array){
-			if(result.photos.length > 0){ //making sure the array has pictures
+			if(result.photos.length > 0){ //making sure the array has pictures. Sometimes will display nothing if 20/20 results have no pictures 
 				html += `<div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
 							<div class="trainer">
 							<figure>
@@ -284,9 +285,6 @@ function myFunction4() {
     }
 }
 // End Fuctions for the filter search 
-
-
-
 
 AOS.init({
  	duration: 800,

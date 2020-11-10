@@ -1,3 +1,4 @@
+// 1. Sleep function
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
@@ -5,8 +6,8 @@ function sleep(ms) {
 // Lets retrieve some data from our SQL database
 console.log('8Js is loaded');
 
+// 2. Making call to SQL DB
 function run_sql(){
-    // Requiring modules 
     console.log('I am here in run_sql');
     axios.post('../database/getadoptionbasket.php')
     .then(response => {
@@ -16,19 +17,21 @@ function run_sql(){
         console.log(response_str);
         var response_array = response_str.split(",");
         console.log("array_response: ", response_array);
+        console.log('Finished running run_sql()')
+        adoptionBasket(response_array);
         return response_array        
         })
     .catch(error => {
         console.log(error.message)
         })
-    
 }
 //SQL ends here
-async function adoptionBasket(){
+
+// 3. Making API Call
+async function adoptionBasket(pet_list){
     console.log('we are inside adoptionbasket');
-    compiled_array = [];
     // pet_list = await run_sql();
-    pet_list= ["49662769", "49662820", "49662799","49711076"];
+    // pet_list= ["49662769", "49662820", "49662799","49711076"];
     console.log('PetList: ', pet_list);
     compiled_array =[];
     for (pet of pet_list){
@@ -50,40 +53,49 @@ async function adoptionBasket(){
         });
     };
     
-    setTimeout(function afterTwoSeconds() {
-        console.log(compiled_array);
-      }, 5000);
-
-    function meh(){
-        console.log('meh')
-    };
-
-    setTimeout(meh(), 1000);
-
+    // Once SQL runs and API runs, display funciton will run after a small delay
     setTimeout(function display_adoption_basket_cards(result_array){
-        console.log('I am in display_adoption_basket_cards');
+        console.log('I am in display_adoption_basket_cards HEHEHE');
         var html = ''; // This will be used to replace dog-card-deck innerHTML later
             for (result of result_array){
                     console.log(result);
-                    html += `<div class="card">
-                                <a href='4individualpage.php?id=${result.id}'><img src="${result.photos[0]['full']}" alt="Image" class="img-fluid"></a>                            <div class="card-body">
-                                <h5 class="card-title">${result.name}</h5>
-                                <p class="card-text">${result.description}.</p>
-                                <input type="checkbox" id="${result.id}" value="${result.id}" v-model="checkeddogs">
-                                <label for="${result.id}">I choose you!!</label>
-                                <p class="card-text"><small class="text-muted">Checked Dogs: {{checkeddogs}}</small></p>
+                    html += `
+                            {{ testing }} TESTING 
+                            <div id='app'> {{line1}} </div>
+                            <div class="col-sm-3 my-3">
+                                <div class="card">
+                                    <a href='4individualpage.php?id=${result.id}'><img src="${result.photos[0]['full']}" alt="Image" class="img-fluid"></a>                            <div class="card-body">
+                                    <h5 class="card-title">Name: ${result.name}</h5>
+                                    <p class="card-text">${result.description}.</p>
+                                    <input type="checkbox" id="${result.id}" value="${result.id}" v-model="checkeddogs">
+                                    <label for="${result.id}">I choose you!!</label>
+                                    <p class="card-text"><small class="text-muted">Checked Dogs: {{checkeddogs}}</small></p>
+                                    <form action='../database/delete_from_cart.php' method='POST'>
+                                        <input type='hidden' id='${result.id}' name='dog_id' value='${result.id}'>
+                                        <input type='submit' value='Remove from cart'>
+                                    </form>
+                                    </div>
                                 </div>
-                            </div>`;
+                            </div>
+                                `;
                     }
             // end for loop, now lets put html inside the dog-card-deck
             console.log(html);
-            document.getElementById('dog_card_deck').innerHTML = html;}, 5000, compiled_array);
-    
+            document.getElementById('dog_card_deck').innerHTML = html;}, 5000, compiled_array);  
+            
 }
 
-new Vue({
+var app = new Vue({
     el: '#dog_card_deck',
     data: {
-        checkeddogs: []
+        checkeddogs: [],
+        testing: 'THIS IS A TEST'
+    }
+  })
+
+new Vue({
+    el: '#app',
+    data: {
+        line1: 'Line 1'
     }
 })

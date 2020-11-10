@@ -10,12 +10,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
     
+<<<<<<< Updated upstream:html/8adoptionbasket.php
   <!-- More scripts -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
   <script src="../js/main.js"></script>
   <script src="../ownjs/8.2adoptionbasket.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+=======
+    <!-- More scripts -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+>>>>>>> Stashed changes:html/8adoptionbasket.html
 
   <!-- Axios -->
   <script src="https://unpkg.com/axios/dist/axios.js"></script>
@@ -88,12 +96,20 @@
     <!-- Body -->
     <section style="margin-top: 120px;">
       <div class="card-deck" id='dog_card_deck'>
+        <div id='app'>{{testing}}</div>
         <div class="card">
           <img class="card-img-top" src="images/golden1.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <p class="card-text"><small class="text-muted">{{testing}}</small></p>
+            <input type="checkbox" id="${result.id}" value="${result.id}" v-model="checkeddogs">
+            <label for="${result.id}">I choose you!!</label>
+            <p class="card-text"><small class="text-muted">Checked Dogs: {{checkeddogs}}</small></p>
+            <form action='../database/delete_from_cart.php' method='POST'>
+                <input type='hidden' id='${result.id}' name='dog_id' value='${result.id}'>
+                <input type='submit' value='Remove from cart'>
+            </form>
           </div>
         </div>
         <div class="card">
@@ -193,5 +209,11 @@
 <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
+
+<!-- Vue -->
+<script src="../ownjs/8.1adoptionbasket.js"></script>
+<script>
+  
+</script>
 
 </html>
