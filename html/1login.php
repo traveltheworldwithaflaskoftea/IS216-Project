@@ -98,7 +98,7 @@
                 </span>
               
               
-                <a class="col-12 text-center mt-3 mb-3 blue size pf" href="9passwordreset.html">Forgot Password? </a>
+                <a class="col-12 text-center mt-3 mb-3 blue size pf" href="9passwordreset.php">Forgot Password? </a>
 
                 <button class="btn btn-primary col-8 col-offset-2 size" id="login" onclick='ifValid()'>Log In</button><br>
 

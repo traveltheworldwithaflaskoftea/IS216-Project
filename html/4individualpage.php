@@ -104,7 +104,7 @@
               <li><a href="3mainpage.php" class="nav-link">Home</a></li>
               <li><a href= "7profilepage.php" class="nav-link">🙍Profile</a></li>
               <li><a href= "6appointmentpage.php">📆Appointment</a></li>
-              <li><a href="8adoptionbasket.html">🛒Adoption Basket</a></li>
+              <li><a href="8adoptionbasket.php">🛒Adoption Basket</a></li>
             </ul>
           </nav>          
         </div>   
@@ -287,7 +287,7 @@
                   <li><a href="#pet-section" class="smoothscroll">Find Your Pet</a></li>
                   <li><a href="7profilepage.php" class="smoothscroll">Profile</a></li>
                   <li><a href= "6appointmentpage.php" class="smoothscroll">Appointment</a></li>
-                  <li><a href="8adoptionbasket.html" class="smoothscroll">Adoption Basket</a></li>
+                  <li><a href="8adoptionbasket.php" class="smoothscroll">Adoption Basket</a></li>
                   <li><a href="#contact-section" class="smoothscroll">Contact</a></li>
                 </ul>
               </div>

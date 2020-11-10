@@ -74,7 +74,7 @@
               <li><a href="3mainpage.php" class="nav-link">Home</a></li>
               <li><a href= "7profilepage.php" class="nav-link">🙍Profile</a></li>
               <li><a href= "6appointmentpage.php">📆Appointment</a></li>
-              <li><a href="8adoptionbasket.html">🛒Adoption Basket</a></li>
+              <li><a href="8adoptionbasket.php">🛒Adoption Basket</a></li>
               </ul>
           </nav>          
           </div>   
@@ -117,7 +117,7 @@
 
     <div class="row justify-content-center"> 
               <button type="button" class=" col-xl-2 col-lg-3  col-sm-3 col-5  mx-2 mb-2 btn btn-primary">
-                <a href="9passwordreset.html" class="text-white"> Password reset </a>
+                <a href="9passwordreset.php" class="text-white"> Password reset </a>
               </button>
               <button type="button" class="col-xl-2 col-lg-3  col-sm-3 col-5 mx-2 mb-2 btn btn-primary"> <a href='logout.php' class="text-white">Log Out</a></button>
     </div>
@@ -140,7 +140,7 @@
                 <li><a href="3mainpage.php" class="smoothscroll">Home</a></li>
                 <li><a href="7profilepage.php" class="smoothscroll">Profile</a></li>
                 <li><a href= "6appointmentpage.php" class="smoothscroll">Appointment</a></li>
-                <li><a href="8adoptionbasket.html" class="smoothscroll">Adoption Basket</a></li>
+                <li><a href="8adoptionbasket.php" class="smoothscroll">Adoption Basket</a></li>
               </ul>
             </div>
             <!-- Social Media Buttons-->

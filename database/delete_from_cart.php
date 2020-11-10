@@ -28,7 +28,7 @@ $adoption_basket = $dao->getadoptionbasket($user_id);
 var_dump("current dog basket: " . $adoption_basket);
 
 
-$location = "Location: " . "../html/8adoptionbasket.html";
+$location = "Location: " . "../html/8adoptionbasket.php";
 
 header($location);
 return;
