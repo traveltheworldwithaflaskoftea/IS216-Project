@@ -445,56 +445,16 @@
         </div>
         <!-- Here starts the row -->
         <div class="row" id='dog-card-deck'>
-          <!-- col1 -->
-          <div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
-            <div class="trainer">
-              <figure>
-              <img src="../images/dogger_trainer_1.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-md-3">
-                <h3>Doggie 1</h3>
-                <p>Woof</p>
-              </div>
-            </div>
-          </div>
-          <!-- end of col 1 -->
-          <!-- col 2 -->
-          <div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="trainer">
-              <figure>
-              <img src="../images/dogger_trainer_2.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-md-3">
-                <h3>Doggie 2</h3>
-                <p>Woof</p>
-                <!-- <ul class="ul-social-circle">
-                  <li><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li><a href="#"><span class="icon-instagram"></span></a></li>
-                  <li><a href="#"><span class="icon-facebook"></span></a></li>
-                </ul> -->
-              </div>
-            </div>
-          </div>
-          <!-- end of col2 -->
-          <!-- col 3 -->
-          <div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up"  data-aos-delay="200">
-            <div class="trainer">
-              <figure>
-              <img src="../images/dogger_trainer_3.jpg" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-md-3">
-                <h3>Doggie 3</h3>
-                <p>Woof</p>
-                <!-- <ul class="ul-social-circle">
-                  <li><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li><a href="#"><span class="icon-instagram"></span></a></li>
-                  <li><a href="#"><span class="icon-facebook"></span></a></li>
-                </ul> -->
-              </div>
-            </div>
-          </div>
-          <!-- end of col3 -->
-        <!-- This Div ends the row -->
+        <div class="col-12" data-aos="fade-up"> 
+          <img src="../images/giphy.gif" alt="Image" class="img-fluid justify-content-center" data-aos="fade-up">
+        </div>
+
+        <div class="col-12 mt-4" data-aos="fade-up"> 
+          <h1> FINDING YOUR FUREVER PET</h1>
+        </div>
+
+        
+      
         </div>
       </div>
     </section>

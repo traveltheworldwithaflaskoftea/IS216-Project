@@ -154,7 +154,7 @@
           <div class="paws">
             <span class="icon-paw"></span>
           </div>
-          <h2 class="text-black mb-2"  id="dog_name">Name</h2>
+          <h2 class="text-black mb-2"  id="dog_name"></h2>
         </div>
       </div>
 
@@ -164,7 +164,7 @@
           <!-- <img src="images/golden1.jpg" alt="Image" class="img-fluid rounded"> -->
           <!-- Carousel Code -->
           <!-- <section class="site-section" id="pet-section" style="border: solid brown 1px;"> -->
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="border: solid brown 1px;">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <!-- <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -172,13 +172,8 @@
             </ol> -->
             <div class="carousel-inner" id="dog_images">
               <div class="carousel-item active" >
-                <img class="d-block w-100" src="images/golden1.jpg" alt="First slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/golden2.jpg" alt="Second slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="images/golden3.jpg" alt="Third slide">
+                <img class="d-block w-100" src="../images/loading.gif" alt="First slide">
+                <h2>Loading...</h2>
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" id="caro_buttons_left">
@@ -201,7 +196,6 @@
             </h3>
             <div id="collapseFive" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="body-text" id='dog_details'>
-                <p>Woof</p>
               </div>
             </div>
           </div> 
@@ -212,7 +206,7 @@
             </h3>
             <div id="collapseSix" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="body-text" id="dog_attributes">
-                <p>Woof</p>
+                <p></p>
               </div>
             </div>
           </div> 
@@ -223,7 +217,7 @@
             </h3>
             <div id="collapseSeven" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="body-text" id='dog_description'>
-                <p>Woof</p>
+                <p></p>
               </div>
             </div>
           </div> 
@@ -234,7 +228,7 @@
             </h3>
             <div id="collapseEight" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="body-text" id="dog_contact_details">
-                <p>Woof</p>
+                <p></p>
               </div>
             </div>
           </div> 
