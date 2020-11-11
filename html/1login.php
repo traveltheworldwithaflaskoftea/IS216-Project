@@ -79,7 +79,7 @@
                 <div class="form-group row">
                   <label for="username" class="col-sm-3 col-form-label text-right">Username</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" id="username" placeholder="Username" name='username' required>
+                    <input type="text" class="mx-2 form-control" id="username" placeholder="Username" name='username' required>
                   </div>
                 </div>
 
@@ -87,7 +87,7 @@
                 <div class="form-group row">
                   <label for="inputPassword" class="col-sm-3 col-form-label text-right">Password</label>
                   <div class="col-sm-9">
-                    <input type="password" class="form-control" id="password" placeholder="Password" name='password' required>
+                    <input type="password" class="mx-2 form-control" id="password" placeholder="Password" name='password' required>
                   </div>
                 </div>
 

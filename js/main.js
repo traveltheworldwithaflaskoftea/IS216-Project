@@ -77,6 +77,17 @@ function display_cards(result_array){
 
 // Function2: Loading the cards when the page loads for the first time
 function load_default_cards(){
+	//Dog gif that appears while API is being called
+	var dogGif = `<div class="col-12" data-aos="fade-up"> 
+					<img src="../images/giphy.gif" alt="Image" class="img-fluid justify-content-center" data-aos="fade-up">
+  				</div>
+
+ 				<div class="col-12 mt-4" data-aos="fade-up"> 
+					<h1> FINDING YOUR FUREVER PET</h1>
+				</div>`; 
+
+	document.getElementById('dog-card-deck').innerHTML = dogGif; 
+
 	list_states();
 	list_dog();
 	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
@@ -98,6 +109,17 @@ function load_default_cards(){
 
 // Function3: Search button which takes in params and calls the PetFinder API 
 function search(){
+
+	var dogGif =`<div class="col-12" data-aos="fade-up"> 
+					<img src="../images/giphy.gif" alt="Image" class="img-fluid justify-content-center" data-aos="fade-up">
+ 				</div>
+
+ 				<div class="col-12 mt-4" data-aos="fade-up"> 
+					<h1> FINDING YOUR FUREVER PET</h1>
+				</div>`; 
+
+document.getElementById('dog-card-deck').innerHTML = dogGif; 
+
 	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
 	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
 	// var search_state = '';

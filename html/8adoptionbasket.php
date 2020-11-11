@@ -18,7 +18,6 @@
   <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
   <script src="../js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  <script src="../ownjs/8.2adoptionbasket.js"></script>
 
   <!-- Style sheets -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i">
@@ -203,7 +202,7 @@
 <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
 
 <!-- Vue -->
-<script src="../ownjs/8.1adoptionbasket.js"></script>
+<script src="../ownjs/8.2adoptionbasket.js"></script>
 <script>
   
 </script>

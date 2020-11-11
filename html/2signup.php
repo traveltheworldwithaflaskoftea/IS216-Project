@@ -65,6 +65,7 @@
 
 </head>
 <body>
+<form action="accountDAO.php" method="get">
   <div class="container">
     <div class="row  d-flex justify-content-center align-middle mt-4 ">
       <div class="col-6 shadow white mt-5 mb-5">
