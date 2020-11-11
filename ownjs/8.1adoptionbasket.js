@@ -60,10 +60,11 @@ async function adoptionBasket(pet_list){
             for (result of result_array){
                     console.log(result);
                     html += `
-                            {{ testing }} TESTING 
+                            {{ testing }} TESTING 123456
                             <div id='app'> {{line1}} </div>
                             <div class="col-sm-3 my-3">
                                 <div class="card">
+                                <div id='app'>{{line1}}123221</div>
                                     <a href='4individualpage.php?id=${result.id}'><img src="${result.photos[0]['full']}" alt="Image" class="img-fluid"></a>                            <div class="card-body">
                                     <h5 class="card-title">Name: ${result.name}</h5>
                                     <p class="card-text">${result.description}.</p>
@@ -85,12 +86,19 @@ async function adoptionBasket(pet_list){
             
 }
 
+
 var app = new Vue({
     el: '#dog_card_deck',
     data: {
         checkeddogs: [],
-        testing: 'THIS IS A TEST'
-    }
+        testing: 'THIS IS A TEST',
+        isHidden: true
+    },
+    methods: {
+        activate() {
+          setTimeout(() => this.isHidden = false, 500);
+        }
+      }
   })
 
 new Vue({
