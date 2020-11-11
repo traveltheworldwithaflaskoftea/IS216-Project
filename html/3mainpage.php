@@ -175,9 +175,9 @@
                 <li><a href="3mainpage.php" class="nav-link">Home</a></li>
                 <li><a href="#pet-section" class="nav-link">🐶 Find Your Pet</a></li>
                 <li><a href= "7profilepage.php" class="nav-link">🙍 Profile</a></li>
-                <li><a href= "6appointmentpage.php">📆 Appointment</a></li>
+                <li><a href= "6appointmentpage.php" class="nav-link">📆 Appointment</a></li>
                 <li><a href="#contact-section" class="nav-link">☎️ Contact</a></li>
-                <li><a href="8adoptionbasket.php">🛒 Adoption Basket</a></li>
+                <li><a href="8adoptionbasket.php" class="nav-link">🛒 Adoption Basket</a></li>
                 <!-- <li>
                   <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" id="cart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -91,18 +91,15 @@
                   </div>
                 </div>
 
-              
-
                 <span> 
                   <input type="checkbox" id="remember" style="margin-bottom:15px;" onclick="rememberMe()"> Remember me
                 </span>
-              
-              
+
                 <a class="col-12 text-center mt-3 mb-3 blue size pf" href="9passwordreset.php">Forgot Password? </a>
 
                 <button class="btn btn-primary col-8 col-offset-2 size" id="login" onclick='ifValid()'>Log In</button><br>
 
-                <a href="2signup.php" class=" col-12 text-center mb-4 size" style="margin-top: 10px;">Create an account</a>
+                <a href="../html/2signup.php" class=" col-12 text-center mb-4 size" style="margin-top: 10px;">Create an account</a>
               </form>
         </div>
       </div>
@@ -126,6 +123,7 @@
   <script src="../js/jquery.sticky.js"></script>
   <script src="../js/isotope.pkgd.min.js"></script>
   <script src="../js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
 
