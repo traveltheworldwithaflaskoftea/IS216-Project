@@ -123,7 +123,6 @@
   <script src="../js/jquery.sticky.js"></script>
   <script src="../js/isotope.pkgd.min.js"></script>
   <script src="../js/main.js"></script>
-  <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
 
