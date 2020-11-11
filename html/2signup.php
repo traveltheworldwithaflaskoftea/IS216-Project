@@ -1,7 +1,7 @@
 <?php
   require_once '../database/accountDAO.php'; 
   require_once '../database/common.php';
-  require_once '../database/protect.php';  
+  // require_once '../database/protect.php';  
 
   $msg = '';
   // var_dump($_POST['password']); 
