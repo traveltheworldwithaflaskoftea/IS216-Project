@@ -10,23 +10,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
     
-<<<<<<< Updated upstream:html/8adoptionbasket.php
+   <!-- Axios -->
+   <script src="https://unpkg.com/axios/dist/axios.js"></script>
+   
   <!-- More scripts -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
   <script src="../js/main.js"></script>
-  <script src="../ownjs/8.2adoptionbasket.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-=======
-    <!-- More scripts -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
->>>>>>> Stashed changes:html/8adoptionbasket.html
-
-  <!-- Axios -->
-  <script src="https://unpkg.com/axios/dist/axios.js"></script>
+  <script src="../ownjs/8.2adoptionbasket.js"></script>
 
   <!-- Style sheets -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i">
