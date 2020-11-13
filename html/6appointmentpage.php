@@ -2,34 +2,35 @@
 <head>
     <?php
       //Uncomment once our website is done 
-      // require_once '../database/protect.php';  
-    $appointment_page_dict = [];
+      // require_once '../database/protect.php'; 
+      session_start(); 
+
+    if(!isset($_SESSION['appointment_page_dict'])){
+        $_SESSION['appointment_page_dict'] = [];
+    }
 
     if(isset($_POST)){
     var_dump($_POST);
     };
-      
+    
     //   $user = $_SESSION['username'];
+    var_dump($_SESSION);
+
+
     $user = 'SupremeLeader555';
 
-    if(!array_key_exists($user, $appointment_page_dict)){
-        $appointment_page_dict[$user] = [
-            'contact_mode' => $_POST['contact_mode'],
-            'day' => $_POST['checkbox-465'][0],
-            'time' => $_POST['checkbox-246'][0]
-        ];
-    }
-    else {
-        $appointment_page_dict[$user] = [
-            'contact_mode' => $_POST['contact_mode'],
-            'day' => $_POST['checkbox-465'][0],
-            'time' => $_POST['checkbox-246'][0]
-        ];
-    };
+            $_SESSION['appointment_page_dict'][$_POST['dog_id']] = [
+                'dog_name' => $_POST['dog_name'],
+                'dog_address' => $_POST['dog_address'],
+                'dog_image' => $_POST['dog_image'],
+                'contact_mode' => $_POST['contact_mode'],
+                'day' => $_POST['checkbox-465'][0],
+                'time' => $_POST['checkbox-246'][0]
+            ];
 
-      var_dump($appointment_page_dict);
+    var_dump($_SESSION['appointment_page_dict']);
 
-    echo json_encode($appointment_page_dict); 
+    echo json_encode($_SESSION['appointment_page_dict']); 
 
     ?> 
     
@@ -46,12 +47,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
-    <script src="../js/main.js"></script>
     <script src="../ownjs/6appointmentpage.js"></script>
-    <script type="text/javascript">
-        var appointment_page_dict = <?php echo json_encode($appointment_page_dict) ?>;
-        console.log(appointment_page_dict);
-    </script>
+    <!-- <script src="../js/main.js"></script> -->
+    <script src="../ownjs/6.1appointmentpage.js"></script>
+
 
     <!-- Style sheets -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i">
@@ -72,35 +71,9 @@
             text-align:center;
         }
     </style>
-   
-    
-    <!---Internal CSS Styling -->
-    <!-- The internal css styling also makes this weird -->
-    <!-- <style> 
-      
-        .sidebar{ 
-            background-color: #cbe7e5; 
-            padding: 5px; 
-            margin: 0px;
-            position: fixed; 
-            left: 0; 
-            top: 10; 
-            height: 100%;
-            line-height: 40px;
-            max-width: 20%;
-        }
-
-        .appointmentpage{ 
-            position: absolute;
-            top: 10; 
-            left: 20px; 
-            max-width: 80%;           
-        }
-     
-    </style> -->
 </head>
    
-<body onload="maps_api(75212,91723)">
+<body>
 
     <!-- Navigation bar -->
     <div class="site-wrap">
@@ -177,94 +150,31 @@
                         <!-- Button -->
                         <div class="col-sm-5 col-md-3 col-lg-3 col-xl-2 text-left">
                             <!-- JavaScript display_reviews() function populates this section of HTML -->
-                            <button style="margin-bottom: 10px;" class="btn btn-primary p-2" type="button" data-toggle="collapse" data-target="#day1">Day 1
+                            <button style="margin-bottom: 10px;" class="btn btn-primary p-2" type="button" data-toggle="collapse" data-target="#Monday">Monday
                             </button>
 
-                            <button style="margin-bottom: 10px;" class="btn btn-primary p-2" type="button" data-toggle="collapse" data-target="#day2">Day 2
+                            <button style="margin-bottom: 10px;" class="btn btn-primary p-2" type="button" data-toggle="collapse" data-target="#Tuesday">Tuesday
                             </button>
 
-                            <button style="margin-bottom: 10px;" class="btn btn-primary p-2" type="button" data-toggle="collapse" data-target="#day3">Day 3
+                            <button style="margin-bottom: 10px;" class="btn btn-primary p-2" type="button" data-toggle="collapse" data-target="#Wednesday">Wednesday
+                            </button>
+
+                            <button style="margin-bottom: 10px;" class="btn btn-primary p-2" type="button" data-toggle="collapse" data-target="#Thursday">Thursday
+                            </button>
+
+                            <button style="margin-bottom: 10px;" class="btn btn-primary p-2" type="button" data-toggle="collapse" data-target="#Friday">Friday
                             </button>
                         </div>
 
                         <!-- Day Information -->
-                        <div  class="col-sm-7 col-md-9 col-lg-9 col-xl-10">
-                            <div class="collapse show" id="day1"> 
-                                <!-- <div class="card-body"> 
-                                    <div class="card card-body">  -->
-                                        <div class="container-fluid">  
-                                            <h2 style="font-weight: bold">Day 1 Schedule </h2>
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
-                                                        <li>
-                                                        Organization:
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-7">Love Dogs</div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
-                                                        <li>
-                                                        Meeting Method:
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-7"><a href='zoom.us'> Zoom </a></div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
-                                                        <li>
-                                                        Date:
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-7">23 November</div>
-                                            </div>
-
-
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
-                                                        <li>
-                                                        Time:
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-7">3.30pm</div>
-                                            </div>
-                                            <!-- <p> 
-                                                <table border='1' width=100%> 
-                                                    <tr>
-                                                        <th colspan='2'>Love cats </th>
-                                                    </tr> 
-                                                    <tr>
-                                                        <th>Meeting method</th>
-                                                        <td>
-                                                            <a href='zoom.us'> Zoom </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Date & Time</th>
-                                                        <td>23 November 3.30pm</td>
-                                                    </tr>
-                                                </table>
-                                            </p> -->
-                                        </div>
-                                    <!-- </div>
-                                </div> -->
-                            </div>
+                        <!-- DO THE DOM here -->
+                        <div  class="col-sm-7 col-md-9 col-lg-9 col-xl-10" id='planner'>
                         
                             <div class="collapse" id="day2"> 
                                 <div class="card-body"> 
-                                    <!-- <div class="card card-body"> 
-                                        <div class="container-fluid">   -->
-                                            <h2 style="font-weight: bold">Day 2 Schedule </h2>
+                                    <div class="card card-body"> 
+                                        <div class="container-fluid">  
+                                            <h2 style="font-weight: bold">Tuesday </h2>
                                             <div class="row">
                                                 <div class="col-5">
                                                     <ul class="list-unstyled ul-paw primary mb-0">
@@ -309,107 +219,15 @@
                                                 </div>
                                                 <div class="col-7">4.00pm</div>
                                             </div>
-                                            <!-- <p> 
-                                                <table border='1' width=100%> 
-                                                    <tr>
-                                                        <th colspan='2'>Sunshine Pets </th>
-                                                    </tr> 
-                                                    <tr>
-                                                        <th>Meeting method</th>
-                                                        <td>
-                                                            1201 Macklind Ave, St. Louis, MO 63110, United States
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Date & Time</th>
-                                                        <td>27 November 3.30pm</td>
-                                                    </tr>
-                                                </table>
-                                            </p> -->
-                                        <!-- </div>
-                                    </div> -->
+                                         </div>
+                                    </div>
                                 </div>
                             </div>
+                        <!-- ends here -->
+                        
+                        </div> <!-- End of container div -->
 
-                            <div class="collapse" id="day3"> 
-                                <div class="card-body"> 
-                                    <!-- <div class="card card-body"> 
-                                        <div class="container-fluid">   -->
-                                            <h2 style="font-weight: bold">Day 3 Schedule </h2>
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
-                                                        <li>
-                                                        Organization:
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-7"> Kitty Doggy Party</div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
-                                                        <li>
-                                                        Meeting Method:
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-7"> <a href='zoom.us'> Zoom </a></div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
-                                                        <li>
-                                                        Date:
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-7">30 November</div>
-                                            </div>
-
-
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
-                                                        <li>
-                                                        Time:
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-7">9.30am</div>
-                                            </div>
-                                            <!-- <p> 
-                                                <table border='1' width=100% > 
-                                                    <tr>
-                                                        <th colspan='2'>Kitty Doggy Party </th>
-                                                    </tr> 
-                                                    <tr>
-                                                        <th>Meeting method</th>
-                                                        <td>
-                                                            <a href='zoom.us'> Zoom </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Date & Time</th>
-                                                        <td>30 November 9.30am</td>
-                                                    </tr>
-                                                </table>
-                                            </p> -->
-                                        <!-- </div>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div> 
-                    </div> <!-- End of row div -->
-                </div> <!-- End of container div -->
-
-            </div>
-
-
-
-                    
+            </div>  
         </div>
     </div>
     </section>
@@ -488,7 +306,92 @@
     <script src="../js/jquery.sticky.js"></script>
     <script src="../js/isotope.pkgd.min.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../ownjs/6appointmentpage.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
+
+    <!-- PHP JS -->
+    <script type="text/javascript">
+        var appointment_page_dict = <?php echo json_encode($_SESSION['appointment_page_dict']) ?>;
+        console.log(appointment_page_dict);
+
+        console.log(typeof(appointment_page_dict));
+
+        var locations = [];
+        var html = '';
+
+        for (const [id, info_object] of Object.entries(appointment_page_dict)) {
+            console.log(`${id}: ${info_object}`);   
+            locations.push(info_object.dog_address) ;
+            html += `
+            <div class="collapse" id="${info_object.day}"> 
+                                <div class="card-body"> 
+                                    <div class="card card-body"> 
+                                        <div class="container-fluid">  
+                                            <h2 style="font-weight: bold"> ${info_object.day} ${info_object.time}</h2>
+                                            <div class="row">
+                                                <div class="container m-2">
+                                                    <img src="${info_object.dog_image}">
+                                                </div>
+                                            </div>                                            
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                        <li>
+                                                        Name:
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-7">${info_object.dog_name}</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                        <li>
+                                                        Postal Code: 
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-7">${info_object.dog_address}</div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                        <li>
+                                                        Day:
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-7">${info_object.day}</div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                        <li>
+                                                        Time:
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-7">${info_object.time}</div>
+                                            </div>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                    `;
+        }
+        console.log('I AM HERE WTF');
+        console.log(html);
+        document.getElementById('planner').innerHTML = html;
+
+        // maps_api();
+        maps_api_waypoints(94563,94563,locations);
+
+    </script>
+
 </body>
 </html>

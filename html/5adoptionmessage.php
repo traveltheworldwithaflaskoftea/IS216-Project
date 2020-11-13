@@ -191,6 +191,13 @@
                 <div class="col-md-12 message">
                   <label for="message">Write a message to enquire about the Pet!</label> 
                   <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
+                  <?php 
+                  
+                  echo $_GET['id'] . "<br>";
+                  echo $_GET['name'] . "<br>";
+                  echo "<img src='" . $_GET['image'] . "'>";
+
+                  ?>
                 </div>
               </div>
 
@@ -229,6 +236,17 @@
                 <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f560-p590-o1">
                 <input type="hidden" name="_wpnonce" value="dbb28877d5">
                 </div>
+                
+                <form action="6appointmentpage.php" method='POST'>
+                <?php
+      
+                  echo"<input type='hidden' name='dog_id' value='" . $_GET['id'] . "'>";
+                  echo"<input type='hidden' name='dog_name' value='" . $_GET['name'] . "'>";
+                  echo"<input type='hidden' name='dog_image' value='" . $_GET['image'] . "'>";
+                  echo"<input type='hidden' name='dog_address' value='" . $_GET['address'] . "'>";
+
+                  
+                ?>
                 <div class="group">
                 <div style="width: 100%; float: left; color: rgb(39, 37, 37);">
                 <h4>What is the best way to reach you?</h4>

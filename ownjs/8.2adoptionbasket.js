@@ -1,29 +1,3 @@
-var app = new Vue({
-    el: '#dog_card_deck',
-    data: {
-        checkeddogs: [],
-        testing: 'THIS IS A TEST',
-        isHidden: true
-    },
-    methods: {
-        foo_reload: function() {
-            console.log('[Before] Reload');
-            this.$forceUpdate();
-            console.log('[After] Reload');
-        }
-        // activate() {
-        // setTimeout(() => this.isHidden = false, 500);
-        // }
-    }
-})
-
-new Vue({
-    el: '#foo',
-    data: {
-        something: "Hello Something"
-    }
-})
-
 // 1. Sleep function
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));

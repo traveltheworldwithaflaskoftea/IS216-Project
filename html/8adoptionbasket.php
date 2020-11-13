@@ -4,7 +4,6 @@
   <?php
       //Uncomment once our website is done 
       // require_once '../database/protect.php';   
-      
   ?> 
   
   <title>🛒Adoption Basket</title>
@@ -63,7 +62,7 @@
           <div class="col-6 col-xl-2">
             <h1 class="mb-0 site-logo">
               <a href="3mainpage.php" class="h2 mb-0 navbar-brand">
-                <img src="../html/images/logo_no_bg.png" height="55" alt="Furever_home_logo">
+                <img src="../images/logo_no_bg.png" height="55" alt="Furever_home_logo">
                 <span class="text-primary">FureverHome</span>
               </a>
             </h1>
@@ -95,12 +94,8 @@
       <img src="../images/adoption.gif" style="margin: auto;">
         <!-- [END] Below to be replaced by JS -->
       </div>
-      <a href="5adoptionmessage.php">
-        <button input class='btn btn-primary' @click='submit_selections()'>
-          Lets go
-        </button>
-      </a>
-    </section>
+      <br>
+    </section> 
     <!-- end of body -->
     
         
