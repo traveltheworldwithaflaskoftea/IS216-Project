@@ -93,10 +93,15 @@ async function adoptionBasket(pet_list){
             for (result of result_array){
                     console.log(result);
                     
-                    html += `
-                            <div class="col-sm-3 my-3">
-                                <div class="card">
-                                    <a href='4individualpage.php?id=${result.id}'><img src="${result.photos[0]['full']}" alt="Image" class="img-fluid"></a>                            <div class="card-body">
+                    html += 
+                             // <div class="col-sm-3 my-3">
+                            `
+                            <div class="card-group" style="display: flex;">
+                            <div class="justify-content-center" style="margin-left: 30px; display: flex; flex-wrap: wrap; align-content: center;">
+                            <div class="col-md-6 col-xl-4 my-3 justify-content-sm-center">    
+                                <div class="card" style="width: 18rem; margin: auto;">
+                                    <a href='4individualpage.php?id=${result.id}'><img src="${result.photos[0]['full']}" alt="Image" class="img-fluid"></a>
+                                    <div class="card-body">
                                     <h5 class="card-title">Name: ${result.name}</h5>
                                     <p class="card-text">${result.description}.</p>
                                     <input type="checkbox" id="${result.id}" value="${result.id}" v-model="checkeddogs">
@@ -110,7 +115,10 @@ async function adoptionBasket(pet_list){
                                     </div>
                                 </div>
                             </div>
+                            </div>
+                            </div>
                             `;
+
             }//end-for
             // end for loop, now lets put html inside the dog-card-deck
             document.getElementById('dog_card_deck').innerHTML = html;
