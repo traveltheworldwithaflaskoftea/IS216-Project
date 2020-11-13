@@ -1,3 +1,29 @@
+var app = new Vue({
+    el: '#dog_card_deck',
+    data: {
+        checkeddogs: [],
+        testing: 'THIS IS A TEST',
+        isHidden: true
+    },
+    methods: {
+        foo_reload: function() {
+            console.log('[Before] Reload');
+            this.$forceUpdate();
+            console.log('[After] Reload');
+        }
+        // activate() {
+        // setTimeout(() => this.isHidden = false, 500);
+        // }
+    }
+})
+
+new Vue({
+    el: '#foo',
+    data: {
+        something: "Hello Something"
+    }
+})
+
 // 1. Sleep function
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -10,7 +36,7 @@ console.log('8Js is loaded');
 function run_sql(){
     console.log('I am here in run_sql');
     axios.post('../database/getadoptionbasket.php')
-    .then(response => {
+    .then(response => {  
         console.log(response.data);
         console.log(typeof(response.data));
         response_str = response.data.replace(/\s/g, '');
@@ -59,12 +85,10 @@ async function adoptionBasket(pet_list){
         var html = ''; // This will be used to replace dog-card-deck innerHTML later
             for (result of result_array){
                     console.log(result);
+                    
                     html += `
-                            {{ testing }} TESTING 123456
-                            <div id='app'> {{line1}} </div>
                             <div class="col-sm-3 my-3">
                                 <div class="card">
-                                <div id='app'>{{line1}}123221</div>
                                     <a href='4individualpage.php?id=${result.id}'><img src="${result.photos[0]['full']}" alt="Image" class="img-fluid"></a>                            <div class="card-body">
                                     <h5 class="card-title">Name: ${result.name}</h5>
                                     <p class="card-text">${result.description}.</p>
@@ -73,37 +97,39 @@ async function adoptionBasket(pet_list){
                                     <p class="card-text"><small class="text-muted">Checked Dogs: {{checkeddogs}}</small></p>
                                     <form action='../database/delete_from_cart.php' method='POST'>
                                         <input type='hidden' id='${result.id}' name='dog_id' value='${result.id}'>
-                                        <input type='submit' value='Remove from cart'>
-                                    </form>
+                                        <input class='btn btn-primary' type='submit' value="🗑" style="max-width: 100%;"> 
+                                    </form><br>
+                                    <button class='btn btn-secondary' onclick="make_appointment(${result.id})">Make Appointment</button>
                                     </div>
                                 </div>
                             </div>
-                                `;
-                    }
+                            `;
+            }//end-for
             // end for loop, now lets put html inside the dog-card-deck
-            console.log(html);
-            document.getElementById('dog_card_deck').innerHTML = html;}, 5000, compiled_array);  
+            document.getElementById('dog_card_deck').innerHTML = html;
+            console.log("========== foo ===========");
+            console.log(document.getElementById('dog_card_deck').innerHTML);
+
+            new Vue({
+                el: '#dog_card_deck',
+                data: {
+                    testing: 'TESTING PLEASE',
+                    checkeddogs: []
+                },
+                methods: {
+                    submit_selections: function() {
+
+                    }
+                }
+            })
+
+        }, 5000, compiled_array);
+
+            
             
 }
 
-
-var app = new Vue({
-    el: '#dog_card_deck',
-    data: {
-        checkeddogs: [],
-        testing: 'THIS IS A TEST',
-        isHidden: true
-    },
-    methods: {
-        activate() {
-          setTimeout(() => this.isHidden = false, 500);
-        }
-      }
-  })
-
-new Vue({
-    el: '#app',
-    data: {
-        line1: 'Line 1'
-    }
-})
+// 5. Function to make appointment
+function make_appointment(dog_id){
+    window.location = '5adoptionmessage.php?=' + dog_id;
+}

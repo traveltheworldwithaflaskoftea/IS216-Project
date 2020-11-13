@@ -4,6 +4,10 @@
   <?php
       //Uncomment once our website is done 
       // require_once '../database/protect.php';   
+      
+
+
+
   ?> 
   
   <title>🛒Adoption Basket</title>
@@ -41,8 +45,6 @@
   
 </head>
 <body onload="run_sql()">
-
-<h1 id="foo">{{ something }}</h1>
 
 <!-- <body> -->
     <!-- Navigation bar -->
@@ -125,6 +127,11 @@
         </div>
         <!-- [END] Below to be replaced by JS -->
       </div>
+      <a href="5adoptionmessage.php">
+        <input class='btn btn-primary' @click='submit_selections()' >
+          Lets go
+        </button>
+      </a>
     </section>
     <!-- end of body -->
     
@@ -207,7 +214,7 @@
 <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
 
 <!-- Vue -->
-<script src="../ownjs/8.2adoptionbasket.js"></script>
+<script src="../ownjs/8.1adoptionbasket.js"></script>
 <script>
   
 </script>

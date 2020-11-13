@@ -87,7 +87,6 @@ async function adoptionBasket(pet_list){
                     console.log(result);
                     
                     html += `
-                            <div id='app'> {{line1}} </div>
                             <div class="col-sm-3 my-3">
                                 <div class="card">
                                     <a href='4individualpage.php?id=${result.id}'><img src="${result.photos[0]['full']}" alt="Image" class="img-fluid"></a>                            <div class="card-body">
@@ -106,11 +105,6 @@ async function adoptionBasket(pet_list){
                             `;
             }//end-for
             // end for loop, now lets put html inside the dog-card-deck
-            html += `
-                    <button class='btn btn-primary' @click='submit_selections()'>
-                        Lets go
-                    </button>
-                    `;
             document.getElementById('dog_card_deck').innerHTML = html;
             console.log("========== foo ===========");
             console.log(document.getElementById('dog_card_deck').innerHTML);

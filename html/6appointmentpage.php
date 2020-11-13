@@ -2,7 +2,35 @@
 <head>
     <?php
       //Uncomment once our website is done 
-      // require_once '../database/protect.php';   
+      // require_once '../database/protect.php';  
+    $appointment_page_dict = [];
+
+    if(isset($_POST)){
+    var_dump($_POST);
+    };
+      
+    //   $user = $_SESSION['username'];
+    $user = 'SupremeLeader555';
+
+    if(!array_key_exists($user, $appointment_page_dict)){
+        $appointment_page_dict[$user] = [
+            'contact_mode' => $_POST['contact_mode'],
+            'day' => $_POST['checkbox-465'][0],
+            'time' => $_POST['checkbox-246'][0]
+        ];
+    }
+    else {
+        $appointment_page_dict[$user] = [
+            'contact_mode' => $_POST['contact_mode'],
+            'day' => $_POST['checkbox-465'][0],
+            'time' => $_POST['checkbox-246'][0]
+        ];
+    };
+
+      var_dump($appointment_page_dict);
+
+    echo json_encode($appointment_page_dict); 
+
     ?> 
     
     <title>📆Appointment Page</title>
@@ -19,6 +47,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
     <script src="../js/main.js"></script>
+    <script type="text/javascript">
+var book = <?php echo json_encode($book, JSON_PRETTY_PRINT) ?>;
+/* var book = {
+    "title": "JavaScript: The Definitive Guide",
+    "author": "David Flanagan",
+    "edition": 6
+}; */
+alert(book.title);
+</script>
 
     <!-- Style sheets -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i">
