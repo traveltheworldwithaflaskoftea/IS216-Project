@@ -41,6 +41,9 @@
   
 </head>
 <body onload="run_sql()">
+
+<h1 id="foo">{{ something }}</h1>
+
 <!-- <body> -->
     <!-- Navigation bar -->
     <div class="site-wrap">
@@ -87,7 +90,8 @@
     <!-- Body -->
     <section style="margin-top: 120px;">
       <div class="card-deck" id='dog_card_deck'>
-        <div id='app'>{{testing}}</div>
+        
+        <!-- Below to be replaced by JS -->
         <div class="card">
           <img class="card-img-top" src="images/golden1.jpg" alt="Card image cap">
           <div class="card-body">
@@ -119,6 +123,7 @@
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
+        <!-- [END] Below to be replaced by JS -->
       </div>
     </section>
     <!-- end of body -->

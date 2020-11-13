@@ -5,7 +5,7 @@ require_once 'ConnectionManager.php';
 
 $dog_id = $_POST['dog_id'];
 var_dump("Dog id:" . $dog_id);
-// $user_id = $_SESSION['user_id']; We use this once the sessions are set up 
+$_SESSION['username'] = 'SupremeLeader555'; //We use this once the sessions are set up 
 $user_id = $_SESSION['username'];
 
 // 
