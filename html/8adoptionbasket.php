@@ -92,6 +92,7 @@
       <img src="../images/adoption.gif" style="margin-left: auto; margin-right: auto;">
         <!-- [END] Below to be replaced by JS -->
       </div>
+      <br>
     </section>
     <!-- end of body -->
     

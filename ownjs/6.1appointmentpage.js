@@ -22,7 +22,7 @@ function maps_api_waypoints(start,end,waypoints_arary){
     var ending = end;
     console.log("This is the waypoint array" + waypoints_arary);
     console.log(waypoints_arary);
-	var waypoints = waypoints_arary.join("|");
+	var waypoints = waypoints_arary.split("|");
 
 	var url = "https://www.google.com/maps/embed/v1/directions?key=" + maps_api_key + "&origin=" + starting + "&destination=" + ending + "&waypoints=" + waypoints
 	var html = `<iframe src="${url}" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>`
