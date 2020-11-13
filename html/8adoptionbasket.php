@@ -5,9 +5,6 @@
       //Uncomment once our website is done 
       // require_once '../database/protect.php';   
       
-
-
-
   ?> 
   
   <title>🛒Adoption Basket</title>
@@ -93,11 +90,11 @@
     <section style="margin-top: 120px;">
       <div class="card-deck" id='dog_card_deck'>
       <!-- Placeholder -->
-      <img src="../images/adoption.gif" style="margin-left: auto; margin-right: auto;">
+      <img src="../images/adoption.gif" style="margin: auto;">
         <!-- [END] Below to be replaced by JS -->
       </div>
       <a href="5adoptionmessage.php">
-        <input class='btn btn-primary' @click='submit_selections()' >
+        <button input class='btn btn-primary' @click='submit_selections()'>
           Lets go
         </button>
       </a>
