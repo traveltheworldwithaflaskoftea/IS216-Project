@@ -109,7 +109,14 @@
             <!-- <div class="contact-us row justify-content-center align-items-center h-100"> -->
 
               <!-- <div class="landing-page"><div class="form-appointment"><div class="wpcf7" id="wpcf7-f560-p590-o1"><form action="/landing-page-template-do-not-delete/#wpcf7-f560-p590-o1" method="post" class="wpcf7-form" novalidate="novalidate" _lpchecked="1"> -->
-                <div class="col-lg-6 text-center heading-section mb-5 align-self-center"></div>
+
+                <div class="row justify-content-center">
+              <div class="col-lg-6 text-center heading-section mb-5 align-self-center">
+                <div class="paws">
+                  <span class="icon-paw"></span>
+                </div>
+                <h2 class="text-white mb-4">Request Appointment</h2>
+                <ul class="list-unstyled text-left address">
                 <div style="display: none;">
                 <input type="hidden" name="_wpcf7" value="560">
                 <input type="hidden" name="_wpcf7_version" value="3.5">
@@ -117,32 +124,18 @@
                 <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f560-p590-o1">
                 <input type="hidden" name="_wpnonce" value="dbb28877d5">
                 </div>
-                
-                <form action="6appointmentpage.php" method='POST'>
                 <div class="group">
-                <div style="width: 100%; float: left; color: rgb(39, 37, 37); padding-left:20px ;">
-                  <h4>What is the best way to reach you?</h4>
-                    <p><span class="wpcf7-form-control-wrap radio-98">
-                    <span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item"><label>
-                      <input type="radio" name="contact_mode" value="Phone">&nbsp;<span     class="wpcf7-list-item-label">Phone</span></label></span><span class="wpcf7-list-item"><label><input type="radio" name="contact_mode" value="Email">&nbsp;<span class="wpcf7-list-item-label">Email</span></label></span></span></span></p>
-                  <h4>Days of the week you are available for appointment:</h4>
-                    <p><span class="wpcf7-form-control-wrap checkbox-465"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item"><label>
-                      <input type="checkbox" name="checkbox-465[]" value="Monday">&nbsp;<span class="wpcf7-list-item-label">Monday</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Tuesday">&nbsp;<span class="wpcf7-list-item-label">Tuesday</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Wednesday">&nbsp;<span class="wpcf7-list-item-label">Wednesday</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Thursday">&nbsp;<span class="wpcf7-list-item-label">Thursday</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Friday">&nbsp;<span class="wpcf7-list-item-label">Friday</span></label></span></span></span></p>
-                  <h4>Best time of day for your appointment:</h4>
-                    <p><span class="wpcf7-form-control-wrap checkbox-246"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item"><label>
-                      <input type="checkbox" name="checkbox-246[]" value="Morning">&nbsp;<span class="wpcf7-list-item-label">Morning</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-246[]" value="Afternoon">&nbsp;<span class="wpcf7-list-item-label">Afternoon</span></label></span></span></span></p>
-                  </div>
-                  </div>
-                  <div style="text-align: center; padding-top: 2em; border-top: 1px solid #a4d4d1; margin-top: 1em;">
-                    <input type="submit" value="Request My Appointment" class="btn btn-primary"><img class="ajax-loader" src="http://www.professionalaudiologicalservices.com/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;">
-                  </div>
-                    <br>
-                  <div class="wpcf7-response-output wpcf7-display-none">
-                  </div>
-                </form>
+                <div style="width: 100%; float: left; color: rgb(39, 37, 37);">
+                <h4>What is the best way to reach you?</h4>
+                <p><span class="wpcf7-form-control-wrap radio-98"><span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item"><label><input type="radio" name="radio-98" value="Phone">&nbsp;<span class="wpcf7-list-item-label">Phone</span></label></span><span class="wpcf7-list-item"><label><input type="radio" name="radio-98" value="Email">&nbsp;<span class="wpcf7-list-item-label">Email</span></label></span></span></span></p>
+                <h4>Days of the week you are available for appointment:</h4>
+                <p><span class="wpcf7-form-control-wrap checkbox-465"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Monday">&nbsp;<span class="wpcf7-list-item-label">Monday</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Tuesday">&nbsp;<span class="wpcf7-list-item-label">Tuesday</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Wednesday">&nbsp;<span class="wpcf7-list-item-label">Wednesday</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Thursday">&nbsp;<span class="wpcf7-list-item-label">Thursday</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-465[]" value="Friday">&nbsp;<span class="wpcf7-list-item-label">Friday</span></label></span></span></span></p>
+                <h4>Best time of day for your appointment:</h4>
+                <p><span class="wpcf7-form-control-wrap checkbox-246"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-246[]" value="Morning">&nbsp;<span class="wpcf7-list-item-label">Morning</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-246[]" value="Afternoon">&nbsp;<span class="wpcf7-list-item-label">Afternoon</span></label></span></span></span></p></div>
                 </div>
-              </div>
+                <button type="submit" style="margin-bottom: 20px;" class="btn btn-primary col-12 col-offset-2 size" id="pet_compatibility">Request Appointment!</button>
 
+              </div>
     </section>
 
 
