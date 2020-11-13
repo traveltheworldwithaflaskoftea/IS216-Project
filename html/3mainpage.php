@@ -240,7 +240,7 @@
                   <!-- // Col -->
                   <div class="col"> 
                     <div class="dropdown my-4" data-aos="fade-up">
-                      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Age
+                      <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Age
                       <span class="caret"></span></button>
                       <div class='form-group'>
                         <ul class="dropdown-menu p-2" id="myUL">
