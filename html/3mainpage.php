@@ -7,6 +7,7 @@
     <script src="../js/main.js"></script>
     
     <!-- Style sheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i">
     <link rel="stylesheet" href="../fonts/icomoon/style.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -167,10 +168,9 @@
               </a>
             </h1>
           </div>
-
-          <div class="col-12 col-md-10 d-none d-xl-block">
+      
+          <div class="col-12 col-md-10 d-none d-xl-block" id="navbarTogglerDemo02">
             <nav class="site-navigation position-relative text-right" role="navigation">
-
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="3mainpage.php" class="nav-link">Home</a></li>
                 <li><a href="#pet-section" class="nav-link">🐶 Find Your Pet</a></li>
@@ -178,23 +178,28 @@
                 <li><a href= "6appointmentpage.php" class="nav-link">📆 Appointment</a></li>
                 <li><a href="#contact-section" class="nav-link">☎️ Contact</a></li>
                 <li><a href="8adoptionbasket.php" class="nav-link">🛒 Adoption Basket</a></li>
-                <!-- <li>
-                  <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="cart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Adoption Basket
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Doggie1</a>
-                      <a class="dropdown-item" href="#">Doggie2</a>
-                      <a class="dropdown-item" href="#">Doggie3</a>
-                    </div>
-                  </div>
-                </li> -->
               </ul>
-            </nav>          
-          </div>   
+            </nav>       
+          </div>
 
           <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+        
+          <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light float-right" style="position: relative; top: 3px;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse float-right" id="navbarTogglerDemo02">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item"><a href="3mainpage.php" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#pet-section" class="nav-link">🐶 Find Your Pet</a></li>
+                <li class="nav-item"><a href= "7profilepage.php" class="nav-link">🙍 Profile</a></li>
+                <li class="nav-item"><a href= "6appointmentpage.php" class="nav-link">📆 Appointment</a></li>
+                <li class="nav-item"><a href="#contact-section" class="nav-link">☎️ Contact</a></li>
+                <li class="nav-item"><a href="8adoptionbasket.php" class="nav-link">🛒 Adoption Basket</a></li>
+              </ul>
+            </div>
+          </nav> -->
 
         </div>
       </div>
@@ -208,6 +213,7 @@
             <div class="intro-text">
               <h1> Find your <span class="d-md-block">Furever Pet! </span></h1>
               <p class="mb-4">Matching these furry buddies to their<span class="d-block"> 🐶 FureverHome 🐱</p>
+              <button type="submit" onclick="location.href='../html/questionnaire.html'" style="margin-bottom: 20px;" class="btn btn-primary col-8 col-offset-2 size" id="pet_compatibility">Take Pet Compatibility Test!</button>
             </div>
           </div>  
           <div class="col-md-5 align-self-end text-center text-md-right" style="margin-top: 50px;">
@@ -1011,5 +1017,8 @@
   <script src="../ownjs/3mainpage.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 </body>
 </html>
