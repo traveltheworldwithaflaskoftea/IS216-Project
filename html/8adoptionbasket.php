@@ -177,7 +177,7 @@
 <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
 
 <!-- Vue -->
-<script src="../ownjs/8.1adoptionbasket.js"></script>
+<script src="../ownjs/8.2adoptionbasket.js"></script>
 <script>
   
 </script>

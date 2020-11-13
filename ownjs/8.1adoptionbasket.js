@@ -62,8 +62,15 @@ async function adoptionBasket(pet_list){
     compiled_array =[];
     for (pet of pet_list){
         console.log("we are in round ", pet);
-        var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
-        var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
+        //Wes API KEY
+        // var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
+        // var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
+        //Wes 2nd API KEY
+        var id = 'KCXb8y2r6wilER4RBfAdnYwWm6bhUFXGI09J4N6X8qRk2aaAz0';
+        var secret = 'qagSVQBSizMwEx8acEJ4ojmx9XWgTmKSCb1vvkxp';
+        //Sheri API KEY
+        // var id = 'tdIL28vzdTlXMQqyJY28FYHp8GSrkhr1taoUTiTmQaIrOxFs0g';
+        // var secret = 'ZGs2r5AvICHaynezcEv7M1LfNC35Vmuq8SDX9sj6';
 
         var client  = new petfinder.Client({apiKey: id, secret: secret});
         console.log('PetFinder works'); 
