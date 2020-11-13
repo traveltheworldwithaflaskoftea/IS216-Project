@@ -47,15 +47,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
     <script src="../js/main.js"></script>
+    <script src="../ownjs/6appointmentpage.js"></script>
     <script type="text/javascript">
-var book = <?php echo json_encode($book, JSON_PRETTY_PRINT) ?>;
-/* var book = {
-    "title": "JavaScript: The Definitive Guide",
-    "author": "David Flanagan",
-    "edition": 6
-}; */
-alert(book.title);
-</script>
+        var appointment_page_dict = <?php echo json_encode($appointment_page_dict) ?>;
+        console.log(appointment_page_dict);
+    </script>
 
     <!-- Style sheets -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700, 900|Vollkorn:400i">
