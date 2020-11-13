@@ -195,7 +195,7 @@
                   
                   echo $_GET['id'] . "<br>";
                   echo $_GET['name'] . "<br>";
-                  echo "<img src='" . $_GET['image'] . "'>";
+                  echo "<img src='" . $_GET['image'] . "' style='max-width: 400px; max-height: 1020px;'>";
 
                   ?>
                 </div>
