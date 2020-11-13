@@ -1,20 +1,4 @@
 console.log("main.js is loaded");
-// adoption basket for page 8
-// function adoptionBasket(){
-//     var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
-// 	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
-
-// 	var client  = new petfinder.Client({apiKey: id, secret: secret});
-
-// 	client.animal.search({
-// 		type: 'dog'
-// 		})
-// 	.then(resp => {
-// 		// Do something with resp.data.breeds
-// 		var results_array = resp.data.animals;
-// 		console.log(results_array);
-// 	});
-// }
 
 // Function1: Displaying the card decks
 function display_cards(result_array){
@@ -34,23 +18,24 @@ function display_cards(result_array){
 							</div>
 						</div>
 						`;
-				}else{ 
-					//diff pic for doggies w/o pic 
-					html += `<div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
-							<div class="trainer">
-							<figure>
-							<a href='4individualpage.php?id=${result.id}'><img src="../images/noimgfound.png" alt="Image" class="img-fluid"></a>
-							</figure>
-							<div class="px-md-3">
-								<h3>${result.name}</h3>
-								<p>${result.description}</p>
-							</div>
-							</div>
-						</div>
-						`;
-
-				}
 			}
+			else{ 
+				//diff pic for doggies w/o pic 
+				html += `<div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
+						<div class="trainer">
+						<figure>
+						<a href='4individualpage.php?id=${result.id}'><img src="../images/noimgfound.png" alt="Image" class="img-fluid"></a>
+						</figure>
+						<div class="px-md-3">
+							<h3>${result.name}</h3>
+							<p>${result.description}</p>
+						</div>
+						</div>
+					</div>
+					`;
+
+			}
+		}
 		// end for loop, now lets put html inside the dog-card-deck
 		document.getElementById('dog-card-deck').innerHTML = html;
 }
@@ -71,8 +56,15 @@ function load_default_cards(){
 
 	list_states();
 	list_dog();
-	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
-	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
+	//Wes API KEY
+	// var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
+	// var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
+	//Wes 2nd API KEY
+	var id = 'KCXb8y2r6wilER4RBfAdnYwWm6bhUFXGI09J4N6X8qRk2aaAz0';
+	var secret = 'qagSVQBSizMwEx8acEJ4ojmx9XWgTmKSCb1vvkxp';
+	//Sheri API KEY
+	// var id = 'tdIL28vzdTlXMQqyJY28FYHp8GSrkhr1taoUTiTmQaIrOxFs0g';
+	// var secret = 'ZGs2r5AvICHaynezcEv7M1LfNC35Vmuq8SDX9sj6';
 
 	var client  = new petfinder.Client({apiKey: id, secret: secret});
 
@@ -156,8 +148,15 @@ document.getElementById('dog-card-deck').innerHTML = dogGif;
 
 // Function4: Searching by ID 
 function search_by_id(id){
-	var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
-	var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
+	//Wes API KEY
+	// var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
+	// var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
+	//Wes 2nd API KEY
+	var id = 'KCXb8y2r6wilER4RBfAdnYwWm6bhUFXGI09J4N6X8qRk2aaAz0';
+	var secret = 'qagSVQBSizMwEx8acEJ4ojmx9XWgTmKSCb1vvkxp';
+	//Sheri API KEY
+	// var id = 'tdIL28vzdTlXMQqyJY28FYHp8GSrkhr1taoUTiTmQaIrOxFs0g';
+	// var secret = 'ZGs2r5AvICHaynezcEv7M1LfNC35Vmuq8SDX9sj6';
 
 	var client  = new petfinder.Client({apiKey: id, secret: secret});
 
