@@ -172,7 +172,7 @@
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="3mainpage.php" class="nav-link">🏚️ Home</a></li>
+                <li><a href="3mainpage.php" class="nav-link">Home</a></li>
                 <li><a href="#pet-section" class="nav-link">🐶 Find Your Pet</a></li>
                 <li><a href= "7profilepage.php" class="nav-link">🙍 Profile</a></li>
                 <li><a href= "6appointmentpage.php" class="nav-link">📆 Appointment</a></li>
@@ -182,7 +182,7 @@
             </nav>       
           </div>
           
-          <div class="col-6 d-inline-block ml-md-0 py-3" ><a href="" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" ><a href="" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
 
           <!-- <div class="col-6 col-md-10">
           <nav class="site-navigation navbar navbar-expand-lg navbar-light bg-light float-right" style="position: right;" role="navigation">
