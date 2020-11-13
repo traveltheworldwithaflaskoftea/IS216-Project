@@ -60,11 +60,11 @@ function load_default_cards(){
 	// var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
 	// var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
 	//Wes 2nd API KEY
-	var id = 'KCXb8y2r6wilER4RBfAdnYwWm6bhUFXGI09J4N6X8qRk2aaAz0';
-	var secret = 'qagSVQBSizMwEx8acEJ4ojmx9XWgTmKSCb1vvkxp';
+	//var id = 'KCXb8y2r6wilER4RBfAdnYwWm6bhUFXGI09J4N6X8qRk2aaAz0';
+	//var secret = 'qagSVQBSizMwEx8acEJ4ojmx9XWgTmKSCb1vvkxp';
 	//Sheri API KEY
-	// var id = 'tdIL28vzdTlXMQqyJY28FYHp8GSrkhr1taoUTiTmQaIrOxFs0g';
-	// var secret = 'ZGs2r5AvICHaynezcEv7M1LfNC35Vmuq8SDX9sj6';
+	var id = 'tdIL28vzdTlXMQqyJY28FYHp8GSrkhr1taoUTiTmQaIrOxFs0g';
+	var secret = 'ZGs2r5AvICHaynezcEv7M1LfNC35Vmuq8SDX9sj6';
 
 	var client  = new petfinder.Client({apiKey: id, secret: secret});
 
@@ -91,24 +91,24 @@ function search(){
 					<h1> FINDING YOUR FUREVER PET</h1>
 				</div>`; 
 
-	document.getElementById('dog-card-deck').innerHTML = dogGif; 
+document.getElementById('dog-card-deck').innerHTML = dogGif; 
 
 	//Wes API KEY
 	// var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
 	// var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
 	//Wes 2nd API KEY
-	var id = 'KCXb8y2r6wilER4RBfAdnYwWm6bhUFXGI09J4N6X8qRk2aaAz0';
-	var secret = 'qagSVQBSizMwEx8acEJ4ojmx9XWgTmKSCb1vvkxp';
+	//var id = 'KCXb8y2r6wilER4RBfAdnYwWm6bhUFXGI09J4N6X8qRk2aaAz0';
+	//var secret = 'qagSVQBSizMwEx8acEJ4ojmx9XWgTmKSCb1vvkxp';
 	//Sheri API KEY
-	// var id = 'tdIL28vzdTlXMQqyJY28FYHp8GSrkhr1taoUTiTmQaIrOxFs0g';
-	// var secret = 'ZGs2r5AvICHaynezcEv7M1LfNC35Vmuq8SDX9sj6';
+	 var id = 'tdIL28vzdTlXMQqyJY28FYHp8GSrkhr1taoUTiTmQaIrOxFs0g';
+	var secret = 'ZGs2r5AvICHaynezcEv7M1LfNC35Vmuq8SDX9sj6';
 
 	var client  = new petfinder.Client({apiKey: id, secret: secret});
 	var search_age = document.getElementById('age_badge').innerHTML.slice(1,-1);
 	var search_gender = document.getElementById('gender_badge').innerHTML.slice(1,-1);
 	var search_breed = document.getElementById('breed_badge').innerHTML.slice(1,-1);
 	var search_state = document.getElementById('state_badge').innerHTML.slice(1,-1);
-	console.log(search_state);
+	console.log(search_breed);
 
 	if (search_state != ''){ //Got search states 
 		client.animal.search({
