@@ -1,11 +1,9 @@
 <?php
 require_once 'common.php';
-require_once 'account.php';
-require_once 'ConnectionManager.php';
+require_once 'accountDAO.php';
 
 $dog_id = $_POST['dog_id'];
 var_dump("Dog id:" . $dog_id);
-$_SESSION['username'] = 'SupremeLeader555'; //We use this once the sessions are set up 
 $user_id = $_SESSION['username'];
 
 // 

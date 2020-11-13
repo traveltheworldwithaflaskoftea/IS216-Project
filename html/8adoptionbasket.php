@@ -92,39 +92,8 @@
     <!-- Body -->
     <section style="margin-top: 120px;">
       <div class="card-deck" id='dog_card_deck'>
-        
-        <!-- Below to be replaced by JS -->
-        <div class="card">
-          <img class="card-img-top" src="images/golden1.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">{{testing}}</small></p>
-            <input type="checkbox" id="${result.id}" value="${result.id}" v-model="checkeddogs">
-            <label for="${result.id}">I choose you!!</label>
-            <p class="card-text"><small class="text-muted">Checked Dogs: {{checkeddogs}}</small></p>
-            <form action='../database/delete_from_cart.php' method='POST'>
-                <input type='hidden' id='${result.id}' name='dog_id' value='${result.id}'>
-                <input type='submit' value='Remove from cart'>
-            </form>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="images/golden2.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="images/golden3.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
+      <!-- Placeholder -->
+      <img src="../images/adoption.gif" style="margin-left: auto; margin-right: auto;">
         <!-- [END] Below to be replaced by JS -->
       </div>
       <a href="5adoptionmessage.php">

@@ -8,6 +8,7 @@
     // once retrieve, remove it
     unset($_SESSION['error']);
   }
+
 ?>
 
 <html lang="en">
@@ -74,7 +75,7 @@
 
               <div id="error" class="col-8 mb-2" style="color:red; font-weight: bold;"></div>
 
-              <form action='process_login.php' method='POST' class='p-2'>
+              <form action='../database/process_login.php' method='POST' class='p-2'>
             
                 <div class="form-group row">
                   <label for="username" class="col-sm-3 col-form-label text-right">Username</label>

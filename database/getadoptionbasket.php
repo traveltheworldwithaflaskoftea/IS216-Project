@@ -1,8 +1,8 @@
 <?php
 
 require_once 'common.php';
+require_once 'accountDAO.php';
 
-// $user_id = $_SESSION['user_id']; We use this once the sessions are set up 
 $user_id = $_SESSION['username'];
 
 // 

@@ -104,7 +104,7 @@ class accountDAO {
 
     // Adds a new account
     // Return TRUE (if no SQL error) or FALSE (SQL error)
-    public function add($username, $name, $password, $email, $phone_number, $postal_code) {        
+    public function add($username, $name, $password, $email, $phone_number, $postal_code, $adoption_basket) {        
         // STEP 1 - Connect to MySQL Database
         $connMgr = new ConnectionManager();
         $pdo= $connMgr->connect(); 
@@ -114,7 +114,7 @@ class accountDAO {
         INSERT INTO 
             account 
             VALUES 
-            (:username,:name,:password,:email,:phone_number,:postal_code)
+            (:username,:name,:password,:email,:phone_number,:postal_code, :adoption_basket)
             ";
 
         $stmt =$pdo->prepare($sql); 
@@ -124,6 +124,7 @@ class accountDAO {
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':phone_number', $phone_number, PDO::PARAM_INT);
         $stmt->bindParam(':postal_code', $postal_code, PDO::PARAM_INT);
+        $stmt->bindParam(':adoption_basket', $adoption_basket, PDO::PARAM_STR); 
 
         // STEP 3 - Run Query
                 $isOk = $stmt->execute();
