@@ -172,7 +172,7 @@
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="3mainpage.php" class="nav-link">🏚️ Home</a></li>
+                <li><a href="3mainpage.php" class="nav-link">Home</a></li>
                 <li><a href="#pet-section" class="nav-link">🐶 Find Your Pet</a></li>
                 <li><a href= "7profilepage.php" class="nav-link">🙍 Profile</a></li>
                 <li><a href= "6appointmentpage.php" class="nav-link">📆 Appointment</a></li>
@@ -181,8 +181,8 @@
               </ul>
             </nav>       
           </div>
-
-          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+          
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" ><a href="" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
 
           <!-- <div class="col-6 col-md-10">
           <nav class="site-navigation navbar navbar-expand-lg navbar-light bg-light float-right" style="position: right;" role="navigation">
@@ -240,7 +240,7 @@
                   <!-- // Col -->
                   <div class="col"> 
                     <div class="dropdown my-4" data-aos="fade-up">
-                      <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Age
+                      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Age
                       <span class="caret"></span></button>
                       <div class='form-group'>
                         <ul class="dropdown-menu p-2" id="myUL">
@@ -1019,6 +1019,7 @@
   <script src="../ownjs/3mainpage.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
