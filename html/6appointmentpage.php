@@ -3,8 +3,7 @@
     <?php
     //Uncomment once our website is done 
     // require_once '../database/protect.php'; 
-    session_start(); 
-
+    // session_start(); 
     // unset($_SESSION['appointment_page_dict']['49774278']);
 
     if(!isset($_SESSION['appointment_page_dict'])){
@@ -144,9 +143,9 @@
 
                     <h2 id='map'> IM THE MAP!</h2>
                     <p>
-                        insert map api
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+
                         
+
                     </p>
                 </div>
 

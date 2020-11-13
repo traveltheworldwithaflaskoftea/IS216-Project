@@ -195,7 +195,7 @@
                   
                   echo $_GET['id'] . "<br>";
                   echo $_GET['name'] . "<br>";
-                  echo "<img src='" . $_GET['image'] . "'>";
+                  echo "<img src='" . $_GET['image'] . "' style='max-width: 400px; max-height: 400px'>";
 
                   ?>
                 </div>
@@ -275,7 +275,7 @@
                 <!-- Modal content -->
                 <div class="modal-content animate">
                   <span class="close">&times;</span>
-                  <p class="confirmation">We have received your appointment request. Please check your email to confirm your appointment timing.</p>
+                  <p class="confirmation">Please select a contact option and date</p>
                 </div>
 
               </div>
