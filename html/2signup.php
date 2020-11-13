@@ -60,7 +60,7 @@
           <div class="form-group row">
             <label for="username" class="col-sm-3 col-form-label text-right">Username</label>
             <div class="col-sm-9">
-              <input type="text" name='username' class="mx-2 form-control" placeholder="Username" required>
+              <input type="text" name='username' class="form-control" placeholder="Username" required>
             </div>
           </div>
 
