@@ -91,7 +91,7 @@ function search(){
 					<h1> FINDING YOUR FUREVER PET</h1>
 				</div>`; 
 
-	document.getElementById('dog-card-deck').innerHTML = dogGif; 
+document.getElementById('dog-card-deck').innerHTML = dogGif; 
 
 	//Wes API KEY
 	// var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
@@ -108,7 +108,7 @@ function search(){
 	var search_gender = document.getElementById('gender_badge').innerHTML.slice(1,-1);
 	var search_breed = document.getElementById('breed_badge').innerHTML.slice(1,-1);
 	var search_state = document.getElementById('state_badge').innerHTML.slice(1,-1);
-	console.log(search_state);
+	console.log(search_breed);
 
 	if (search_state != ''){ //Got search states 
 		client.animal.search({
