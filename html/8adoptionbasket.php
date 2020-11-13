@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <?php
-      //Uncomment once our website is done 
+      // Uncomment once our website is done 
       // require_once '../database/protect.php';   
   ?> 
   
@@ -39,10 +39,10 @@
     }
   </style>
   
-</head>
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section" onload="run_sql()">
+  </head>
 
-<!-- <Body> -->
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section" onload="run_sql()">
+
     <!-- Navigation Bar -->
     <div class="site-wrap">
       <div class="site-mobile-menu site-navbar-target">
@@ -53,7 +53,7 @@
         </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-   
+    
     <header class="site-navbar js-sticky-header site-navbar-target" role="banner" >
 
       <div class="container">
@@ -83,6 +83,7 @@
         </div>
       </div>
     </header>
+
     <!-- Body -->
     <section style="margin-top: 120px;">
       <div class="card-deck" id='dog_card_deck'>
