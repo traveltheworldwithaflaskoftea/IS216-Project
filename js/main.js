@@ -91,7 +91,7 @@ function search(){
 					<h1> FINDING YOUR FUREVER PET</h1>
 				</div>`; 
 
-document.getElementById('dog-card-deck').innerHTML = dogGif; 
+	document.getElementById('dog-card-deck').innerHTML = dogGif; 
 
 	//Wes API KEY
 	// var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
