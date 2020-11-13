@@ -19,14 +19,18 @@
 
     $user = 'SupremeLeader555';
 
-            $_SESSION['appointment_page_dict'][$_POST['dog_id']] = [
-                'dog_name' => $_POST['dog_name'],
-                'dog_address' => $_POST['dog_address'],
-                'dog_image' => $_POST['dog_image'],
-                'contact_mode' => $_POST['contact_mode'],
-                'day' => $_POST['checkbox-465'][0],
-                'time' => $_POST['checkbox-246'][0]
-            ];
+    if (isset($_GET)){
+        console.log()
+        $_SESSION['appointment_page_dict'][$_POST['dog_id']] = [
+            'dog_name' => $_POST['dog_name'],
+            'dog_address' => $_POST['dog_address'],
+            'dog_image' => $_POST['dog_image'],
+            'contact_mode' => $_POST['contact_mode'],
+            'day' => $_POST['checkbox-465'][0],
+            'time' => $_POST['checkbox-246'][0]
+        ];
+    }
+            
 
     var_dump($_SESSION['appointment_page_dict']);
 
@@ -322,7 +326,7 @@
 
         for (const [id, info_object] of Object.entries(appointment_page_dict)) {
             console.log(`${id}: ${info_object}`);   
-            locations.push(info_object.dog_address) ;
+            locations.push(info_object.dog_address  ) ;
             html += `
             <div class="collapse" id="${info_object.day}"> 
                                 <div class="card-body"> 
