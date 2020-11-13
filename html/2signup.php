@@ -2,23 +2,6 @@
   require_once '../database/accountDAO.php'; 
   require_once '../database/common.php';
   // require_once '../database/protect.php';  
-
-  $msg = '';
-  // var_dump($_POST['password']); 
-  // var_dump($_POST['submit']); 
-  
-  // if (isset($_POST['submit']) && $_POST['name'] != '' // is checking that they are not empty
-  // && $_POST['age'] != '' && $_POST['gender'] != ''){  // necessary?
-  //     $name = $_POST['name']; 
-  //     $age = $_POST['age']; 
-  //     $gender= $_POST['gender']; 
-  //     $dao->add($name, $age, $gender);
-  //     $cats= $dao->getCats(); 
-  //     $msg = 'A new cat has been added'; 
-  // } else {
-  //     $cats = $dao->getCats();
-  // }
-  
   
 ?>
 
@@ -73,55 +56,59 @@
           <span class="mb-0">Create An Account With Us!</span>
           <br>
         </div>
-        <form method='POST' action='2signup.php'>
+
+        <form action='../database/process_signup.php' method='POST' >    
           <div class="form-group row">
             <label for="username" class="col-sm-3 col-form-label text-right">Username</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name='username' id="username" placeholder="Username" required>
+              <input type="text" name='username' class="mx-2 form-control" placeholder="Username" required>
             </div>
           </div>
 
           <div class="form-group row">
             <label for="name" class="col-sm-3 col-form-label text-right">Name</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" name='name'  id="name" placeholder="Name" required>
+              <input type="text" name='name' class="form-control" placeholder="Name" required>
             </div>
           </div>
 
           <div class="form-group row">
             <label for="inputPassword" class="col-sm-3 col-form-label text-right">Password</label>
             <div class="col-sm-9">
-              <input type="password" class="form-control" name='password' id="inputPassword" placeholder="Password" required>
+              <input type="password" name='password' class="form-control" placeholder="Password" required>
             </div>
           </div>
 
           <div class="form-group row">
             <label for="email" class="col-sm-3 col-form-label text-right">Email</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="email" name='email' placeholder="Email" required>
+              <input type="text" class="form-control" name='email' placeholder="Email" required>
             </div>
           </div>
 
           <div class="form-group row">
             <label for="phone_number" class="col-sm-3 col-form-label text-right">Phone number</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="phone_number" placeholder="Phone number" required>
+              <input type="text" class="form-control" name='phone_number' placeholder="Phone number" required>
             </div>
           </div>
 
           <div class="form-group row">
             <label for="postal_code" class="col-sm-3 col-form-label text-right">Postal code</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="postal_code" placeholder="Postal code" required>
+              <input type="text" class="form-control" name='postal_code' placeholder="Postal code" required>
             </div>
           </div>
+
+          
+          <p>By creating an account, you agree to our <a href="https://www.termsandconditionsgenerator.com/live.php?token=4T0tnknEDWPdrvAaDG4MDUdR5cyhn35h" style="color:dodgerblue">Terms & Conditions</a>.</p>
+              
+          <button type='submit' style="margin-bottom: 20px;" class="btn btn-primary col-8 col-offset-2 size" id="signup">Sign Up!</button><br>
 
         </form>
 
   
-              <p>By creating an account, you agree to our <a href="https://www.termsandconditionsgenerator.com/live.php?token=4T0tnknEDWPdrvAaDG4MDUdR5cyhn35h" style="color:dodgerblue">Terms & Conditions</a>.</p>
-              
-              <button type="submit" style="margin-bottom: 20px;" class="btn btn-primary col-8 col-offset-2 size" id="connect">Sign Up!</button><br>
+             
 
         </div>
       </div>

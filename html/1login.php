@@ -8,6 +8,7 @@
     // once retrieve, remove it
     unset($_SESSION['error']);
   }
+
 ?>
 
 <html lang="en">
