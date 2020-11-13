@@ -143,7 +143,6 @@
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section" onload="load_default_cards()">
 
-    <link href="navbar.html" rel="import" />
     <!-- Navigation Bar -->
     <div class="site-wrap">
       <div class="site-mobile-menu site-navbar-target">
