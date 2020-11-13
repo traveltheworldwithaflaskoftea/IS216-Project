@@ -1,9 +1,11 @@
 <html>
 <head>
     <?php
-      //Uncomment once our website is done 
-      // require_once '../database/protect.php'; 
-      session_start(); 
+    //Uncomment once our website is done 
+    // require_once '../database/protect.php'; 
+    session_start(); 
+
+    unset($_SESSION['appointment_page_dict']['']);
 
     if(!isset($_SESSION['appointment_page_dict'])){
         $_SESSION['appointment_page_dict'] = [];
@@ -19,8 +21,8 @@
 
     $user = 'SupremeLeader555';
 
-    if (sizeof($_GET)>0){
-        var_dump($_GET);
+    if (sizeof($_POST)>0){
+        var_dump($_POST);
         $_SESSION['appointment_page_dict'][$_POST['dog_id']] = [
             'dog_name' => $_POST['dog_name'],
             'dog_address' => $_POST['dog_address'],
