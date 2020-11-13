@@ -14,7 +14,7 @@ $adoption_basket ='';
 
 $dao = new AccountDAO();
 $new_user = $dao->add($username, $name, $password, $email, $phone_number, $postal_code, $adoption_basket); 
-
+$_SESSION['username'] = $username;
 $location = "Location: " . "../html/3mainpage.php";
 header($location);
 return;

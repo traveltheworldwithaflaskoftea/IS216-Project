@@ -11,4 +11,4 @@ CREATE TABLE if not exists `account` (
   `adoption_basket` varchar(256)
 ); 
 
-insert into account values('SupremeLeader555', 'Kyong Bieber', 'ilovedogs', 'supremebieber@gmail.com', '5156243463', '94563', '49777535','49777541','4977753');
+insert into account values('SupremeLeader555', 'Kyong Bieber', 'ilovedogs', 'supremebieber@gmail.com', '5156243463', '94563', '49777535, 49777541, 4977753');
