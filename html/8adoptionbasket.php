@@ -95,7 +95,7 @@
         <!-- [END] Below to be replaced by JS -->
       </div>
       <br>
-    </section>
+    </section> 
     <!-- end of body -->
     
         
