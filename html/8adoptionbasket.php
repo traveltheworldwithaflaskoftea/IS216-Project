@@ -40,10 +40,10 @@
   </style>
   
 </head>
-<body onload="run_sql()">
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section" onload="run_sql()">
 
 <!-- <Body> -->
-    <!-- Navigation bar -->
+    <!-- Navigation Bar -->
     <div class="site-wrap">
       <div class="site-mobile-menu site-navbar-target">
         <div class="site-mobile-menu-header">
@@ -53,7 +53,7 @@
         </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-    
+   
     <header class="site-navbar js-sticky-header site-navbar-target" role="banner" >
 
       <div class="container">
@@ -67,34 +67,22 @@
               </a>
             </h1>
           </div>
-
+      
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
-
-              <ul class="site-menu main-menu dropdown-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li class='nav-item active'>
-                  <a href="3mainpage.php" class="nav-link">Home</a>
-                </li>
-                <li class='nav-item'>
-                  <a href= "7profilepage.php" class="dropdown-item">🙍 Profile</a>
-                </li>
-                <li class='nav-item'>
-                  <a href= "6appointmentpage.php" class="dropdown-item">📆 Appointment</a>
-                </li>
-                <li class='nav-item'>
-                  <a href="8adoptionbasket.php" class= "dropdown-item">🛒 Adoption Basket</a>
-                </li>
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li><a href="3mainpage.php" class="nav-link">🏠 Home</a></li>
+                <li><a href= "7profilepage.php" class="nav-link">🙍 Profile</a></li>
+                <li><a href= "6appointmentpage.php" class="nav-link">📆 Appointment</a></li>
+                <li><a href="8adoptionbasket.php" class="nav-link">🛒 Adoption Basket</a></li>
               </ul>
-            </nav>          
-          </div>   
-
-          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
-
-
+            </nav>       
+          </div>
+          
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" ><a href="" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
         </div>
       </div>
     </header>
-
     <!-- Body -->
     <section style="margin-top: 120px;">
       <div class="card-deck" id='dog_card_deck'>

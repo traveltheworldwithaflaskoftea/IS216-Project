@@ -1,9 +1,11 @@
 <html>
 <head>
     <?php
-      //Uncomment once our website is done 
-      // require_once '../database/protect.php'; 
-      session_start(); 
+    //Uncomment once our website is done 
+    // require_once '../database/protect.php'; 
+    session_start(); 
+
+    // unset($_SESSION['appointment_page_dict']['49774278']);
 
     if(!isset($_SESSION['appointment_page_dict'])){
         $_SESSION['appointment_page_dict'] = [];
@@ -19,14 +21,17 @@
 
     $user = 'SupremeLeader555';
 
-            $_SESSION['appointment_page_dict'][$_POST['dog_id']] = [
-                'dog_name' => $_POST['dog_name'],
-                'dog_address' => $_POST['dog_address'],
-                'dog_image' => $_POST['dog_image'],
-                'contact_mode' => $_POST['contact_mode'],
-                'day' => $_POST['checkbox-465'][0],
-                'time' => $_POST['checkbox-246'][0]
-            ];
+    if (sizeof($_POST)>0){
+        var_dump($_POST);
+        $_SESSION['appointment_page_dict'][$_POST['dog_id']] = [
+            'dog_name' => $_POST['dog_name'],
+            'dog_address' => $_POST['dog_address'],
+            'dog_image' => $_POST['dog_image'],
+            'contact_mode' => $_POST['radio-98'],
+            'day' => $_POST['checkbox-465']
+        ];
+    }
+            
 
     var_dump($_SESSION['appointment_page_dict']);
 
@@ -48,8 +53,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
     <script src="../ownjs/6appointmentpage.js"></script>
-    <!-- <script src="../js/main.js"></script> -->
-    <script src="../ownjs/6.1appointmentpage.js"></script>
+    <script src="../js/main.js"></script>
+   
 
 
     <!-- Style sheets -->
@@ -322,13 +327,13 @@
 
         for (const [id, info_object] of Object.entries(appointment_page_dict)) {
             console.log(`${id}: ${info_object}`);   
-            locations.push(info_object.dog_address) ;
+            locations.push(info_object.dog_address  ) ;
             html += `
             <div class="collapse" id="${info_object.day}"> 
                                 <div class="card-body"> 
                                     <div class="card card-body"> 
                                         <div class="container-fluid">  
-                                            <h2 style="font-weight: bold"> ${info_object.day} ${info_object.time}</h2>
+                                            <h2 style="font-weight: bold"> ${info_object.day} </h2>
                                             <div class="row">
                                                 <div class="container m-2">
                                                     <img src="${info_object.dog_image}">
