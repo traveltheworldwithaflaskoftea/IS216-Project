@@ -388,7 +388,6 @@
                             </div>
                     `;
         }
-        console.log('I AM HERE WTF');
         console.log(html);
         document.getElementById('planner').innerHTML = html;
 
