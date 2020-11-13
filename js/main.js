@@ -34,6 +34,21 @@ function display_cards(result_array){
 							</div>
 						</div>
 						`;
+				}else{ 
+					//diff pic for doggies w/o pic 
+					html += `<div class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
+							<div class="trainer">
+							<figure>
+							<a href='4individualpage.php?id=${result.id}'><img src="../images/noimgfound.png" alt="Image" class="img-fluid"></a>
+							</figure>
+							<div class="px-md-3">
+								<h3>${result.name}</h3>
+								<p>${result.description}</p>
+							</div>
+							</div>
+						</div>
+						`;
+
 				}
 			}
 		// end for loop, now lets put html inside the dog-card-deck

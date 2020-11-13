@@ -163,13 +163,13 @@
           <div class="col-6 col-xl-2">
             <h1 class="mb-0 site-logo">
               <a href="3mainpage.php" class="h2 mb-0 navbar-brand">
-                <img src="../html/images/logo_no_bg.png" height="55" alt="Furever_home_logo">
+                <img src="../images/logo_no_bg.png" height="55" alt="Furever_home_logo">
                 <span class="text-primary">FureverHome</span>
               </a>
             </h1>
           </div>
       
-          <div class="col-12 col-md-10 d-none d-xl-block" id="navbarTogglerDemo02">
+          <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="3mainpage.php" class="nav-link">Home</a></li>
@@ -184,13 +184,14 @@
 
           <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
 
+          <!-- <div class="col-6 col-md-10">
+          <nav class="site-navigation navbar navbar-expand-lg navbar-light bg-light float-right" style="position: right;" role="navigation">
         
-          <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light float-right" style="position: relative; top: 3px;">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse float-right" id="navbarTogglerDemo02">
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class=" main-menu navbar-nav mr-auto mt-2 mt-lg-0 text-right">
                 <li class="nav-item"><a href="3mainpage.php" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#pet-section" class="nav-link">🐶 Find Your Pet</a></li>
                 <li class="nav-item"><a href= "7profilepage.php" class="nav-link">🙍 Profile</a></li>
@@ -199,7 +200,8 @@
                 <li class="nav-item"><a href="8adoptionbasket.php" class="nav-link">🛒 Adoption Basket</a></li>
               </ul>
             </div>
-          </nav> -->
+          </nav>
+          </div> -->
 
         </div>
       </div>

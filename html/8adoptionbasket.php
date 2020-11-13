@@ -43,44 +43,46 @@
 </head>
 <body onload="run_sql()">
 
-<!-- <body> -->
+<!-- <Body> -->
     <!-- Navigation bar -->
     <div class="site-wrap">
       <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-header">
           <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
+            <span class="icon-close2 js-menu-toggle"></span>
           </div>
-      </div>
+        </div>
       <div class="site-mobile-menu-body"></div>
     </div>
+    
     <header class="site-navbar js-sticky-header site-navbar-target" role="banner" >
 
       <div class="container">
 
         <div class="row align-items-center">
-            <div class="col-6 col-xl-2">
+          <div class="col-6 col-xl-2">
             <h1 class="mb-0 site-logo">
-                <a href="3mainpage.php" class="h2 mb-0 navbar-brand">
+              <a href="3mainpage.php" class="h2 mb-0 navbar-brand">
                 <img src="../html/images/logo_no_bg.png" height="55" alt="Furever_home_logo">
                 <span class="text-primary">FureverHome</span>
-                </a>
+              </a>
             </h1>
-            </div>
+          </div>
 
-            <div class="col-12 col-md-10 d-none d-xl-block">
+          <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
 
-                <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="3mainpage.php" class="nav-link">Home</a></li>
                 <li><a href= "7profilepage.php" class="nav-link">🙍 Profile</a></li>
                 <li><a href= "6appointmentpage.php">📆 Appointment</a></li>
                 <li><a href="8adoptionbasket.php">🛒 Adoption Basket</a></li>
-                </ul>
+              </ul>
             </nav>          
-            </div>   
+          </div>   
 
-            <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
 
         </div>
       </div>
