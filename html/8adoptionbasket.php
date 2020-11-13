@@ -71,11 +71,27 @@
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
 
+<<<<<<< Updated upstream
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="3mainpage.php" class="nav-link">🏚️ Home</a></li>
                 <li><a href= "7profilepage.php" class="nav-link">🙍 Profile</a></li>
                 <li><a href= "6appointmentpage.php">📆 Appointment</a></li>
                 <li><a href="8adoptionbasket.php">🛒 Adoption Basket</a></li>
+=======
+              <ul class="site-menu main-menu dropdown-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li class='nav-item active'>
+                  <a href="3mainpage.php" class="nav-link">Home</a>
+                </li>
+                <li class='nav-item'>
+                  <a href= "7profilepage.php" class="dropdown-item">🙍 Profile</a>
+                </li>
+                <li class='nav-item'>
+                  <a href= "6appointmentpage.php" class="dropdown-item">📆 Appointment</a>
+                </li>
+                <li class='nav-item'>
+                  <a href="8adoptionbasket.php" class= "dropdown-item">🛒 Adoption Basket</a>
+                </li>
+>>>>>>> Stashed changes
               </ul>
             </nav>          
           </div>   
