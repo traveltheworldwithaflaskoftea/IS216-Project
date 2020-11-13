@@ -5,7 +5,7 @@
     // require_once '../database/protect.php'; 
     session_start(); 
 
-    unset($_SESSION['appointment_page_dict']['']);
+    // unset($_SESSION['appointment_page_dict']['49774278']);
 
     if(!isset($_SESSION['appointment_page_dict'])){
         $_SESSION['appointment_page_dict'] = [];
@@ -27,9 +27,8 @@
             'dog_name' => $_POST['dog_name'],
             'dog_address' => $_POST['dog_address'],
             'dog_image' => $_POST['dog_image'],
-            'contact_mode' => $_POST['contact_mode'],
-            'day' => $_POST['checkbox-465'][0],
-            'time' => $_POST['checkbox-246'][0]
+            'contact_mode' => $_POST['radio-98'],
+            'day' => $_POST['checkbox-465']
         ];
     }
             
@@ -334,7 +333,7 @@
                                 <div class="card-body"> 
                                     <div class="card card-body"> 
                                         <div class="container-fluid">  
-                                            <h2 style="font-weight: bold"> ${info_object.day} ${info_object.time}</h2>
+                                            <h2 style="font-weight: bold"> ${info_object.day} </h2>
                                             <div class="row">
                                                 <div class="container m-2">
                                                     <img src="${info_object.dog_image}">
