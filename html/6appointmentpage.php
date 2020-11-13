@@ -19,8 +19,8 @@
 
     $user = 'SupremeLeader555';
 
-    if (isset($_GET)){
-        console.log()
+    if (sizeof($_GET)>0){
+        var_dump($_GET);
         $_SESSION['appointment_page_dict'][$_POST['dog_id']] = [
             'dog_name' => $_POST['dog_name'],
             'dog_address' => $_POST['dog_address'],
