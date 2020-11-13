@@ -324,8 +324,8 @@
               <h2 class="footer-heading mb-4">Quick Links</h2>
               <ul class="list-unstyled">
                 <li><a href="3mainpage.php" class="smoothscroll">Home</a></li>
-                <li><a href="7profilepage.html" class="smoothscroll">🙍 Profile</a></li>
-                <li><a href= "6appointmentpage.html" class="smoothscroll">📆 Appointment</a></li>
+                <li><a href="7profilepage.php" class="smoothscroll">🙍 Profile</a></li>
+                <li><a href= "6appointmentpage.php" class="smoothscroll">📆 Appointment</a></li>
                 <li><a href="8adoptionbasket.php" class="smoothscroll">🛒 Adoption Basket</a></li>
               </ul>
             </div>
