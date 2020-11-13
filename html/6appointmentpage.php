@@ -127,12 +127,12 @@
     <section class="site-section" id="appointments">
         <div class="container" id="accordion">
             <div class="row justify-content-center" data-aos="fade-up">
-            <div class="col-lg-6 text-center heading-section mb-5">
+            <div class="col-lg-6 text-center heading-section mb-2">
                 <div class="paws">
                 <span class="icon-paw"></span>
                 </div>
-                <h2 class="text-black mb-2">Upcoming Appointments</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <h2 class="text-black">Upcoming Appointments</h2>
+                <p>Look at the map for directions!</p>
             </div>
         </div>
     
@@ -144,8 +144,7 @@
 
                     <h2 id='map'> IM THE MAP!</h2>
                     <p>
-                        insert map api
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatum quaerat, nemo accusamus cupiditate nisi perspiciatis, at excepturi veritatis et repellendus necessitatibus! Reiciendis possimus officia commodi repellendus ut minima dignissimos.
+                        🐕 Find the estimated time and best route to take to find your Furever Pet ! 🐕
                         
                     </p>
                 </div>
@@ -336,7 +335,7 @@
                                             <h2 style="font-weight: bold"> ${info_object.day} </h2>
                                             <div class="row">
                                                 <div class="container m-2">
-                                                    <img src="${info_object.dog_image}">
+                                                    <img src="${info_object.dog_image}" style='max-width:400px; max-height: 1020px;'>
                                                 </div>
                                             </div>                                            
                                             <div class="row">
