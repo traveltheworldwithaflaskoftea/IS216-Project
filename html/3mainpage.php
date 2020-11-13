@@ -208,6 +208,7 @@
             <div class="intro-text">
               <h1> Find your <span class="d-md-block">Furever Pet! </span></h1>
               <p class="mb-4">Matching these furry buddies to their<span class="d-block"> 🐶 FureverHome 🐱</p>
+              <button type="submit" onclick="location.href='../html/questionnaire.html'" style="margin-bottom: 20px;" class="btn btn-primary col-8 col-offset-2 size" id="pet_compatibility">Take Pet Compatibility Test!</button>
             </div>
           </div>  
           <div class="col-md-5 align-self-end text-center text-md-right" style="margin-top: 50px;">
