@@ -43,33 +43,138 @@
       }
       div.message{
         margin-top: -20px;
+        margin-bottom: 10px;
       }
       textarea.form-control{
+        margin-top: 40px;
         margin-bottom: 25px;
       }
       h4,p {
         color: rgb(240, 239, 239);
       }
+      div.paws {
+        margin-top: 20px;
+      }
+      
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
 
+    /* Set a style for all buttons */
+    button {
+      background-color: #a2c0be;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    /* Extra styles for the cancel button */
+    .closebtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color:#2b5c59;
+    }
+
+    /* Position the close button */
+
+    .container {
+      padding: 16px;
+    }
+
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      padding-top: 60px;
+
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #a2c0be;
+      margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+      
+    }
+
+    /* Close Button */
+    .close {
+      position: absolute;
+      right: 25px;
+      top: 0;
+      color: #000;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: darkblue;
+      cursor: pointer;
+    }
+
+    /* Add Zoom Animation */
+    .animate {
+      -webkit-animation: animatezoom 0.6s;
+      animation: animatezoom 0.6s
+    }
+
+    @-webkit-keyframes animatezoom {
+      from {-webkit-transform: scale(0)} 
+      to {-webkit-transform: scale(1)}
+    }
+      
+    @keyframes animatezoom {
+      from {transform: scale(0)} 
+      to {transform: scale(1)}
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+        display: block;
+        float: none;
+      }
+      .closebtn {
+        width: 100%;
+      }
+    }
+
+    p.confirmation {
+      color:black;
+    }
 
     </style>
 
 </head>
 <body>
-
-<link href="navbar.html" rel="import" />
-<!-- Navigation Bar -->
-<div class="site-wrap">
-  <div class="site-mobile-menu site-navbar-target">
-    <div class="site-mobile-menu-header">
-      <div class="site-mobile-menu-close mt-3">
-        <span class="icon-close2 js-menu-toggle"></span>
-      </div>
-    </div>
-  <div class="site-mobile-menu-body"></div>
-</div>
-
-
 
   <!-- Body section -->  
   <section class="" id="contact-section">
@@ -98,7 +203,7 @@
 
               <div class="row form-group">
                   <div class="col-md-6">
-                      <!-- <input type="submit" value="Send Message" class="btn btn-dark btn-md text-white"> -->
+                      <input type="submit" value="Send Message" class="btn btn-dark btn-md text-white">
                   </div>
                   <div class="dropdown col-md-6">
                       
@@ -151,9 +256,48 @@
                 <h4>Best time of day for your appointment:</h4>
                 <p><span class="wpcf7-form-control-wrap checkbox-246"><span class="wpcf7-form-control wpcf7-checkbox"><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-246[]" value="Morning">&nbsp;<span class="wpcf7-list-item-label">Morning</span></label></span><span class="wpcf7-list-item"><label><input type="checkbox" name="checkbox-246[]" value="Afternoon">&nbsp;<span class="wpcf7-list-item-label">Afternoon</span></label></span></span></span></p></div>
                 </div>
-                <button type="submit" style="margin-bottom: 20px;" class="btn btn-primary col-12 col-offset-2 size" id="pet_compatibility">Request Appointment!</button>
+                <button type="submit" style="margin-bottom: 20px;" class="btn btn-primary col-12 col-offset-2 size" id="request_appt">Request Appointment!</button>
 
               </div>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content animate">
+                  <span class="close">&times;</span>
+                  <p class="confirmation">We have received your appointment request. Please check your email to confirm your appointment timing!</p>
+                </div>
+
+              </div>
+              <script>
+              // Get the modal
+              var modal = document.getElementById("myModal");
+
+              // Get the button that opens the modal
+              var btn = document.getElementById("request_appt");
+
+              // Get the <span> element that closes the modal
+              var span = document.getElementsByClassName("close")[0];
+
+              // When the user clicks the button, open the modal 
+              btn.onclick = function() {
+                modal.style.display = "block";
+              }
+
+              // When the user clicks on <span> (x), close the modal
+              span.onclick = function() {
+                modal.style.display = "none";
+              }
+
+              // When the user clicks anywhere outside of the modal, close it
+              window.onclick = function(event) {
+                if (event.target == modal) {
+                  modal.style.display = "none";
+                }
+              }
+              </script>
+
     </section>
 
 
