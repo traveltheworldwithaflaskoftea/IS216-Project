@@ -48,8 +48,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
     <script src="../ownjs/6appointmentpage.js"></script>
-    <!-- <script src="../js/main.js"></script> -->
-    <script src="../ownjs/6.1appointmentpage.js"></script>
+    <script src="../js/main.js"></script>
+   
 
 
     <!-- Style sheets -->
