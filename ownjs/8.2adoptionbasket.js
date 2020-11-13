@@ -1,3 +1,29 @@
+var app = new Vue({
+    el: '#dog_card_deck',
+    data: {
+        checkeddogs: [],
+        testing: 'THIS IS A TEST',
+        isHidden: true
+    },
+    methods: {
+        foo_reload: function() {
+            console.log('[Before] Reload');
+            this.$forceUpdate();
+            console.log('[After] Reload');
+        }
+        // activate() {
+        // setTimeout(() => this.isHidden = false, 500);
+        // }
+    }
+})
+
+new Vue({
+    el: '#foo',
+    data: {
+        something: "Hello Something"
+    }
+})
+
 // 1. Sleep function
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -36,8 +62,15 @@ async function adoptionBasket(pet_list){
     compiled_array =[];
     for (pet of pet_list){
         console.log("we are in round ", pet);
-        var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
-        var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
+        //Wes API KEY
+        // var id = '7xl0fwJI98JMdZBn8vxztbMrxm7sIgf31I7wRBchOGkAOWeGnO';
+        // var secret = 'pSAX1F4ihX08DiHz6uH9AGOWvzVRTZTgAQfbta0E';
+        //Wes 2nd API KEY
+        var id = 'KCXb8y2r6wilER4RBfAdnYwWm6bhUFXGI09J4N6X8qRk2aaAz0';
+        var secret = 'qagSVQBSizMwEx8acEJ4ojmx9XWgTmKSCb1vvkxp';
+        //Sheri API KEY
+        // var id = 'tdIL28vzdTlXMQqyJY28FYHp8GSrkhr1taoUTiTmQaIrOxFs0g';
+        // var secret = 'ZGs2r5AvICHaynezcEv7M1LfNC35Vmuq8SDX9sj6';
 
         var client  = new petfinder.Client({apiKey: id, secret: secret});
         console.log('PetFinder works'); 
@@ -71,8 +104,9 @@ async function adoptionBasket(pet_list){
                                     <p class="card-text"><small class="text-muted">Checked Dogs: {{checkeddogs}}</small></p>
                                     <form action='../database/delete_from_cart.php' method='POST'>
                                         <input type='hidden' id='${result.id}' name='dog_id' value='${result.id}'>
-                                        <input type='submit' value='Remove from cart'>
-                                    </form>
+                                        <input class='btn btn-primary' type='submit' value="🗑" style="max-width: 100%;"> 
+                                    </form><br>
+                                    <button class='btn btn-secondary' onclick="make_appointment(${result.id},'${result.name}','${result.photos[0]['full']}','${result.contact['address']['postcode']}')">Make Appointment</button>
                                     </div>
                                 </div>
                             </div>
@@ -100,4 +134,9 @@ async function adoptionBasket(pet_list){
 
             
             
+}
+
+// 5. Function to make appointment
+function make_appointment(dog_id,dog_name,dog_image,dog_address){
+    window.location = '5adoptionmessage.php?id=' + dog_id + '&name=' + dog_name + '&image=' + dog_image + '&address=' + dog_address;
 }
