@@ -4,10 +4,6 @@
   <?php
       //Uncomment once our website is done 
       // require_once '../database/protect.php';   
-      
-
-
-
   ?> 
   
   <title>🛒Adoption Basket</title>
@@ -96,11 +92,6 @@
       <img src="../images/adoption.gif" style="margin-left: auto; margin-right: auto;">
         <!-- [END] Below to be replaced by JS -->
       </div>
-      <a href="5adoptionmessage.php">
-        <input class='btn btn-primary' @click='submit_selections()' >
-          Lets go
-        </button>
-      </a>
     </section>
     <!-- end of body -->
     

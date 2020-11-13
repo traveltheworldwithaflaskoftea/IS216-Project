@@ -99,7 +99,7 @@ async function adoptionBasket(pet_list){
                                         <input type='hidden' id='${result.id}' name='dog_id' value='${result.id}'>
                                         <input class='btn btn-primary' type='submit' value="🗑" style="max-width: 100%;"> 
                                     </form><br>
-                                    <button class='btn btn-secondary' onclick="make_appointment(${result.id})">Make Appointment</button>
+                                    <button class='btn btn-secondary' onclick="make_appointment(${result.id},'${result.name}','${result.photos[0]['full']}','${result.contact['address']['postcode']}')">Make Appointment</button>
                                     </div>
                                 </div>
                             </div>
@@ -130,6 +130,6 @@ async function adoptionBasket(pet_list){
 }
 
 // 5. Function to make appointment
-function make_appointment(dog_id){
-    window.location = '5adoptionmessage.php?=' + dog_id;
+function make_appointment(dog_id,dog_name,dog_image,dog_address){
+    window.location = '5adoptionmessage.php?id=' + dog_id + '&name=' + dog_name + '&image=' + dog_image + '&address=' + dog_address;
 }

@@ -2,34 +2,34 @@
 <head>
     <?php
       //Uncomment once our website is done 
-      // require_once '../database/protect.php';  
-    $appointment_page_dict = [];
+      // require_once '../database/protect.php'; 
+      session_start(); 
+
+    if(!isset($_SESSION['appointment_page_dict'])){
+        $_SESSION['appointment_page_dict'] = [];
+    }
 
     if(isset($_POST)){
     var_dump($_POST);
     };
       
     //   $user = $_SESSION['username'];
+    var_dump($_SESSION);
+
     $user = 'SupremeLeader555';
 
-    if(!array_key_exists($user, $appointment_page_dict)){
-        $appointment_page_dict[$user] = [
-            'contact_mode' => $_POST['contact_mode'],
-            'day' => $_POST['checkbox-465'][0],
-            'time' => $_POST['checkbox-246'][0]
-        ];
-    }
-    else {
-        $appointment_page_dict[$user] = [
-            'contact_mode' => $_POST['contact_mode'],
-            'day' => $_POST['checkbox-465'][0],
-            'time' => $_POST['checkbox-246'][0]
-        ];
-    };
+            $_SESSION['appointment_page_dict'][$_POST['dog_id']] = [
+                'dog_name' => $_POST['dog_name'],
+                'dog_address' => $_POST['dog_address'],
+                'dog_image' => $_POST['dog_image'],
+                'contact_mode' => $_POST['contact_mode'],
+                'day' => $_POST['checkbox-465'][0],
+                'time' => $_POST['checkbox-246'][0]
+            ];
 
-      var_dump($appointment_page_dict);
+    var_dump($_SESSION['appointment_page_dict']);
 
-    echo json_encode($appointment_page_dict); 
+    echo json_encode($_SESSION['appointment_page_dict']); 
 
     ?> 
     
@@ -51,6 +51,8 @@
     <script type="text/javascript">
         var appointment_page_dict = <?php echo json_encode($appointment_page_dict) ?>;
         console.log(appointment_page_dict);
+
+        document.getElementById('planner') = appointment_page_dict;
     </script>
 
     <!-- Style sheets -->
@@ -188,12 +190,12 @@
                         </div>
 
                         <!-- Day Information -->
-                        <div  class="col-sm-7 col-md-9 col-lg-9 col-xl-10">
+                        <div  class="col-sm-7 col-md-9 col-lg-9 col-xl-10" id='planner'>
                             <div class="collapse show" id="day1"> 
                                 <!-- <div class="card-body"> 
                                     <div class="card card-body">  -->
                                         <div class="container-fluid">  
-                                            <h2 style="font-weight: bold">Day 1 Schedule </h2>
+                                            <h2 style="font-weight: bold">Monday</h2>
                                             <div class="row">
                                                 <div class="col-5">
                                                     <ul class="list-unstyled ul-paw primary mb-0">
@@ -264,7 +266,7 @@
                                 <div class="card-body"> 
                                     <!-- <div class="card card-body"> 
                                         <div class="container-fluid">   -->
-                                            <h2 style="font-weight: bold">Day 2 Schedule </h2>
+                                            <h2 style="font-weight: bold">Tuesday </h2>
                                             <div class="row">
                                                 <div class="col-5">
                                                     <ul class="list-unstyled ul-paw primary mb-0">
@@ -335,7 +337,7 @@
                                 <div class="card-body"> 
                                     <!-- <div class="card card-body"> 
                                         <div class="container-fluid">   -->
-                                            <h2 style="font-weight: bold">Day 3 Schedule </h2>
+                                            <h2 style="font-weight: bold">Wednesday </h2>
                                             <div class="row">
                                                 <div class="col-5">
                                                     <ul class="list-unstyled ul-paw primary mb-0">
