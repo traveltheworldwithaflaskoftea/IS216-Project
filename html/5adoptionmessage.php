@@ -222,7 +222,7 @@
 
               <!-- <div class="landing-page"><div class="form-appointment"><div class="wpcf7" id="wpcf7-f560-p590-o1"><form action="/landing-page-template-do-not-delete/#wpcf7-f560-p590-o1" method="post" class="wpcf7-form" novalidate="novalidate" _lpchecked="1"> -->
 
-                <div class="row justify-content-center">
+                <div class="row justify-content-center p-2">
               <div class="col-lg-6 text-center heading-section mb-5 align-self-center">
                 <div class="paws">
                   <span class="icon-paw"></span>
@@ -266,7 +266,7 @@
                 <!-- Modal content -->
                 <div class="modal-content animate">
                   <span class="close">&times;</span>
-                  <p class="confirmation">We have received your appointment request. Please check your email to confirm your appointment timing!</p>
+                  <p class="confirmation">We have received your appointment request. Please check your email to confirm your appointment timing.</p>
                 </div>
 
               </div>
