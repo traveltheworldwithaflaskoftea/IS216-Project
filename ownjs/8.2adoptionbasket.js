@@ -79,8 +79,8 @@ async function adoptionBasket(pet_list){
         .then(resp => {
             // Do something with resp.data.breeds
             var results_array = resp.data.animal;
-            // compiled_array.push(result_array);
             console.log(results_array);
+            console.log('Pushing into results array');
             compiled_array.push(results_array)
             // display_adoption_basket_cards(results_array);
         });
@@ -88,11 +88,11 @@ async function adoptionBasket(pet_list){
     
     // Once SQL runs and API runs, display function will run after a small delay
     setTimeout(function display_adoption_basket_cards(result_array){
+        console.log('Running time delay function')
+        console.log(result_array);
         console.log('I am in display_adoption_basket_cards HEHEHE');
         var html = ''; // This will be used to replace dog-card-deck innerHTML later
-            for (result of result_array){
-                    console.log(result);
-                    
+            for (result of result_array){                    
                     html += 
                              // <div class="col-sm-3 my-3">
                             `
@@ -137,7 +137,7 @@ async function adoptionBasket(pet_list){
                 }
             })
 
-        }, 5000, compiled_array);
+        }, 8000, compiled_array);
 
             
             

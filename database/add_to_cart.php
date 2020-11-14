@@ -20,10 +20,19 @@ foreach($basket_array as $value){
 } 
 // If it doesn't exist. to reset '49569136, 49569131, 49569170, 49569168, 49569185'
 if($is_exist == false){
-    $new_adoption_basket = $adoption_basket . "," . $dog_id;
-    $dao->updateAdoptionBasket($user_id,$new_adoption_basket);
-    $adoption_basket = $dao->getadoptionbasket($user_id);
-    var_dump("current dog basket: " . $adoption_basket);
+    if(strlen($adoption_basket)>0){
+        $new_adoption_basket = $adoption_basket . "," . $dog_id;
+        $dao->updateAdoptionBasket($user_id,$new_adoption_basket);
+        $adoption_basket = $dao->getadoptionbasket($user_id);
+        var_dump("current dog basket: " . $adoption_basket);
+    }
+    else{
+        $new_adoption_basket = $dog_id;
+        $dao->updateAdoptionBasket($user_id,$new_adoption_basket);
+        $adoption_basket = $dao->getadoptionbasket($user_id);
+        var_dump("current dog basket: " . $adoption_basket);
+    }
+    
 }
 
 
