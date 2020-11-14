@@ -274,66 +274,66 @@
             console.log(`${id}: ${info_object}`);   
             locations.push(info_object.dog_address  ) ;
             html += `
-            <div class="collapse" id="${info_object.day}"> 
-                                <div class="card-group" style="display: flex;">
-                                    <div class="card card-body"> 
-                                        
-                                        <div class="container-fluid">  
-                                            <h2 style="font-weight: bold"> ${info_object.day} </h2>
-                                            <div class="row">
-                                                <div class="container m-2">
-                                                    <img src="${info_object.dog_image}" style='max-width:400px; max-height: 1020px;'>
-                                                </div>
-                                            </div>                                            
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
-                                                        <li>
-                                                        Name:
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-7">${info_object.dog_name}</div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
-                                                        <li>
-                                                        Postal Code: 
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-7">${info_object.dog_address}</div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
-                                                        <li>
-                                                        Day:
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-7">${info_object.day}</div>
-                                            </div>
-
-
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
-                                                        <li>
-                                                        Meeting Method:
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-7">Online (Zoom)</div>
-                                            </div>
-                                         </div>
+                <div class="collapse" id="${info_object.day}"> 
+                    <div class="card-group" style="display: flex;">
+                        <div class="card card-body"> 
+                            
+                            <div class="container-fluid">  
+                                <h2 style="font-weight: bold"> ${info_object.day} </h2>
+                                <div class="row">
+                                    <div class="container m-2">
+                                        <img src="${info_object.dog_image}" style='max-width:400px; max-height: 1020px;'>
                                     </div>
+                                </div>                                            
+                                <div class="row">
+                                    <div class="col-5">
+                                        <ul class="list-unstyled ul-paw primary mb-0">
+                                            <li>
+                                            Name:
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-7">${info_object.dog_name}</div>
                                 </div>
-                            </div>
-                    `;
+
+                                <div class="row">
+                                    <div class="col-5">
+                                        <ul class="list-unstyled ul-paw primary mb-0">
+                                            <li>
+                                            Postal Code: 
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-7">${info_object.dog_address}</div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-5">
+                                        <ul class="list-unstyled ul-paw primary mb-0">
+                                            <li>
+                                            Day:
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-7">${info_object.day}</div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-5">
+                                        <ul class="list-unstyled ul-paw primary mb-0">
+                                            <li>
+                                            Meeting Method:
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-7">Online (Zoom)</div>
+                                </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+             `;
         }
         console.log(html);
         document.getElementById('planner').innerHTML = html;
