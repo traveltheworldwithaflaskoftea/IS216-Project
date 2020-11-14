@@ -172,59 +172,7 @@
                         <!-- DO THE DOM here -->
                         <div  class="col-sm-7 col-md-9 col-lg-9 col-xl-10" id='planner'>
                         
-                            <div class="collapse" id="day2"> 
-                                <div class="card-body"> 
-                                    <div class="card card-body"> 
-                                        <div class="container-fluid">  
-                                            <h2 style="font-weight: bold">Tuesday </h2>
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
-                                                        <li>
-                                                        Organization:
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-7">Sunshine Pets</div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
-                                                        <li>
-                                                        Meeting Method:
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-7">1201 Macklind Ave, St. Louis, MO 63110, United States</div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
-                                                        <li>
-                                                        Date:
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-7">27 November</div>
-                                            </div>
-
-
-                                            <div class="row">
-                                                <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
-                                                        <li>
-                                                        Time:
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col-7">4.00pm</div>
-                                            </div>
-                                         </div>
-                                    </div>
-                                </div>
-                            </div>
+                        </div>
                         <!-- ends here -->
                         
                         </div> <!-- End of container div -->
@@ -328,10 +276,6 @@
             html += `
             <div class="collapse" id="${info_object.day}"> 
                                 <div class="card-group" style="display: flex;">
-                                <div class="card-group" style="display: flex;">
-                                <div class="justify-content-center" style="margin-left: 30px; display: flex; flex-wrap: wrap; align-content: center;">
-                                <div class="col-md-6 col-xl-4 my-3 justify-content-sm-center">    
-                                <div class="card" style="width: 18rem; margin: auto;">
                                     <div class="card card-body"> 
                                         
                                         <div class="container-fluid">  
@@ -379,11 +323,11 @@
                                                 <div class="col-5">
                                                     <ul class="list-unstyled ul-paw primary mb-0">
                                                         <li>
-                                                        Time:
+                                                        Meeting Method:
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <div class="col-7">${info_object.time}</div>
+                                                <div class="col-7">Online (Zoom)</div>
                                             </div>
                                          </div>
                                     </div>
