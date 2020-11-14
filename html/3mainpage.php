@@ -182,26 +182,6 @@
           </div>
           
           <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" ><a href="" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
-
-          <!-- <div class="col-6 col-md-10">
-          <nav class="site-navigation navbar navbar-expand-lg navbar-light bg-light float-right" style="position: right;" role="navigation">
-        
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-              <ul class=" main-menu navbar-nav mr-auto mt-2 mt-lg-0 text-right">
-                <li class="nav-item"><a href="3mainpage.php" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#pet-section" class="nav-link">🐶 Find Your Pet</a></li>
-                <li class="nav-item"><a href= "7profilepage.php" class="nav-link">🙍 Profile</a></li>
-                <li class="nav-item"><a href= "6appointmentpage.php" class="nav-link">📆 Appointment</a></li>
-                <li class="nav-item"><a href="#contact-section" class="nav-link">☎️ Contact</a></li>
-                <li class="nav-item"><a href="8adoptionbasket.php" class="nav-link">🛒 Adoption Basket</a></li>
-              </ul>
-            </div>
-          </nav>
-          </div> -->
-
         </div>
       </div>
     </header>
