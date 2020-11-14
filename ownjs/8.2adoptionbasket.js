@@ -86,7 +86,7 @@ async function adoptionBasket(pet_list){
         });
     };
     
-    // Once SQL runs and API runs, display funciton will run after a small delay
+    // Once SQL runs and API runs, display function will run after a small delay
     setTimeout(function display_adoption_basket_cards(result_array){
         console.log('I am in display_adoption_basket_cards HEHEHE');
         var html = ''; // This will be used to replace dog-card-deck innerHTML later

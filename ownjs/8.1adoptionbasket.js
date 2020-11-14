@@ -91,7 +91,7 @@ async function adoptionBasket(pet_list){
         console.log('I am in display_adoption_basket_cards HEHEHE');
         var html = ''; // This will be used to replace dog-card-deck innerHTML later
             for (result of result_array){
-                    console.log(result);
+                    console.log(result.photo[0]['full']);
                     
                     html += `
                             <div class="col-sm-3 my-3">
