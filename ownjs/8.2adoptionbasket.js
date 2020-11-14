@@ -132,7 +132,6 @@ async function adoptionBasket(pet_list){
                 },
                 methods: {
                     submit_selections: function() {
-
                     }
                 }
             })
