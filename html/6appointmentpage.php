@@ -11,17 +11,17 @@
     }
 
     if(isset($_POST)){
-    var_dump($_POST);
+    //var_dump($_POST);
     };
     
     //   $user = $_SESSION['username'];
-    var_dump($_SESSION);
+    //var_dump($_SESSION);
 
 
     $user = 'SupremeLeader555';
 
     if (sizeof($_POST)>0){
-        var_dump($_POST);
+        //var_dump($_POST);
         $_SESSION['appointment_page_dict'][$_POST['dog_id']] = [
             'dog_name' => $_POST['dog_name'],
             'dog_address' => $_POST['dog_address'],
@@ -32,9 +32,9 @@
     }
             
 
-    var_dump($_SESSION['appointment_page_dict']);
+    //var_dump($_SESSION['appointment_page_dict']);
 
-    echo json_encode($_SESSION['appointment_page_dict']); 
+    //echo json_encode($_SESSION['appointment_page_dict']); 
 
     ?> 
     
