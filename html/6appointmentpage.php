@@ -3,7 +3,7 @@
     <?php
     //Uncomment once our website is done 
     // require_once '../database/protect.php'; 
-    // session_start(); 
+    session_start(); 
     // unset($_SESSION['appointment_page_dict']['49774278']);
 
     if(!isset($_SESSION['appointment_page_dict'])){
@@ -18,7 +18,7 @@
     //var_dump($_SESSION);
 
 
-    $user = 'SupremeLeader555';
+    //$user = 'SupremeLeader555';
 
     if (sizeof($_POST)>0){
         //var_dump($_POST);
