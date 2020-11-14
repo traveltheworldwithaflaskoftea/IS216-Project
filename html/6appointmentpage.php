@@ -328,6 +328,10 @@
             html += `
             <div class="collapse" id="${info_object.day}"> 
                                 <div class="card-group" style="display: flex;">
+                                <div class="card-group" style="display: flex;">
+                                <div class="justify-content-center" style="margin-left: 30px; display: flex; flex-wrap: wrap; align-content: center;">
+                                <div class="col-md-6 col-xl-4 my-3 justify-content-sm-center">    
+                                <div class="card" style="width: 18rem; margin: auto;">
                                     <div class="card card-body"> 
                                         
                                         <div class="container-fluid">  
