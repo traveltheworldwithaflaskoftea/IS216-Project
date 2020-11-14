@@ -275,19 +275,16 @@
             locations.push(info_object.dog_address  ) ;
             html += `
             <div class="collapse" id="${info_object.day}"> 
-                                <div class="card-group" style="display: flex;">
-                                    <div class="card card-body"> 
-                                        
-                                        <div class="container-fluid">  
+                                <div class="card-group" style="display: flex; margin:auto;" >
+                                    <div class="card card-body ml-3"> 
+                                        <div class="container-fluid"> 
                                             <h2 style="font-weight: bold"> ${info_object.day} </h2>
-                                            <div class="row">
-                                                <div class="container m-2">
-                                                    <img src="${info_object.dog_image}" style='max-width:400px; max-height: 1020px;'>
-                                                </div>
+                                            <div class="row justify-content-center">
+                                                    <img src="${info_object.dog_image}" class="card-img-top mb-2" style='max-width:400px; max-height: 1020px;'>
                                             </div>                                            
                                             <div class="row">
                                                 <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                    <ul class="list-unstyled ul-paw primary mb-0 d-flex">
                                                         <li>
                                                         Name:
                                                         </li>
@@ -298,9 +295,9 @@
 
                                             <div class="row">
                                                 <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                    <ul class="list-unstyled ul-paw primary mb-0 d-flex">
                                                         <li>
-                                                        Postal Code: 
+                                                        Location: 
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -309,7 +306,7 @@
 
                                             <div class="row">
                                                 <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                    <ul class="list-unstyled ul-paw primary mb-0 d-flex">
                                                         <li>
                                                         Day:
                                                         </li>
@@ -317,17 +314,15 @@
                                                 </div>
                                                 <div class="col-7">${info_object.day}</div>
                                             </div>
-
-
                                             <div class="row">
-                                                <div class="col-5">
-                                                    <ul class="list-unstyled ul-paw primary mb-0">
+                                                <div class="col-6">
+                                                    <ul class="list-unstyled ul-paw primary mb-0 d-flex">
                                                         <li>
-                                                        Meeting Method:
+                                                        Meeting:
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <div class="col-7">Online (Zoom)</div>
+                                                <div class="col-6">Online (Zoom)</div>
                                             </div>
                                          </div>
                                     </div>
