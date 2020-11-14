@@ -326,9 +326,56 @@
                                             </div>
                                          </div>
                                     </div>
+                                </div>                                            
+                                <div class="row">
+                                    <div class="col-5">
+                                        <ul class="list-unstyled ul-paw primary mb-0">
+                                            <li>
+                                            Name:
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-7">${info_object.dog_name}</div>
                                 </div>
-                            </div>
-                    `;
+
+                                <div class="row">
+                                    <div class="col-5">
+                                        <ul class="list-unstyled ul-paw primary mb-0">
+                                            <li>
+                                            Postal Code: 
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-7">${info_object.dog_address}</div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-5">
+                                        <ul class="list-unstyled ul-paw primary mb-0">
+                                            <li>
+                                            Day:
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-7">${info_object.day}</div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-5">
+                                        <ul class="list-unstyled ul-paw primary mb-0">
+                                            <li>
+                                            Meeting Method:
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-7">Online (Zoom)</div>
+                                </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+             `;
         }
         console.log(html);
         document.getElementById('planner').innerHTML = html;
