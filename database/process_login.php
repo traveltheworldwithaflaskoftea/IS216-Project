@@ -16,7 +16,6 @@ if( isset($_POST['username']) && isset($_POST['password'])) {
     $isValid = $dao->authenticate($username, $password);
 
     if( $isValid ) {
-        start($_SESSION);
         $_SESSION['username'] = $username;
         header('Location: ../html/3mainpage.php');
         return;
