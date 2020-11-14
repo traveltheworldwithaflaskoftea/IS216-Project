@@ -327,8 +327,9 @@
             locations.push(info_object.dog_address  ) ;
             html += `
             <div class="collapse" id="${info_object.day}"> 
-                                <div class="card-body"> 
+                                <div class="card-group" style="display: flex;">
                                     <div class="card card-body"> 
+                                        
                                         <div class="container-fluid">  
                                             <h2 style="font-weight: bold"> ${info_object.day} </h2>
                                             <div class="row">
