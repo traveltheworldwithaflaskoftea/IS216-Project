@@ -1,4 +1,6 @@
 a) How to set up your application based on the submitted file(s)?
+1. Access the application using this url:
+http://localhost/app/1login.php
 
 b) How to run your application?
 1. In the log in page, there is an existing account that has been set. Use the information below to log in to the account.
