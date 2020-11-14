@@ -6,6 +6,11 @@ spl_autoload_register(function ($class_name) {
 
 session_start();
 
+if(session_id() == ''){
+    //session has not started
+    session_start();
+}
+
 function printErrors() {
     if(isset($_SESSION['errors'])){
         print "<ul style='color:red;'>";

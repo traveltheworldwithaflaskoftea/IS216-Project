@@ -4,6 +4,7 @@
   <?php
       // Uncomment once our website is done 
       // require_once '../database/protect.php';   
+      
   ?> 
   
   <title>🛒Adoption Basket</title>
