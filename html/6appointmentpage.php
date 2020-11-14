@@ -3,8 +3,7 @@
     <?php
     //Uncomment once our website is done 
     // require_once '../database/protect.php'; 
-    session_start(); 
-
+    // session_start(); 
     // unset($_SESSION['appointment_page_dict']['49774278']);
 
     if(!isset($_SESSION['appointment_page_dict'])){
@@ -145,7 +144,6 @@
                     <h2 id='map'> IM THE MAP!</h2>
                     <p>
                         🐕 Find the estimated time and best route to take to find your Furever Pet ! 🐕
-                        
                     </p>
                 </div>
 
